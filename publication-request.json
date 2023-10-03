@@ -1,0 +1,10 @@
+{
+  "package-id" : "hl7.fhir.us.smp",
+  "version" : "1.0.0",
+  "path" : "http://hl7.org/fhir/us/smp/STU1.0",
+  "status" : "trial-use",
+  "sequence" : "STU 1.0",
+  "milestone" : true,
+  "mode": "milestone",
+  "desc" : "This is the published instance of the guide in the STU 1.0 sequence."
+}
