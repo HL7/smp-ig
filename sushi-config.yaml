@@ -5,13 +5,13 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.smp
 canonical: http://hl7.org/fhir/us/smp
-version: 1.0.0
+version: 0.1.0
 name: StandardizedMedicationProfile
 title: Standardized Medication Profile (SMP) FHIR IG
 status: active
-publisher: 
-  name: HL7 International - Pharmacy Work Group
-  url: http://hl7.org/Special/committees/pharmacy
+publisher:
+  name: HL7 International / Pharmacy
+  url: http://www.hl7.org/Special/committees/medication
   email: pharmacylists@lists.hl7.org
 contact:
   - name: Andy Stechishin
@@ -22,22 +22,26 @@ description: Guidelines for conveying coverage requirements to clinicians when p
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.1
+  hl7.fhir.us.core: 5.0.1
   hl7.fhir.extensions.r5: 4.0.1
 parameters:
+  shownav: 'true'
   show-inherited-invariants: false
   path-expansion-params: '../../exp-params.json'
 copyrightYear: 2023+
+releaseLabel: ci-build
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-    valueInteger: 3
-releaseLabel: STU 1.0
+    valueInteger: 1
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: phx
+#releaseLabel: STU 1.0
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 pages:
   index.md:
-    title: Prior Authorization Implementation Guide Home Page
+    title: Standardized Medication Profile Implementation Guide Home Page
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
@@ -46,31 +50,21 @@ pages:
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
+  domains.md:
+    title: Domains
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
   background.md:
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
     title: Technical Background
-  regulations.md:
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
-    title: HIPAA Regulations
   specification.md:
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
     title: Formal Specification
-  privacy.md:
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
-    title: Privacy & Security
-  epaWorkflow.md:
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
-    title: PAS ePA Coordinator Information
   downloads.md:
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -91,12 +85,9 @@ menu:
   SMP Specification:
     SMP Home Page: index.html
     Use Cases and Overview: usecases.html
+    Domains: domains.html
     Technical Background: background.html
-    HIPAA Regulations: regulations.html
     Formal Specification: specification.html
-    Privacy and Security: privacy.html
-    ePA Coordinator: epaWorkflow.html
-    Metrics: metrics.html
     Downloads: downloads.html
     Credits: credits.html
   FHIR Artifacts: fhirArtifacts.html
