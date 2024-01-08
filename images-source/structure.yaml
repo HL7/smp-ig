@@ -1,0 +1,7 @@
+--- # Case Scheduled
+resourceType: Appointment
+meta.lastUpdated : "#30 Creation Date/#31 Last Update Date"
+identifier : "#28 Case Number"
+status : proposed
+serviceCategory.coding[0].code : "#21 Surgeon Service"
+appointmentType.coding[0].code : "#3 Patient Type"

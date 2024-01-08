@@ -23,7 +23,34 @@ A systematic review (Alqenae, Steinke, Keers, 2020) about the prevalence and nat
 
 ### Business Requirements
 
+#### Example Scenario
+Although the example and use case reflect a post-acute care (PAC) scenario, this IG is intended to cover the FHIR-based exchange of medication information  between healthcare settings, pharmacies and home- and community-based services (HCBS) broadly.
+
+PAC patients are typically complex from a healthcare perspective and have many stops during their healthcare journey (as shown in Figure 1). As the patient moves from one healthcare setting to another, it is vital that the information on the medications the patient is receiving travel with them so that the new healthcare setting has the most complete information about that patient so they can provide the best care, support effective coordination of care with multiple providers/pharmacists/professionals. Although the example and use case reflect a PAC scenario, this IG is intended to cover the FHIR-based exchange of medication information that is compiled and exchanged between healthcare settings, pharmacies and HCBS broadly.
+
+Figure 1, the example PAC patient healthcare journey, illustrates a common scenario for an elderly patient moving through the healthcare ecosystem. The journey starts with Ms. Smith in her home. She has a medical event that results in an emergency medical service (EMS) transport to Hospital A. Following her hospital stay, Ms. Smith returns home and receives PAC Home Health services. The Home Health agency is coordinating care with multiple professionals and provider organizations including Ms. Smith’s primary physician and her pharmacy, behavioral health provider, and outpatient dialysis provider. @@The assessment instrument resides in the agencies EHR and the functioning observations are shared using FHIR with her and her care team as appropriate.@@
+
+Ms. Smith has another medical event at home and is transferred to Hospital B. Her previous observational data related to mobility, self-care and domestic life is shared with the hospital. From Hospital B, Ms. Smith is transferred to a PAC Skilled Nursing Facility (SNF). The hospital shares information with the SNF including her performance of the same activities. The SNF completes a Minimum Data Set (MDS) assessment instrument which includes mobility and self-care functioning observation information and electronically transmits the MDS to CMS. These observations are shared with Ms. Smith and her care team (Physician, Therapists, Pharmacy, Daughter, etc.). She is discharged from the SNF and returns home with a variety of Home and Community-based Services. The SNF shares information with Ms. Smith, her daughter, her physician and HCBS providers to support care transition and coordination. While receiving HCBS, the Functional Assessment Standardized Items (FASI) is completed which includes mobility, self-care, and/or domestic life/instrumental activities of daily living (IADL) observations. FASI data is electronically transmitted to CMS.[1] The HCBS provider shares current related observations with Ms. Smith’s care team and providers.
+
+
+{::options parse_block_html="false" /}
+<figure>
+  <img style="padding-top:0;padding-bottom:30px" width="800px" src="usecase-diagram.png" alt="A placeholder"/>
+  <figcaption>Figure 1 - SMP Example Scenario</figcaption>
+</figure>
+{::options parse_block_html="true" /}
+
+*Special thanks to the PACIO project for allowing the use of their basic framework example scenario that has been adapted above.*
+
 ### Supported Use Cases
+In Figure 2, the patient is admitted to Healthcare Setting A due to the result of an adverse event, such as a fall. Healthcare setting A treats the patient and records the medications the patient is expected to receive on discharge. The results are captured in the electronic health record (EHR) system of Healthcare Setting A.
+
+Healthcare Setting A transfers the patient to Healthcare Setting B. When the patient arrives at Healthcare Setting B, their clinicians can retrieve the medication profile of the patient at Healthcare Setting A, as part of the transfer summary, using the FHIR profiles for exchanging data defined in this Implementation Guide. Additionally, during the patient’s stay in Healthcare setting B, the clinicians document additional medications.
+
+Healthcare Setting B releases the patient to the community. When the patient or their family , the clinicians can retrieve the results from the functional status assessment instruments that were performed on the patient at Healthcare Setting A and Healthcare Setting B, as part of the transfer summary, using the profiles for exchanging functional status data defined in this Implementation Guide.
+
+Authorized caregivers, including the patient, their family, and clinicians can also access the results from the functional assessment instruments from Healthcare Setting A, Healthcare Setting B, and Healthcare Setting C at any time through a patient sharing system (mobile/web application), so that they are informed about the patient’s care, can track progress, and can be more engaged in their healthcare decisions.
+
 
 ### Workflow
 

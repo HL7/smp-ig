@@ -20,7 +20,7 @@ This implementation guide is dependent on other specifications.  Please submit a
 The implementation guide is organized into the following sections:
 
 * [Use Cases and Overview](usecases.html) describes the intent of the implementation guide, gives examples of its use and provides a high-level overview of expected process flow
-* [Domains]()domains.html) describes
+* [Domains](domains.html) describes
 * [Technical Background](background.html) describes the different specifications this implementation guide relies on and indicates what developers should read and understand prior to implementing this specification
 * [Formal Specification](specification.html) covers the detailed implementation requirements and conformance expectations
 * [Artifacts](fhirArtifacts.html) introduces and provides links to the FHIR [R4](artifacts.html) profiles, operations and other FHIR artifacts used in this implementation guide

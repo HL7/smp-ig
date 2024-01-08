@@ -1,7 +1,7 @@
 ### Credits
 Primary authors:
 
-* Mary Kay McDaniel (Markham Consulting)
+* Mary Kay McDaniel (Markam Consulting)
 * Andy Stechishin (CANA Software & Services Ltd.)
 
 Guide Author Support: 
@@ -10,7 +10,7 @@ Guide Author Support:
 
 Project lead:
 
-* Mary Kay Mcdaniel (Markham Consulting)
+* Mary Kay Mcdaniel (Markam Consulting)
 
 
 XXX:
