@@ -13,7 +13,7 @@ Project lead:
 * Mary Kay Mcdaniel (Markam Consulting)
 
 
-XXX:
+Notes:
 
 This implementation guide was created under the supervision and review of the HL7 [Pharmacy Work Group](http://www.hl7.org/Special/committees/medications) (sponsor) with [Patient Care](http://www.hl7.org/Special/Committees/pcwg) (co-sponsor) and [EHR](http://www.hl7.org/Special/Committees/ehr) (co-sponsor) work groups.
 

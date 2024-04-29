@@ -1,7 +1,79 @@
---- # Case Scheduled
-resourceType: Appointment
+--- # Sample Drug list for Betsy
+resourceType: List
 meta.lastUpdated : "#30 Creation Date/#31 Last Update Date"
 identifier : "#28 Case Number"
-status : proposed
-serviceCategory.coding[0].code : "#21 Surgeon Service"
-appointmentType.coding[0].code : "#3 Patient Type"
+status : "current"
+mode : "snapshot"
+title : "SNF Discharge Medication list"
+code.coding[0].code : "xxxx"
+code.coding[0].system : "LOINC"
+subject :
+  resourceType: Patient
+  identifier: "xxxYYY"
+  name :
+    -
+      given :
+        - "Betsy"
+      family : "Smith Johnson"
+date: "2024-04-07T13:28:17-05:00"
+source:
+  resourceType: PractitionerRole
+  practitioner :
+    resourceType : Practitioner
+    identifier :
+      -
+        value : "NPI"
+    name :
+      -
+        text : "Pharmacist Clara"
+note: "Some additional instructions"
+entry:
+  - item:
+      resourceType: MedicationStatement
+      basedOn:
+        -
+          resourceType: MedicationRequest
+          identifier: "prescription#1"
+      status: active
+      medicationCodableConcept.coding[0].code: "27658006"
+      medicationCodableConcept.coding[0].system: "http://snomed.info/sct"
+      medicationCodableConcept.coding[0].display: "Amoxicillin (product)"
+      subject:
+        resourceType: Patient
+        identifier: "xxxYYY"
+        name:
+          - given:
+              - "Betsy"
+            family: "Smith Johnson"
+  - item:
+      resourceType: MedicationStatement
+      status: active
+      medicationReference:
+        resourceType: Medication
+        code.coding[0].code: ""
+        code.coding[0}.system: ""
+        status: active
+      subject:
+        resourceType: Patient
+        identifier: "xxxYYY"
+        name:
+          - given:
+              - "Betsy"
+            family: "Smith Johnson"
+  - item:
+      resourceType: MedicationStatement
+      basedOn:
+        -
+          resourceType: MedicationRequest
+          identifier: "prescription#1"
+      status: active
+      medicationCodableConcept.coding[0].code: "27658006"
+      medicationCodableConcept.coding[0].system: "http://snomed.info/sct"
+      medicationCodableConcept.coding[0].display: "Amoxicillin (product)"
+      subject:
+        resourceType: Patient
+        identifier: "xxxYYY"
+        name:
+          - given:
+              - "Betsy"
+            family: "Smith Johnson"

@@ -90,7 +90,9 @@ menu:
     Formal Specification: specification.html
     Downloads: downloads.html
     Credits: credits.html
-  FHIR Artifacts: fhirArtifacts.html
+  FHIR Artifacts:
+    Artifacts Overview: fhirArtifacts.html
+    SMP Specific: artifacts.html
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
     US Core: new-tab {{site.data.fhir.ver.hl7_fhir_us_core}}

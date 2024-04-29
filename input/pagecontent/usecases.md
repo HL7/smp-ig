@@ -55,8 +55,12 @@ Authorized caregivers, including the patient, their family, and clinicians can a
 ### Workflow
 
 #### Scope of Work Flow
-In Scope
+**In Scope**
 
+The SMP implementation guide covers the exchange of the medication information needed for the reconciliation of medications. The implementation guide also provides information of how the information is forwarded/retrieved in particular during a transition of care from organization to organization.
 
-Out Of Scope
+**Out Of Scope**
 
+The SMP implementation guide does not discuss nor specify the process for medication reconciliation. Medication reconciliation is covered by the professional practices of the individuals performing same. The guide only seeks to ensure that the necessary information is made available or can be retrieved to/by the practitioner as needed.
+
+The SMP implementation guide does not specify the exchange of additional information beyond medication information. Additional information such as personal functioning or allergies are components of the medication reconciliation process however the exchange of this information is documented (*need reference @@@*) elsewhere and those implementation guides should be used.

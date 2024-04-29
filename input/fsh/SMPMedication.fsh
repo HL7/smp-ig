@@ -2,14 +2,14 @@
 NOTE: Aliases are defined in GlobalAliasList.fsh
 **********/
 Profile:        SMPMedication
-Parent:         USCoreMedicationProfile
+Parent:         $us-core-medication
 Id:             smp-medication
 Title:          "Standardized Medication Profile - Medication"
-Description:    "Used ."
+Description:    "A description of a patient medication, may be used for non-prescription medications. Extended from US Core to require code and status"
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[0].valueCode = #phx
 * ^status = #active
-* ^publisher = "HL7 Internation / Pharmacy"
+* ^publisher = "HL7 International / Pharmacy"
 * ^contact[0].name = "HL7 International / Pharmacy"
 * ^contact[=].telecom.system = #url
 * ^contact[=].telecom.value = "http://www.hl7.org/Special/committees/medication"
@@ -19,6 +19,8 @@ Description:    "Used ."
 ****/
 
 * code 1..1 MS
+  * ^short = ""
+  * ^comment = ""
 * status 1..1 MS
 
 

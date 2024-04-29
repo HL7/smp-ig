@@ -1,0 +1,27 @@
+--- # Case Scheduled
+resourceType: Appointment
+meta.lastUpdated : "#30 Creation Date/#31 Last Update Date"
+identifier : "#28 Case Number"
+status : proposed
+serviceCategory.coding[0].code : "#21 Surgeon Service"
+appointmentType.coding[0].code : "#3 Patient Type"
+reasonReference:
+  resourceType : Procedure
+  extension :
+    -
+      url : anaesthesia-type
+      valueCodeableConcept.coding[0].code : "#11 Anaesthesia Type"
+    -
+      url : surgical-priority
+      valueCodeableConcept.coding[0].code : "#22 Surgical Priority Classification"
+      valueCodeableConcept.text : "#23 Surgical Priority Description"
+    -
+      url : unplanned-return
+      valueBoolean : "#16 Unplanned Return to Surgery indicator"
+      valueCodeableConcept.coding[0].code : "#17 Unplanned Return to Surgery reason code"
+      valueCodeableConcept.text : "#18 Unplanned Return to Surgery reason description"
+  status : preparation
+  category.coding[0].code : "#4 Procedure Service"
+  code.coding[0].code : "#5 Procedure Code"
+  code.text : "#6 Procedure Description"
+  subject : same as Appointment.participant[0]

@@ -1,5 +1,4 @@
-This section of the implementation guide defines the specific conformance requirements for systems wishing to conform to this Prior Authorization Support implementation guide.  The bulk of it focuses on the Claim $submit operation, though it also provides guidance on privacy, security and other implementation requirements.
-
+This section of the implementation guide defines the specific conformance requirements for systems wishing to conform to Standardized Medication Profile implementation guide.  The RESTful exchanges of resources is the primary means of information exchange but in some situations, a Bundle containing the primary Medication List resources and all of the reference SMP Medication Statements may optimize the exchange.
 
 ### Context
 
@@ -23,8 +22,7 @@ This implementation guide uses specific terminology to flag statements that have
 
 #### Systems
 
-This implementation guide sets expectations for XXXX:
-
+This implementation guide sets expectations for both clients and servers during the transition of care and the exchange of Standardized Medication Profiles. In a transition of care, one FHIR Server for an organization may act as a client to a FHIR Server for a second organization (with additional system configurations and intermediaries possible). For the use case where the organization responsible for patient following the transition is known, the pre-transition organization may push information to the destination. In all cases, the pre-transition organization must be able to support queries for previous medication lists. 
 
 
 #### Profiles
@@ -33,14 +31,13 @@ This specification makes significant use of [FHIR profiles]({{site.data.fhir.pat
 The full set of profiles defined in this implementation guide can be found by following the links on the [Artifacts](fhirArtifacts.html) page.
 
 #### Integration with other Implementation Guides
-* Along with the profiles defined in the PAS implementation guide, implementations **SHALL** also support the US Core R4 profiles for Condition, Observation, and Procedure.  They **SHOULD** support any other profiles relevant to the types of prior authorizations they process.
-
+* Along with the profiles defined in the SMP implementation guide, implementations **SHALL** also support the US Core R4 profiles for Patient, Practitioner, PractitionerRole, Condition, and Allergy.  They **SHOULD** support any other profiles relevant to the transition process. (*need reference to PFE and Allergy lists @@@*)
 
 ### Detailed Requirements
 
 #### Summary
 
-The primary interaction supported by this implementation guide is 
+The primary interaction supported by this implementation guide is POST and GET
 
 This Bundle will then be sent as the sole payload of a
 
@@ -52,12 +49,12 @@ The Bundle **SHALL** be encoded in JSON.  The first entry in the Bundle **SHALL*
  
 All GUIDs used **SHALL** be unique, including across independent prior authorization submissions - with the exception that the same resource instance being referenced in distinct prior authorization request Bundles can have the same GUID.
 
-All resources **SHALL** comply with their respective profiles.  FHIR elements not marked as 'must support' **MAY** be included in resources within the Bundle, but client systems should have no expectation of such elements being processed by the payer unless prior arrangements have been made.  Systems that do not process such elements **SHALL** ignore unsupported elements unless they are 'modifier' elements, in which case the system **MAY** treat the presence of the element as an error.
+All resources **SHALL** comply with their respective profiles.  FHIR elements not marked as 'must support' **MAY** be included in resources, but client systems should have no expectation of such elements being processed.
 
 This IG treats everything that happens beyond the defined operations endpoint receiving the FHIR bundle as a black box.  This black box includes any business associate(s), clearinghouse(s), payers, contracted review entities,  and other intermediaries that may be involved in the PA request and response. It is up to that black box to ensure that any regulatory requirements are met and to perform all processing within the allowed timeframe.
 
 
-All transactions in PAS are synchronous and **SHALL** require one of the following HTTP responses:
+All transactions in SMP are synchronous and **SHALL** require one of the following HTTP responses:
 
 ##### HTTP Responses
 
@@ -79,7 +76,7 @@ If an OperationOutcome is received, it may have information regarding errors tha
 
 
 ##### SMP Workflow Diagrams
-Here are two workflow diagrams that show the sending of a request, the receiving of a response, and optional error handing.  The diagrams show an optional second intermediary.
+Here are two workflow diagrams that show the forwarding of a medication list, the querying of medication list(s), and optional error handing.
 
 {::options parse_block_html="false" /}
 <figure>
@@ -88,9 +85,6 @@ Here are two workflow diagrams that show the sending of a request, the receiving
 </figure>
 {::options parse_block_html="true" /}
 
-
-#### Checking Status
-Systems other than the requesting system may choose not to subscribe to the prior authorization response but instead to check the status at the request of a user.  There are no retry limits for user-initiated status checks.
 
 
 ### Testing Requirements

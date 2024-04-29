@@ -1,6 +1,6 @@
 
 ### Systems
-The SMP implementation guide defines the responsibilities for the exchange of XXX
+The SMP implementation guide defines the responsibilities for the exchange of Standardized Medication Profiles.
 
 ### Underlying Technologies
 This guide is based on the [HL7 FHIR]({{site.data.fhir.path}}index.html) standard.  Implementers of this specification therefore need to understand some basic information about these specifications.
@@ -20,6 +20,8 @@ specific to FHIR.  Before reading this implementation guide, it's important to b
 This implementation guide supports the [R4]({{site.data.fhir.path}}index.html) version of the FHIR standard.
 
 This implementation guide also builds on the [US Core (STU3 - R4 based)]({{site.data.fhir.hl7_fhir_us_core}}) Implementation Guide and implementers need to familiarize themselves with the profiles in that IG.
+
+This implementation guide works in alignment with the US CDI (*need reference to version @@@*)
 
 ##### Must Support
 The Profile elements consist of both Mandatory and Must Support elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support]({{site.data.fhir.path}}profiling.html#mustsupport) guidance requires specifications to define the support expected for profile elements labeled Must Support.  Along with those expectations, the following rules on MustSupport are also required:
