@@ -23,8 +23,6 @@ Alias: LL4309-2 = http://loinc.org/vs/LL4309-2
 Alias: $us-core-encounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 Alias: $us-core-medication = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication
 Alias: $us-core-medicationdispense = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense
-// http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense
-// Alias: $us-core-medicationdispense = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense
 Alias: $us-core-medicationrequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
 Alias: $us-core-organization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 Alias: $us-core-patient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
@@ -35,3 +33,4 @@ Alias: $us-core-relatedperson = http://hl7.org/fhir/us/core/StructureDefinition/
 // SMP content profiles
 Alias: $smp-medication = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication
 Alias: $smp-medicationstatement = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement
+Alias: $smp-medicationadministration = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationadministration

@@ -1,4 +1,4 @@
-# ╭────────────────────────ImplementationGuide-hl7.fhir.us.davinci-pas.json────────────────────────╮
+# ╭────────────────────────ImplementationGuide-hl7.fhir.us.smp─────────────────────────────────────╮
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see:                                                                    │
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
@@ -22,7 +22,7 @@ description: Guidelines for conveying coverage requirements to clinicians when p
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 5.0.1
+  hl7.fhir.us.core: 6.1.0
   hl7.fhir.extensions.r5: 4.0.1
 parameters:
   shownav: 'true'

@@ -1,11 +1,8 @@
-/**********
-NOTE: Aliases are defined in aliases.fsh
-**********/
 Profile:        SMPMedicationStatement
 Parent:         MedicationStatement
 Id:             smp-medicationstatement
 Title:          "Standardized Medication Profile - MedicationStatement"
-Description:    "The focal resource within the MedicationList that defines a patient's use of a drug"
+Description:    "The focal resource within the MedicationList that defines a patient's use of a drug or compound"
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[0].valueCode = #phx
 * ^status = #active
@@ -20,9 +17,7 @@ Description:    "The focal resource within the MedicationList that defines a pat
 
 * basedOn only Reference($us-core-medicationrequest)
 
-/*
-* partOf only Reference($us-core-medicationdispense)
-*/
+* partOf only Reference($us-core-medicationdispense or $smp-medicationadminitration)
 
 * medicationReference only Reference($smp-medication)
 

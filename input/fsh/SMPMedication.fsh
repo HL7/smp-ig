@@ -1,6 +1,3 @@
-/**********
-NOTE: Aliases are defined in GlobalAliasList.fsh
-**********/
 Profile:        SMPMedication
 Parent:         $us-core-medication
 Id:             smp-medication
