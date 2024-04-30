@@ -1,3 +1,8 @@
+Invariant: smp-medication-required
+Severity: #error
+Description: "One of basedOn, partOf or medicationReference SHALL be populated"
+Expression: "basedOn.exists() or medicationReference.exists() or partOf.exists()"
+
 Profile:        SMPMedicationStatement
 Parent:         MedicationStatement
 Id:             smp-medicationstatement
@@ -17,7 +22,7 @@ Description:    "The focal resource within the MedicationList that defines a pat
 
 * basedOn only Reference($us-core-medicationrequest)
 
-* partOf only Reference($us-core-medicationdispense or $smp-medicationadminitration)
+* partOf only Reference($us-core-medicationdispense or $smp-medicationadministration)
 
 * medicationReference only Reference($smp-medication)
 

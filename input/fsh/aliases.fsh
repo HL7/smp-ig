@@ -31,6 +31,7 @@ Alias: $us-core-practitionerrole = http://hl7.org/fhir/us/core/StructureDefiniti
 Alias: $us-core-relatedperson = http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
 
 // SMP content profiles
+Alias: $smp-medicationlist = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication-list
 Alias: $smp-medication = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication
 Alias: $smp-medicationstatement = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement
 Alias: $smp-medicationadministration = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationadministration

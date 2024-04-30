@@ -1,13 +1,13 @@
 Profile: SMPBundle
 Parent: Bundle
 Id: smp-bundle
-Title: "SMP Bundle - Medication List"
+Title: "Standardized Medication Profile - Bundle Medication List"
 Description: "This profile constrains a Bundle resource to carry the MedicationList and the associated supporting resources"
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #phx
 * ^version = "1.0.0"
 * ^experimental = false
-* ^date = "2024-04-01T00:00:00-05:00"
+* ^date = "2024-04-25T01:00:00-05:00"
 * ^publisher = "HL7 International - Pharmacy"
 * ^contact[0].name = "HL7 International - Pharmacy"
 * ^contact[=].telecom.system = #url
@@ -33,10 +33,11 @@ Description: "This profile constrains a Bundle resource to carry the MedicationL
     patient 1..* MS and
     medicationadministration 0..* MS and
     medicationstatement 0..* MS and
-    pharmacy 0..* MS and
     medication 0..* MS and
     medicationrequest 0..* MS and
+    medicationdispense 0..* MS and
     practitioner 0..* MS and
     practitionerrole 0..* MS
 * entry[patient].resource 1..1 MS
 * entry[patient].resource only $us-core-patient
+* entry[list].resource only $smp-medicationlist
