@@ -1,12 +1,11 @@
 // Code Systems
 // NOTE: use a code system (not value set) in instances
-Alias: LNC = http://loinc.org
-Alias: SCT = http://snomed.info/sct
 Alias: CAT = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: UOM = http://unitsofmeasure.org
 Alias: DAR = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: Hl7FhirAdminGender  = http://hl7.org/fhir/administrative-gender
 Alias: NUCC = http://nucc.org/provider-taxonomy
+Alias: $loinc = http://loinc.org
 Alias: $rxnorm = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias: $snomed = http://snomed.info/sct
 

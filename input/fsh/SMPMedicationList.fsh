@@ -15,6 +15,7 @@ Description:    "The primary mechanism to group a related set of MedicationState
 /*****
 ****/
 
+* code from SMPMedicationListType (required)
 * code 1..1 MS
   * ^short = "Medication list type code"
   * ^comment = "A predetermined LOINC code that defines the list of MedicationStatements"
