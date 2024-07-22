@@ -39,13 +39,10 @@ The full set of profiles defined in this implementation guide can be found by fo
 
 The primary interaction supported by this implementation guide is POST and GET
 
-This Bundle will then be sent as the sole payload of a
+The interactions can be comprised of completely RESTful operations for the storage and retrieval of resources but there are situations where the submission of a transaction Bundle containing the primary List resource and all of the associated MedicationStatement resources would be appropriate. 
 
 
-The Bundle **SHALL** be encoded in JSON.  The first entry in the Bundle **SHALL** be a XXXXX resource complying with the XXX defined in this IG to ensure the content is sufficient to appropriately populate a .  Additional Bundle entries **SHALL** be populated with any resources referenced by the XXXXX resource (and any resources referenced by *those* resources, fully traversing all references and complying with all identified profiles).  Note that even if a given resource instance is referenced multiple times, it **SHALL** only appear in the Bundle once.  E.g., if the same Practitioner information is referenced in multiple places, only one Practitioner instance should be created - referenced from multiple places as appropriate.  Bundle.entry.fullUrl values **SHALL** be:
-
-* the URL at which the resource is available from the EHR if exposed via the client's REST interface; or
-* the form "urn:uuid:[some guid]"  
+The first entry in the Bundle **SHALL** be a List resource complying with the MedicationList defined in this IG to ensure the content is sufficient to appropriately populate a full medication list.
  
 All GUIDs used **SHALL** be unique, including across independent prior authorization submissions - with the exception that the same resource instance being referenced in distinct prior authorization request Bundles can have the same GUID.
 
