@@ -21,12 +21,15 @@ This implementation guide supports the [R4]({{site.data.fhir.path}}index.html) v
 
 This implementation guide also builds on the [US Core (STU3 - R4 based)]({{site.data.fhir.hl7_fhir_us_core}}) Implementation Guide and implementers need to familiarize themselves with the profiles in that IG.
 
-This implementation guide works in alignment with the US CDI (*need reference to version @@@*)
+This implementation guide works in alignment with the US CDI release 7.0.
 
 ##### Must Support
 The Profile elements consist of both Mandatory and Must Support elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support]({{site.data.fhir.path}}profiling.html#mustsupport) guidance requires specifications to define the support expected for profile elements labeled Must Support.  Along with those expectations, the following rules on MustSupport are also required:
 
-* Intermediary Systems **SHALL** be capable of processing all data elements that are marked as Must Support on the XXXXXX.  They **SHALL** not generate an error or cause the application to fail due the presence of any data element marked as Must Support.
+* Intermediary Systems **SHALL** be capable of processing all data elements that are marked as Must Support.  They **SHALL** not generate an error or cause the application to fail due the presence of any data element marked as Must Support.
 * Intermediary Systems **SHALL** be capable of returning resource instances containing any of the data elements that are marked as Must Support on the XXXXX.
-* Client Systems **SHALL** be capable of receiving all data elements that are marked as Must Support on the XXXXXXXXXXX.  They **SHALL** not generate an error or cause the application to fail when receiving any data element that is marked as Must Support.
-* Client Systems **SHOULD NOT** send any data elements that are not marked as Must Support.  If these data elements are included in a XXXXXXXX, the receiving Intermediary System **MAY** ignore those elements.
+* Client Systems **SHALL** be capable of receiving all data elements that are marked as Must Support.  They **SHALL** not generate an error or cause the application to fail when receiving any data element that is marked as Must Support.
+
+### Companion Implementation Guides
+
+This guide focuses on the exchange of medication information during the transitions of care that occur on the patient journey through the health system. There are a number of other guide that deal with other data exchange aspects during transitions of care including Standard Determinants of Health (SDOH) and Personal Functioning and Engagement (PFE). All of these guide including this guide are being grouped and referenced together as part of the PACIO Transitions of Care (ToC) FHIR Implementation Guide.

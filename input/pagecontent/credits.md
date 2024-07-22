@@ -1,16 +1,15 @@
 ### Credits
 Primary authors:
 
-* Mary Kay McDaniel (*need workplace @@@*)
 * Andy Stechishin (CANA Software & Services Ltd.)
 
 Guide Author Support: 
 
 * Rachelle (Shelly) Spiro (Pharmacy HIT Collaborative)
 
-Project lead:
+Supporting Resources Provided by the Department of Veterans Affairs:
 
-* Mary Kay Mcdaniel (*see above @@@*)
+* Mary Kay McDaniel (Health System Specialist, KBS Standards and Interoperability)
 
 
 Notes:

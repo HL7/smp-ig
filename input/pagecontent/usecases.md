@@ -43,7 +43,7 @@ Ms. Smith has another medical event at home and is transferred to Hospital B. He
 *Special thanks to the PACIO project for allowing the use of their basic framework example scenario that has been adapted above.*
 
 ### Supported Use Cases
-In Figure 2, the patient is admitted to Healthcare Setting A due to the result of an adverse event, such as a fall. Healthcare setting A treats the patient and records the medications the patient is expected to receive on discharge. The results are captured in the electronic health record (EHR) system of Healthcare Setting A.
+In Figure 1, the patient is admitted to Healthcare Setting A due to the result of an adverse event, such as a fall. Healthcare setting A treats the patient and records the medications the patient is expected to receive on discharge. The results are captured in the electronic health record (EHR) system of Healthcare Setting A.
 
 Healthcare Setting A transfers the patient to Healthcare Setting B. When the patient arrives at Healthcare Setting B, their clinicians can retrieve the medication profile of the patient at Healthcare Setting A, as part of the transfer summary, using the FHIR profiles for exchanging data defined in this Implementation Guide. Additionally, during the patient’s stay in Healthcare setting B, the clinicians document additional medications.
 
@@ -63,4 +63,4 @@ The SMP implementation guide covers the exchange of the medication information n
 
 The SMP implementation guide does not discuss nor specify the process for medication reconciliation. Medication reconciliation is covered by the professional practices of the individuals performing same. The guide only seeks to ensure that the necessary information is made available or can be retrieved to/by the practitioner as needed.
 
-The SMP implementation guide does not specify the exchange of additional information beyond medication information. Additional information such as personal functioning or allergies are components of the medication reconciliation process however the exchange of this information is documented (*need reference @@@*) elsewhere and those implementation guides should be used.
+The SMP implementation guide does not specify the exchange of additional information beyond medication information. Additional information such as personal functioning or allergies are components of the medication reconciliation process however the exchange of this information is documented (see PACIO Transitions of Care implementation Guide) elsewhere and those implementation guides should be used.

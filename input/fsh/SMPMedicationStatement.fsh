@@ -29,3 +29,5 @@ Description:    "The focal resource within the MedicationList that defines a pat
 * subject only Reference($us-core-patient)
 
 * informationSource only Reference($us-core-patient or $us-core-practitioner or $us-core-practitionerrole or $us-core-relatedperson)
+
+* dosage MS
