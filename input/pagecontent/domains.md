@@ -1,9 +1,3 @@
-<blockquote class="stu-note">
-<p><b>Note to Commenters:</b>
-profiles that cover all domains.
-</p>
-</blockquote>
-<br>
 
 
 ### Use

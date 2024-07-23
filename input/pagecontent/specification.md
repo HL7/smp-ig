@@ -31,7 +31,7 @@ This specification makes significant use of [FHIR profiles]({{site.data.fhir.pat
 The full set of profiles defined in this implementation guide can be found by following the links on the [Artifacts](fhirArtifacts.html) page.
 
 #### Integration with other Implementation Guides
-* Along with the profiles defined in the SMP implementation guide, implementations **SHALL** also support the US Core R4 profiles for Patient, Practitioner, PractitionerRole, Condition, and Allergy.  They **SHOULD** support any other profiles relevant to the transition process. (*need reference to PFE and Allergy lists @@@*)
+* Along with the profiles defined in the SMP implementation guide, implementations **SHALL** also support the US Core R4 profiles for Patient, Practitioner, PractitionerRole, Condition, and Allergy.  They **SHOULD** support any other profiles relevant to the transition process (this includes other implementation guides such as [PACIO Personal Functioning and Engagement](https://www.hl7.org/fhir/us/pacio-pfe/STU1/index.html), other guides will be identified in the forthcoming Transitions of Care IG).
 
 ### Detailed Requirements
 

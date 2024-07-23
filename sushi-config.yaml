@@ -42,41 +42,20 @@ jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 pages:
   index.md:
     title: Standardized Medication Profile Implementation Guide Home Page
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
   usecases.md:
     title: Use Cases and Overview
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
   domains.md:
     title: Domains
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
   background.md:
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
     title: Technical Background
   specification.md:
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
     title: Formal Specification
+  fhirArtifacts.md:
+    title: Artifacts Overview
   downloads.md:
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
     title: Downloads
   credits.md:
     title: Credits
-  fhirArtifacts.md:
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
-    title: Artifacts Overview
   changelog.md:
     title: Change Log
 
@@ -88,7 +67,6 @@ menu:
     Domains: domains.html
     Technical Background: background.html
     Formal Specification: specification.html
-    Downloads: downloads.html
     Credits: credits.html
   FHIR Artifacts:
     Artifacts Overview: fhirArtifacts.html
@@ -97,4 +75,5 @@ menu:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
     US Core: new-tab {{site.data.fhir.ver.hl7_fhir_us_core}}
   Change Log: changelog.html
+  Downloads: downloads.html
   History: http://hl7.org/fhir/us/smp/history.html
