@@ -3,7 +3,7 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 * extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * extension.valueCode = #phx
-* url = "http://hl7.org/fhir/us/smp/CapabilityStatement/smp-client"
+* url = "http://hl7.org/fhir/us/smp/CapabilityStatement/smp-server"
 * version = "1.0.0"
 * name = "SMP_Server"
 * status = #active

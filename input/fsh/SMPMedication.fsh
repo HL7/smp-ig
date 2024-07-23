@@ -24,7 +24,7 @@ Description:    "A description of a patient medication, may be used for non-pres
 Instance: smp-med-1
 InstanceOf: smp-medication
 Usage: #example
-
+Description: "Example of a Medication resource in a patient's SMP list"
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-12-08T06:38:52Z"
 * meta.profile = "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication"
