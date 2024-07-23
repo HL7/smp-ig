@@ -1,5 +1,5 @@
 ### Version = 1.0.0
-- url: <http://hl7.org/fhir/us/smp-ig/STU1.0>
+- url: <http://hl7.org/fhir/us/smp-ig>
 - Based on FHIR version: 4.0.1
 
 This is the initial, ballot version of the US Standardized Medication Profile (SMP) FHIR Implementation Guide.
