@@ -13,8 +13,26 @@ Description:    "The focal resource within the MedicationList that defines a dru
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * ^date = "2024-03-22T08:00:00-04:00"
 
-* medicationReference only Reference($smp-medication)
+* medication[x] only CodeableConcept or Reference($smp-medication)
 
 * subject only Reference($us-core-patient)
 
 * performer.actor only Reference($us-core-practitioner or $us-core-practitionerrole)
+
+Instance: smp-medadm-1
+InstanceOf: smp-medicationadministration
+Usage: #example
+Description: "Example of a MedicationAdministration resource for a patient's SMP list"
+* meta.versionId = "1"
+* meta.lastUpdated = "2024-07-08T06:38:52Z"
+* meta.profile = "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationadministration"
+
+* status = #in-progress
+* medicationCodeableConcept = $rxnorm#1545658
+* subject.reference = "Patient/example"
+* effectiveDateTime = "2024-06-01"
+* reasonCode = $snomed#359642000
+* dosage.text = "po qd"
+* dosage.dose.value = 10
+* dosage.dose.system = "http://unitsofmeasure.org"
+* dosage.dose.code = #mg
