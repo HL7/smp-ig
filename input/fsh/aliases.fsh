@@ -1,6 +1,5 @@
 // Code Systems
 // NOTE: use a code system (not value set) in instances
-Alias: CAT = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: UOM = http://unitsofmeasure.org
 Alias: DAR = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: Hl7FhirAdminGender  = http://hl7.org/fhir/administrative-gender

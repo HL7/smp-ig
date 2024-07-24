@@ -15,7 +15,7 @@ Description:    "The primary mechanism to group a related set of MedicationState
 /*****
 ****/
 
-* code from https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1096.240 (extensible)
+* code from http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1096.240 (extensible)
 * code 1..1 MS
   * ^short = "Medication list type code"
   * ^comment = "A predetermined LOINC code that defines the list of MedicationStatements"
@@ -32,3 +32,22 @@ Description:    "The primary mechanism to group a related set of MedicationState
 
 * entry.item only Reference($smp-medicationstatement)
   * ^short = "Medication details"
+
+
+Instance: smp-medlist-1
+InstanceOf: smp-medication-list
+Usage: #example
+Description: "Example of a List resource for a patient's SMP list"
+* meta.versionId = "1"
+* meta.lastUpdated = "2024-04-08T06:38:52Z"
+* meta.profile = "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication-list"
+
+* status = #current
+* mode = #working
+* title = "Hospital Medication Administration List"
+* code = $loinc#104207-6
+* subject.reference = "Patient/example"
+* date = "2024-07-01"
+* source.reference = "Practitioner/practitioner-1"
+* entry[0].date = "2024-07-01"
+* entry[=].item.reference = "MedicationStatement/smp-medstmt-1"
