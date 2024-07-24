@@ -13,6 +13,7 @@ Alias: $snomed = http://snomed.info/sct
 Alias: LNCVS = http://hl7.org/fhir/ValueSet/observation-codes
 Alias: CATVS = http://hl7.org/fhir/ValueSet/observation-category
 Alias: LL4309-2 = http://loinc.org/vs/LL4309-2
+Alias: $loinc-med-list = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1096.240
 
 // Misc
 
@@ -33,3 +34,5 @@ Alias: $smp-medicationlist = http://hl7.org/fhir/us/smp/StructureDefinition/smp-
 Alias: $smp-medication = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication
 Alias: $smp-medicationstatement = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement
 Alias: $smp-medicationadministration = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationadministration
+Alias: $smp-bundle = http://hl7.org/fhir/us/smp/StructureDefinition/smp-bundle
+Alias: $smp-bundle-tx = http://hl7.org/fhir/us/smp/StructureDefinition/smp-bundle-transaction

@@ -48,3 +48,20 @@ Description: "Example of a MedicationStatement resource in a patient's SMP list"
 * reasonCode = $snomed#359642000
 * dosage.sequence = 1
 * dosage.text = "po daily"
+
+Instance: smp-medstmt-2
+InstanceOf: smp-medicationstatement
+Usage: #example
+Description: "Example of a MedicationStatement resource in a patient's SMP list with a reference to a MedicationAdministration"
+* meta.versionId = "1"
+* meta.lastUpdated = "2023-12-08T06:38:52Z"
+* meta.profile = "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement"
+* partOf.reference = "MedicationAdministration/smp-medadm-1"
+* status = #active
+* medicationCodeableConcept = $rxnorm#1545658
+* subject.reference = "Patient/example"
+* effectiveDateTime = "2024-06-01"
+* dateAsserted = "2024-07-02"
+* reasonCode = $snomed#359642000
+* dosage.sequence = 1
+* dosage.text = "po qd"

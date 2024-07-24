@@ -1,20 +1,20 @@
-Profile: SMPBundle
+Profile: SMPBundleTransaction
 Parent: Bundle
-Id: smp-bundle
-Title: "Standardized Medication Profile - Bundle Medication List"
+Id: smp-bundle-transaction
+Title: "Standardized Medication Profile - Bundle Medication List Maintenance"
 Description: "This profile constrains a Bundle resource to carry the MedicationList and the associated supporting resources to retrieve a complete SMP information set."
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #phx
 * ^version = "1.0.0"
 * ^experimental = false
-* ^date = "2024-04-25T01:00:00-05:00"
+* ^date = "2024-07-20T01:00:00-05:00"
 * ^publisher = "HL7 International - Pharmacy"
 * ^contact[0].name = "HL7 International - Pharmacy"
 * ^contact[=].telecom.system = #url
 * ^contact[=].telecom.value = "http://www.hl7.org/Special/committees/medication"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * type only code
-* type = #collection (exactly)
+* type = #transaction (exactly)
 * type MS
 * total MS
 * entry 1..* MS
@@ -24,34 +24,32 @@ Description: "This profile constrains a Bundle resource to carry the MedicationL
 * entry ^slicing.rules = #open
 * entry.search 0..0
 * entry.search ^mustSupport = false
-* entry.request 0..0
-* entry.request ^mustSupport = false
+* entry.request 1..1
+* entry.request ^mustSupport = true
 * entry.response 0..0
 * entry.response ^mustSupport = false
 * entry contains
     list 1..1 MS and
     patient 0..1 MS and
-    medicationadministration 0..* MS and
     medicationstatement 0..* MS and
     medication 0..* MS and
     medicationrequest 0..* MS and
     medicationdispense 0..* MS and
-    practitioner 0..* MS and
-    practitionerrole 0..* MS
-* entry[patient].resource 1..1 MS
+    medicationadministration 0..* MS
 * entry[patient].resource only $us-core-patient
-* entry[list].resource 1..1 MS
 * entry[list].resource only $smp-medicationlist
 * entry[medicationstatement].resource only $smp-medicationstatement
 
-Instance: smp-bundle-1
-InstanceOf: smp-bundle
+Instance: smp-bundle-tx-1
+InstanceOf: smp-bundle-transaction
 Usage: #example
-Description: "Example of a Bundle resource used to transmit a patient's SMP medication list and contents"
-* meta.profile = $smp-bundle
-* type = #collection
+Description: "Example of a Bundle resource used to create a medication list with a single entry"
+* meta.profile = $smp-bundle-tx
+* type = #transaction
 
 * entry[0].fullUrl = "urn:uuid:9ce2a97b-5cab-4986-814f-4734016e6084"
+* entry[=].request.method = #POST
+* entry[=].request.url = "List"
 * entry[=].resource.id = "smp-medlist-1"
 * entry[=].resource.resourceType = "List"
 * entry[=].resource.meta.profile = $smp-medicationlist
@@ -66,9 +64,11 @@ Description: "Example of a Bundle resource used to transmit a patient's SMP medi
 * entry[=].resource.date = "2024-07-01"
 * entry[=].resource.source.reference = "Practitioner/practitioner-1"
 * entry[=].resource.entry[0].date = "2024-07-01"
-* entry[=].resource.entry[=].item.reference = "urn:uuid:23ac0bc6-0959-4181-8af0-6db5e2ef8176"
+* entry[=].resource.entry[=].item.reference = "urn:uuid:4359ae5b-2b6d-43e1-83b0-2369a6f82177"
 
-* entry[+].fullUrl = "urn:uuid:23ac0bc6-0959-4181-8af0-6db5e2ef8176"
+* entry[+].fullUrl = "urn:uuid:4359ae5b-2b6d-43e1-83b0-2369a6f82177"
+* entry[=].request.method = #POST
+* entry[=].request.url = "MedicationStatement"
 * entry[=].resource.id = "smp-medstmt-bundle-1"
 * entry[=].resource.resourceType = "MedicationStatement"
 * entry[=].resource.meta.profile = $smp-medicationstatement

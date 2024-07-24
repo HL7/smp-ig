@@ -15,7 +15,7 @@ Description:    "The primary mechanism to group a related set of MedicationState
 /*****
 ****/
 
-* code from http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1096.240 (extensible)
+* code from $loinc-med-list (extensible)
 * code 1..1 MS
   * ^short = "Medication list type code"
   * ^comment = "A predetermined LOINC code that defines the list of MedicationStatements"

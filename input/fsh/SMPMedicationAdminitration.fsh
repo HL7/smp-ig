@@ -2,7 +2,7 @@ Profile:        SMPMedicationAdministration
 Parent:         MedicationAdministration
 Id:             smp-medicationadministration
 Title:          "Standardized Medication Profile - MedicationAdministration"
-Description:    "The focal resource within the MedicationList that defines a drug or compound that was given to a patient"
+Description:    "The resource referenced from a MedicationStatement that defines the actual giving of a drug or compound to a patient. A profile was necessary for SMP to ensure the use of SMP and US Core profiles."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[0].valueCode = #phx
 * ^status = #active
