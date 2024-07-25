@@ -1,0 +1,23 @@
+@startuml
+skinparam responseMessageBelowArrow true
+
+actor "Care Team" as CT
+participant "Hospital EHR" as EHR
+database "Health Data\nManager" as HDM
+participant "Skilled Nursing Facility" as SNF
+
+CT -> EHR: Define medications for discharge
+EHR -> EHR: Generate Discharge Medication List
+  loop for each medication
+    EHR -> EHR: Add medication to Discharge list
+  end
+
+alt Connection to HDM
+    EHR -> HDM: POST SMP-Bundle-Tx (Discharge Medication List)
+
+else Connection to SNF
+    EHR -> SNF: POST SMP-Bundle-Tx (Discharge Medication List)
+end
+
+caption Figure B.3: Hospital Discharge
+@enduml

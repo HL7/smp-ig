@@ -75,6 +75,16 @@ If an OperationOutcome is received, it may have information regarding errors tha
 ### SMP Workflow Diagrams
 Using the base use case scenarios, the following diagrams show the information flows across multiple transitions of care and the use of the SMP profiles to support and enhance the information exchange
 
+The abbreviations that appear in the following workflows are defined as:
+
+| Abbrev. | Expansion |
+|  | ----------- |
+| EHR | Electronic Health record system |
+| HDM | Health Data Manager (a repository or exchange to help locate a patient's records) |
+| HHA | Home Health Authority |
+| SNF | Skilled Nursing Facility |
+
+
 #### A: Home - Pre-stroke
 
 {::options parse_block_html="false" /}
@@ -98,7 +108,11 @@ In the initial diagram the capture of the patient medications, including both pr
 </figure>
 {::options parse_block_html="true" /}
 
+{% include uc2-seq.svg %}
+
 Following the stroke event the patient is admitted to hospital, previous medications (via the list created in A.1) are reviewed and based on treatment, the hospital administration list is created. When the patient is stabilized and ready for discharge to the rehabilitation facility, the discharge list is created.
+
+{% include uc3-seq.svg %}
 
 #### C: Skilled Nursing Facility (SNF) - Rehabilitation
 
@@ -108,6 +122,8 @@ Following the stroke event the patient is admitted to hospital, previous medicat
   <figcaption>Figure C.1 - Admission to SNF for Rehab</figcaption>
 </figure>
 {::options parse_block_html="true" /}
+
+{% include uc4-seq.svg %}
 
 The hospital discharge list is reviewed and revised to create the administration list for the Skilled Nursing facility (SNF). This list is updated during the patients stay in the facility. As medications are removed from the administration list, they are added to the discontinued medication list.
 
@@ -134,8 +150,11 @@ Back in the community, the home care team for the patient review the discharge m
 
 
 ### Testing Requirements
-It is the intent of this implementation guide to provide specifications for the exchange of prior authorization in a way that is conducive to developing test scripts and a reference implementation (RI) that can be used to validate/exercise the IG at connectathons and during piloting and production deployment. It is also the intent of this guide that any test scripts will include testing of: 
+It is the intent of this implementation guide to provide specifications for the exchange of medication information in a way that is conducive to developing test scripts and a reference implementation (RI) that can be used to validate/exercise the IG at connectathons and during piloting and production deployment. It is also the intent of this guide that any test scripts will include testing of: 
 
 1. resources and profiles defined in this guide
-2. artifacts used from referenced IGs such as DTR and CRD
+2. artifacts used from referenced IGs such as:
+   * PACIO Transitions of Care Implementation Guide - PACIO Transitions of Care Implementation Guide v0.1.0 (paciowg.github.io)
+   * [Personal Functioning & Engagement (PFE)](https://build.fhir.org/ig/HL7/fhir-pacio-pfe/)
+   * [Physical Activity (PA)](https://build.fhir.org/ig/HL7/physical-activity/)
 3. testing of conformance to the underlying FHIR standards for the associated release (e.g. FHIR R4)

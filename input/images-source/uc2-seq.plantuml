@@ -1,0 +1,19 @@
+@startuml
+skinparam responseMessageBelowArrow true
+
+actor "Care Team" as CT
+participant "Hospital EHR" as EHR
+database "Health Data\nManager" as HDM
+
+CT -> EHR: Request medication info
+EHR -> HDM: GET SMP-Bundle (Query)
+EHR <- HDM: existing Medication Lists
+CT -> EHR: Medication Orders for patient
+EHR -> EHR: Generate Administration Medication List
+  loop for each order
+    EHR -> EHR: Add order to Admin list
+  end
+CT -> EHR: Revise orders (as necessary)
+
+caption Figure B.2: Hospital Treatment
+@enduml

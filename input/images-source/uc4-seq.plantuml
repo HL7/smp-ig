@@ -1,0 +1,32 @@
+@startuml
+skinparam responseMessageBelowArrow true
+
+actor "SNF\nCare Team" as CT
+participant "Skilled Nursing Facility\nEHR" as SNF
+database "Health Data\nManager" as HDM
+
+
+CT -> SNF: Request medication info
+
+alt Previous Lists are requested
+    SNF -> HDM: GET SMP-Bundle (Query)
+    note left
+    The Hospital Discharge
+    Medication List may be
+    available at the SNF but
+    other lists including the
+    Discontinued Medications
+    may form part of this query
+    end note
+    SNF <- HDM: existing Medication Lists
+end
+
+CT -> SNF: Medication Orders for patient
+SNF -> SNF: Generate Administration Medication List
+  loop for each order
+    SNF -> SNF: Add order to Admin list
+  end
+CT -> SNF: Revise orders (as necessary)
+
+caption Figure C.2: SNF Admission
+@enduml
