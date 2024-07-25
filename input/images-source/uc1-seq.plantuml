@@ -1,0 +1,4 @@
+@startuml
+FieldApp -> HDM: POST SMP-Bundle-Tx (Medication List and Medication Statements
+FieldApp <-- HDM: Confirmation
+#enduml

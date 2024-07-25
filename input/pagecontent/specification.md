@@ -72,49 +72,61 @@ If an OperationOutcome is received, it may have information regarding errors tha
 | Expression | 0..* | string | FHIRPath of element(s) |
 
 
-##### SMP Workflow Diagrams
+### SMP Workflow Diagrams
 Using the base use case scenarios, the following diagrams show the information flows across multiple transitions of care and the use of the SMP profiles to support and enhance the information exchange
+
+#### A: Home - Pre-stroke
 
 {::options parse_block_html="false" /}
 <figure>
   <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc1.png" alt="A placeholder"/>
   <figcaption>Figure A.1 - Home Health recording medications</figcaption>
 </figure>
+<br/>
 {::options parse_block_html="true" /}
 
+{% include uc1-seq.svg %}
+
 In the initial diagram the capture of the patient medications, including both prescription and non-prescription items is performed and the information is record via a List resource and MedicationStatement resources as needed
+
+#### B: Hospital
 
 {::options parse_block_html="false" /}
 <figure>
   <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc2.png" alt="A placeholder"/>
-  <figcaption>Figure A.2 - Admission to Hospital following stroke</figcaption>
+  <figcaption>Figure B.1 - Admission to Hospital following stroke</figcaption>
 </figure>
 {::options parse_block_html="true" /}
 
 Following the stroke event the patient is admitted to hospital, previous medications (via the list created in A.1) are reviewed and based on treatment, the hospital administration list is created. When the patient is stabilized and ready for discharge to the rehabilitation facility, the discharge list is created.
 
+#### C: Skilled Nursing Facility (SNF) - Rehabilitation
+
 {::options parse_block_html="false" /}
 <figure>
   <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc3.png" alt="A placeholder"/>
-  <figcaption>Figure A.3 - Admission to SNF for Rehab</figcaption>
+  <figcaption>Figure C.1 - Admission to SNF for Rehab</figcaption>
 </figure>
 {::options parse_block_html="true" /}
 
 The hospital discharge list is reviewed and revised to create the administration list for the Skilled Nursing facility (SNF). This list is updated during the patients stay in the facility. As medications are removed from the administration list, they are added to the discontinued medication list.
 
+#### D: Return to Community/Home
 {::options parse_block_html="false" /}
 <figure>
   <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc4.png" alt="A placeholder"/>
-  <figcaption>Figure A.4 - Discharge from SNF</figcaption>
+  <figcaption>Figure D.1 - Discharge from SNF</figcaption>
 </figure>
 {::options parse_block_html="true" /}
 
 The SNF prepared the discharge medication list for the patient in preparation for the transition back to the community.
 
+#### E: Medication Reconciliation in the Community
+
 {::options parse_block_html="false" /}
 <figure>
   <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc5.png" alt="A placeholder"/>
-  <figcaption>Figure A.5 - Return to Community/Home Health</figcaption>
+  <figcaption>Figure E.1 - Return to Community/Home Health</figcaption>
 </figure>
 {::options parse_block_html="true" /}
 
