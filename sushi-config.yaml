@@ -24,6 +24,7 @@ fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 6.1.0
   hl7.fhir.extensions.r5: 4.0.1
+  us.nlm.vsac: latest
 parameters:
   shownav: 'true'
   show-inherited-invariants: false
