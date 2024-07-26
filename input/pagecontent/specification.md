@@ -127,26 +127,32 @@ Following the stroke event the patient is admitted to hospital, previous medicat
 
 The hospital discharge list is reviewed and revised to create the administration list for the Skilled Nursing facility (SNF). This list is updated during the patients stay in the facility. As medications are removed from the administration list, they are added to the discontinued medication list.
 
+{% include uc5-seq.svg %}
+
+When rehabilitation in the SNF is complete the patient is ready to be returned to the home setting. Here the care team at the SNF prepare the SNF Discharge Medication list.
+
 #### D: Return to Community/Home
 {::options parse_block_html="false" /}
 <figure>
   <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc4.png" alt="A placeholder"/>
-  <figcaption>Figure D.1 - Discharge from SNF</figcaption>
+  <figcaption>Figure D.1 - Return to Community/Home Health</figcaption>
 </figure>
 {::options parse_block_html="true" /}
 
-The SNF prepared the discharge medication list for the patient in preparation for the transition back to the community.
+{% include uc6-seq.svg %}
+
+Back in the community, the home care team for the patient review the discharge medication list from the SNF (and may also review previous administration lists and the discontinued medication list), making any recommendations as appropriate and create the new home medication list.
 
 #### E: Medication Reconciliation in the Community
 
 {::options parse_block_html="false" /}
 <figure>
   <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc5.png" alt="A placeholder"/>
-  <figcaption>Figure E.1 - Return to Community/Home Health</figcaption>
+  <figcaption>Figure E.1 - Medication Reconciliation in the Community</figcaption>
 </figure>
 {::options parse_block_html="true" /}
 
-Back in the community, the home care team for the patient review the discharge medication list from the SNF (and may also review previous administration lists and the discontinued medication list), making any recommendations as appropriate and create the new home medication list.
+The Primary caregivers go to the community pharmacy, the home care team for the patient review the discharge medication list from the SNF (and may also review previous administration lists and the discontinued medication list), making any recommendations as appropriate and create the new home medication list.
 
 
 ### Testing Requirements

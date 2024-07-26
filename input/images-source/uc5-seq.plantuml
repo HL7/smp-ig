@@ -1,0 +1,28 @@
+@startuml
+skinparam responseMessageBelowArrow true
+
+
+actor "SNF\nCare Team" as CT
+participant "Skilled Nursing Facility\nEHR" as SNF
+database "Health Data\nManager" as HDM
+participant "Home Health Authority\nEHR" as HHA
+participant "Community\nPharmacy" as CP
+
+CT -> SNF: Define medications for discharge
+SNF -> SNF: Generate Discharge Medication List
+  loop for each medication
+    SNF -> SNF: Add medication to Discharge list
+  end
+
+alt Connection to HDM
+    SNF -> HDM: POST SMP-Bundle-Tx (Discharge Medication List)
+
+else Connection to HHA
+    SNF -> HHA: POST SMP-Bundle-Tx (Discharge Medication List)
+
+else Connection to Community Pharmacy
+    SNF -> CP: POST SMP-Bundle-Tx (Discharge Medication List)
+end
+
+caption Figure C.3: SNF Discharge
+@enduml

@@ -43,7 +43,7 @@ Ms. Smith has another medical event at home and is transferred to Hospital B. He
 *Special thanks to the PACIO project for allowing the use of their basic framework example scenario that has been adapted above.*
 
 ### Supported Use Cases
-In Figure 1, the patient is admitted to Healthcare Setting A due to the result of an adverse event, such as a fall. Healthcare setting A treats the patient and records the medications the patient is expected to receive on discharge. The results are captured in the electronic health record (EHR) system of Healthcare Setting A.
+In Figure 1, the patient is admitted to Healthcare Setting A due to the result of an adverse event, such as a fall or a stroke. Healthcare setting A treats the patient and records the medications the patient is expected to receive on discharge. The results are captured in the electronic health record (EHR) system of Healthcare Setting A.
 
 Healthcare Setting A transfers the patient to Healthcare Setting B. When the patient arrives at Healthcare Setting B, their clinicians can retrieve the medication profile of the patient at Healthcare Setting A, as part of the transfer summary, using the FHIR profiles for exchanging data defined in this Implementation Guide. Additionally, during the patient’s stay in Healthcare setting B, the clinicians document additional medications.
 

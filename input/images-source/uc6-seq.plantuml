@@ -1,0 +1,27 @@
+@startuml
+skinparam responseMessageBelowArrow true
+
+actor "HHA\nCare Team" as CT
+participant "HHA\nEHR" as HHA
+database "Health Data\nManager" as HDM
+
+
+CT -> HHA: Request medication info
+
+alt Previous Lists are requested
+    HHA -> HDM: GET SMP-Bundle (Query)
+    note left
+    The SNF Discharge
+    Medication List may be
+    available at the HHA but
+    other lists including the
+    Discontinued Medications
+    may form part of this query
+    end note
+    HHA <- HDM: existing Medication Lists
+end
+
+CT -> HHA: Revise orders (as necessary)
+
+caption Figure D.2: Return to Home Care
+@enduml
