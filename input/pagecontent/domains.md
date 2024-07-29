@@ -2,7 +2,7 @@
 
 ### Use
 
-The [supplemental guide](https://confluence.hl7.org/display/PC/Supplemental+Guide) provides a mapping of health and health-related domains that fall under the personal functioning and engagement umbrella. Implementers of this IG **SHOULD** include at least one category from the XXX on each observation instance conformant to this guide. Additionally, the code of the instance **SHOULD** come from the value set associated with the indicated category or categories. 
+Implementers of this IG **SHALL** support the main profiles support the Medication list exchanges, SMPMedicationList and SMPMedicationStatement conformant to this guide. Additionally, the profiles supporting the exchange of medication list information with the Bundle resource **SHOULD** be implemented at implementer discretion. 
 
 ### Motivation and Approach
 

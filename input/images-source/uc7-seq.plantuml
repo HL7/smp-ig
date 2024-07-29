@@ -1,0 +1,33 @@
+@startuml
+skinparam responseMessageBelowArrow true
+
+actor "Community\nPharmacist" as CP
+participant "Pharmacy\nSystem" as PMS
+participant "HHA\nEHR" as HHA
+database "Health Data\nManager" as HDM
+actor "Caregiver" as CG
+
+HHA -> PMS: Home Medications
+note right
+Medication Orders and the
+Home Medication List
+may be pushed to the
+community pharmacy on
+discharge from SNF
+end note
+
+CP -> PMS: Request medication info
+
+CP -> PMS: Request Prior medication lists
+
+PMS -> HDM: Query - MedicationList by Patient
+HDM -> PMS: MedicationLists
+PMS -> CP: Medication History
+CP -> CP: medication reconciliation
+CP -> PMS: Make order recommendations
+PMS -> HHA: Order recommendations
+
+CG -> HHA: Request Medication\ninformation from portal
+
+caption Figure E.2: Fill Medications in Community
+@enduml

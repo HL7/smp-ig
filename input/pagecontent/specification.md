@@ -152,7 +152,9 @@ Back in the community, the home care team for the patient review the discharge m
 </figure>
 {::options parse_block_html="true" /}
 
-The Primary caregivers go to the community pharmacy, the home care team for the patient review the discharge medication list from the SNF (and may also review previous administration lists and the discontinued medication list), making any recommendations as appropriate and create the new home medication list.
+{% include uc7-seq.svg %}
+
+The Primary caregivers go to the community pharmacy, the home care team for the patient review the discharge medication list from the SNF (and may also review previous administration lists and the discontinued medication list), making any recommendations as appropriate and create the new home medication list. The community pharmacist provides the medications to the caregiver with instructions, the caregiver can also the current home medication list from the patient portal of the Home Health Authority system.
 
 
 ### Testing Requirements

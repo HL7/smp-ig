@@ -27,7 +27,7 @@ This implementation guide works in alignment with the US CDI release 7.0.
 The Profile elements consist of both Mandatory and Must Support elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support]({{site.data.fhir.path}}profiling.html#mustsupport) guidance requires specifications to define the support expected for profile elements labeled Must Support.  Along with those expectations, the following rules on MustSupport are also required:
 
 * Intermediary Systems **SHALL** be capable of processing all data elements that are marked as Must Support.  They **SHALL** not generate an error or cause the application to fail due the presence of any data element marked as Must Support.
-* Intermediary Systems **SHALL** be capable of returning resource instances containing any of the data elements that are marked as Must Support on the XXXXX.
+* Intermediary Systems **SHALL** be capable of returning resource instances containing any of the data elements that are marked as Must Support.
 * Client Systems **SHALL** be capable of receiving all data elements that are marked as Must Support.  They **SHALL** not generate an error or cause the application to fail when receiving any data element that is marked as Must Support.
 
 ### Companion Implementation Guides
