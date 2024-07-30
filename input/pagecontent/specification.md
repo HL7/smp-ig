@@ -95,9 +95,12 @@ The abbreviations that appear in the following workflows are defined as:
 <br/>
 {::options parse_block_html="true" /}
 
+<br/><br/>
+
 {% include uc1-seq.svg %}
 
 In the initial diagram the capture of the patient medications, including both prescription and non-prescription items is performed and the information is record via a List resource and MedicationStatement resources as needed
+<br/>
 
 #### B: Hospital
 
@@ -108,11 +111,16 @@ In the initial diagram the capture of the patient medications, including both pr
 </figure>
 {::options parse_block_html="true" /}
 
+<br/><br/>
+
 {% include uc2-seq.svg %}
+<br/>
 
 Following the stroke event the patient is admitted to hospital, previous medications (via the list created in A.1) are reviewed and based on treatment, the hospital administration list is created. When the patient is stabilized and ready for discharge to the rehabilitation facility, the discharge list is created.
+<br/>
 
 {% include uc3-seq.svg %}
+<br/>
 
 #### C: Skilled Nursing Facility (SNF) - Rehabilitation
 
@@ -123,13 +131,23 @@ Following the stroke event the patient is admitted to hospital, previous medicat
 </figure>
 {::options parse_block_html="true" /}
 
+<br/><br/>
+
+
 {% include uc4-seq.svg %}
+
+<br/>
 
 The hospital discharge list is reviewed and revised to create the administration list for the Skilled Nursing facility (SNF). This list is updated during the patients stay in the facility. As medications are removed from the administration list, they are added to the discontinued medication list.
 
+<br/>
+
 {% include uc5-seq.svg %}
 
+<br/>
+
 When rehabilitation in the SNF is complete the patient is ready to be returned to the home setting. Here the care team at the SNF prepare the SNF Discharge Medication list.
+<br/>
 
 #### D: Return to Community/Home
 {::options parse_block_html="false" /}
@@ -139,9 +157,14 @@ When rehabilitation in the SNF is complete the patient is ready to be returned t
 </figure>
 {::options parse_block_html="true" /}
 
+<br/><br/>
+
 {% include uc6-seq.svg %}
 
+<br/>
+
 Back in the community, the home care team for the patient review the discharge medication list from the SNF (and may also review previous administration lists and the discontinued medication list), making any recommendations as appropriate and create the new home medication list.
+<br/>
 
 #### E: Medication Reconciliation in the Community
 
@@ -152,7 +175,10 @@ Back in the community, the home care team for the patient review the discharge m
 </figure>
 {::options parse_block_html="true" /}
 
+<br/><br/>
 {% include uc7-seq.svg %}
+
+<br/>
 
 The Primary caregivers go to the community pharmacy, the home care team for the patient review the discharge medication list from the SNF (and may also review previous administration lists and the discontinued medication list), making any recommendations as appropriate and create the new home medication list. The community pharmacist provides the medications to the caregiver with instructions, the caregiver can also the current home medication list from the patient portal of the Home Health Authority system.
 

@@ -61,6 +61,8 @@ The SMP implementation guide covers the exchange of the medication information n
 
 **Out Of Scope**
 
+As defined by the Joint Commission on Accreditation of Healthcare Organizations (JCAHO), medication reconciliation is "the process of comparing a patient's medication orders to all of the medications that the patient has been taking. This reconciliation is done to avoid medication errors such as omissions, duplications, dosing errors, or drug interactions. MR is separate step from the ordering process.  It is a process performed by different care team members that can lead to medication recommendations to the prescriber for the ordering process. The pharmacists MR process is different from other care team members and requires review of several data points, not just the comparison of one list to another.
+
 The SMP implementation guide does not discuss nor specify the process for medication reconciliation. Medication reconciliation is covered by the professional practices of the individuals performing same. The guide only seeks to ensure that the necessary information is made available or can be retrieved to/by the practitioner as needed.
 
 The SMP implementation guide does not specify the exchange of additional information beyond medication information. Additional information such as personal functioning or allergies are components of the medication reconciliation process however the exchange of this information is documented (see PACIO Transitions of Care implementation Guide) elsewhere and those implementation guides should be used.
