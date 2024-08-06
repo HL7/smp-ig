@@ -30,7 +30,7 @@ parameters:
   show-inherited-invariants: false
   path-expansion-params: '../../exp-params.json'
 copyrightYear: 2023+
-releaseLabel: ballot
+releaseLabel: STU1 Ballot
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
