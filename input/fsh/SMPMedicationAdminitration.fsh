@@ -2,7 +2,7 @@ Profile:        SMPMedicationAdministration
 Parent:         MedicationAdministration
 Id:             smp-medicationadministration
 Title:          "Standardized Medication Profile - MedicationAdministration"
-Description:    "The resource referenced from a MedicationStatement that defines the actual giving of a drug or compound to a patient. A profile was necessary for SMP to ensure the use of SMP and US Core profiles."
+Description:    "Defines the actual giving of a drug or compound to a patient for the purposes of treatment."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[0].valueCode = #phx
 * ^status = #active
@@ -12,6 +12,7 @@ Description:    "The resource referenced from a MedicationStatement that defines
 * ^contact[=].telecom.value = "http://www.hl7.org/Special/committees/medication"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * ^date = "2024-03-22T08:00:00-04:00"
+* ^purpose = "Profile is necessary to ensure the use of SMP and US Core specific profiles in referenced resources."
 
 * medication[x] only CodeableConcept or Reference($smp-medication)
 

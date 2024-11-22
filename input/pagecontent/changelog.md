@@ -1,6 +1,6 @@
 ### Version = 1.0.0
 - Based on FHIR version: 4.0.1
 
-This is the initial, ballot version of the US Standardized Medication Profile (SMP) FHIR Implementation Guide.
+This is the initial publication version of the US Standardized Medication Profile (SMP) FHIR Implementation Guide and contains the following changes as resolutions of the initial ballot (September 2024).
 
-This IG consists primarily of new content that is being balloted for the first time. However, it includes some content from a previous work that was balloted and published as a white paper, which has been incorporated here.
+- Updates to the description and purpose of the profiles for SMPMedication, SMPMedicationList, SMPMedicationAdministration, SMPMedicationStatement, SMPBundle and SMPBundleTransaction (FHIR-47580)

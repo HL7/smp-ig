@@ -2,7 +2,7 @@ Profile:        SMPMedication
 Parent:         $us-core-medication
 Id:             smp-medication
 Title:          "Standardized Medication Profile - Medication"
-Description:    "A description of a patient medication, may be used for non-prescription medications. Extended from US Core to require code and status"
+Description:    "A description of a patient medication, may be used for non-prescription medications. Contains specifics about the type and strength that can be used to inform medication reconciliation."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[0].valueCode = #phx
 * ^status = #active
@@ -12,6 +12,7 @@ Description:    "A description of a patient medication, may be used for non-pres
 * ^contact[=].telecom.value = "http://www.hl7.org/Special/committees/medication"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * ^date = "2023-10-16T01:00:00-04:00"
+* ^purpose = "Extended from US Core to require code and status"
 /*****
 ****/
 

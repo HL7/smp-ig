@@ -2,7 +2,7 @@ Profile: SMPBundle
 Parent: Bundle
 Id: smp-bundle
 Title: "Standardized Medication Profile - Bundle Medication List"
-Description: "This profile constrains a Bundle resource to carry the MedicationList and the associated supporting resources to retrieve a complete SMP information set."
+Description: "A single package that contains a specific kind of medication list with all supporting MedicationStatements and possibly other supporting resources."
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #phx
 * ^version = "1.0.0"
@@ -13,6 +13,7 @@ Description: "This profile constrains a Bundle resource to carry the MedicationL
 * ^contact[=].telecom.system = #url
 * ^contact[=].telecom.value = "http://www.hl7.org/Special/committees/medication"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
+* ^purpose = "Constrained Bundle that supplies only the MedicationList profiled List resource and the SMP profiled MedicationStatement and other supporting resources. A mechanism to allow for the retrieval in a single package of all of the details for a specific medication list."
 * type only code
 * type = #collection (exactly)
 * type MS

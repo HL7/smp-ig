@@ -2,7 +2,7 @@ Profile:        SMPMedicationList
 Parent:         List
 Id:             smp-medication-list
 Title:          "Standardized Medication Profile - Medication List"
-Description:    "The primary mechanism to group a related set of MedicationStatements together for a point in time list (Current administration, Discharge List, Discontinued list). "
+Description:    "A related set of descriptions of individual medications a patient is or has received. May be a currently being administered list, a list of medications for discharge or a list of discontinued medications (with reasons). The list is point in time."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[0].valueCode = #phx
 * ^status = #active
@@ -12,6 +12,7 @@ Description:    "The primary mechanism to group a related set of MedicationState
 * ^contact[=].telecom.value = "http://www.hl7.org/Special/committees/medication"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * ^date = "2024-02-01T01:00:00-04:00"
+* ^purpose = "The mechanism to group a related set of MedicationStatement resources together"
 /*****
 ****/
 

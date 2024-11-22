@@ -2,7 +2,7 @@ Profile: SMPBundleTransaction
 Parent: Bundle
 Id: smp-bundle-transaction
 Title: "Standardized Medication Profile - Bundle Medication List Maintenance"
-Description: "This profile constrains a Bundle resource to carry the MedicationList and the associated supporting resources to retrieve a complete SMP information set."
+Description: "A way to define and create a specific kind of medication list and the various medications that are on the list in a single transaction."
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #phx
 * ^version = "1.0.0"
@@ -13,6 +13,7 @@ Description: "This profile constrains a Bundle resource to carry the MedicationL
 * ^contact[=].telecom.system = #url
 * ^contact[=].telecom.value = "http://www.hl7.org/Special/committees/medication"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
+* ^purpose = "Constrained Bundle that supplies only the MedicationList profiled List resource and the SMP profiled MedicationStatement and other supporting resources. A mechanism to allow for the creation of a new medication list or an updated version of a list (full replacement) with the supporting MedicationStatement resources"
 * type only code
 * type = #transaction (exactly)
 * type MS

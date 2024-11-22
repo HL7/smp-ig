@@ -7,7 +7,7 @@ Profile:        SMPMedicationStatement
 Parent:         MedicationStatement
 Id:             smp-medicationstatement
 Title:          "Standardized Medication Profile - MedicationStatement"
-Description:    "The focal resource within the MedicationList that defines a patient's use of a drug or compound"
+Description:    "The description of a medication or drug that a patient is taking or prescribed. Or a medication or drug that a patient did take or was prescribed in the past."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[0].valueCode = #phx
 * ^status = #active
@@ -17,6 +17,8 @@ Description:    "The focal resource within the MedicationList that defines a pat
 * ^contact[=].telecom.value = "http://www.hl7.org/Special/committees/medication"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * ^date = "2024-03-22T08:00:00-04:00"
+* ^purpose = "The focal resource within the MedicationList profile of List"
+
 /*****
 ****/
 
