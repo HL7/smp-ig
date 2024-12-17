@@ -57,6 +57,8 @@ pages:
     title: Downloads
   credits.md:
     title: Credits
+  references.md:
+    title: Referenences
   changelog.md:
     title: Change Log
 
@@ -68,6 +70,7 @@ menu:
     Domains: domains.html
     Technical Background: background.html
     Formal Specification: specification.html
+    References: references.html
     Credits: credits.html
   FHIR Artifacts:
     Artifacts Overview: fhirArtifacts.html

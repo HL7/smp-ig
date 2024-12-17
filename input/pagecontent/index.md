@@ -26,6 +26,7 @@ The implementation guide is organized into the following sections:
 * [Artifacts](fhirArtifacts.html) introduces and provides links to the FHIR [R4](artifacts.html) profiles, operations and other FHIR artifacts used in this implementation guide
 * [Downloads](downloads.html) allows download of this and other specifications as well as other useful files
 * [Credits](credits.html) identifies the individuals and organizations involved in developing this implementation guide
+* [References](references.html) formal reference to quoted publications
 
 ### Dependencies
 This implementation guide relies on the following other specifications:
