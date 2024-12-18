@@ -21,8 +21,6 @@ A systematic review about the prevalence and nature of medication errors and med
 > the median rate of medication error or unintentional medication discrepancy[^B] was about 50% in elderly patients, post-hospital discharge. Additionally, 20% of these patients were reported to experience an ADE after hospital discharge. Antibiotics, antidiabetics, analgesics and cardiovascular drugs were the most common medications reported with an ADE.
 
 
-### Current State
-
 ### Business Requirements
 
 #### Example Scenario
