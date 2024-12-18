@@ -43,13 +43,8 @@ The interactions can be comprised of completely RESTful operations for the stora
 
 
 The first entry in the Bundle **SHALL** be a List resource complying with the MedicationList defined in this IG to ensure the content is sufficient to appropriately populate a full medication list.
- 
-All GUIDs used **SHALL** be unique, including across independent prior authorization submissions - with the exception that the same resource instance being referenced in distinct prior authorization request Bundles can have the same GUID.
 
 All resources **SHALL** comply with their respective profiles.  FHIR elements not marked as 'must support' **MAY** be included in resources, but client systems should have no expectation of such elements being processed.
-
-This IG treats everything that happens beyond the defined operations endpoint receiving the FHIR bundle as a black box.  This black box includes any business associate(s), clearinghouse(s), payers, contracted review entities,  and other intermediaries that may be involved in the PA request and response. It is up to that black box to ensure that any regulatory requirements are met and to perform all processing within the allowed timeframe.
-
 
 All transactions in SMP are synchronous and **SHALL** require one of the following HTTP responses:
 
