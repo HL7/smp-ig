@@ -8,3 +8,4 @@ This is the initial publication version of the US Standardized Medication Profil
 - Remove extraneous paragraphs from section 5.2.1 (FHIR-47259)
 - Remove empty Current State section in Use Case (FHIR-48295)
 - Update text in Section 1.2 to provide Domain description (FHIR-46704)
+- Remove references to CMS in section 2.2.1 (FHIR-47319)
