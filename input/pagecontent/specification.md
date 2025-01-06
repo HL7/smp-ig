@@ -39,10 +39,11 @@ The full set of profiles defined in this implementation guide can be found by fo
 
 The primary interaction supported by this implementation guide is POST and GET
 
-The interactions can be comprised of completely RESTful operations for the storage and retrieval of resources but there are situations where the submission of a transaction Bundle containing the primary List resource and all of the associated MedicationStatement resources would be appropriate. 
+The interactions can be comprised of completely RESTful operations for the storage and retrieval of resources but there are situations where the submission of a transaction Bundle containing the primary List resource and all of the associated MedicationStatement resources would be appropriate, in these situations, where allowed by the server, use the SMPBundle and SMPBundleTransaction profiles as required. 
 
 
-The first entry in the Bundle **SHALL** be a List resource complying with the MedicationList defined in this IG to ensure the content is sufficient to appropriately populate a full medication list.
+
+When using a Bundle, the first entry in the Bundle **SHALL** be a List resource complying with the MedicationList defined in this IG to ensure the content is sufficient to appropriately populate a full medication list.
 
 All resources **SHALL** comply with their respective profiles.  FHIR elements not marked as 'must support' **MAY** be included in resources, but client systems should have no expectation of such elements being processed.
 
@@ -80,6 +81,8 @@ The abbreviations that appear in the following workflows are defined as:
 | SNF | Skilled Nursing Facility |
 
 All of the information exchanges described in the following sections cover the transitions between care facilities and do not cover the internal events that will update and alter the medication lists during a patient's inpatient stay.
+
+In the interaction diagrams following, the Bundle versions of the updates and retrievals have been used to simplify the diagrams. It is possible to store and retrieve individual resources and still meet the use case requirements with additional interactions between servers and clients.
 
 #### A: Home - Pre-stroke
 

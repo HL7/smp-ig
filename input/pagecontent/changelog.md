@@ -20,3 +20,4 @@ This is the initial publication version of the US Standardized Medication Profil
 - Add IP considerations to home page (FHIR-46757)
 - Add dependency table to home page (FHIR-46756)
 - Correct US Core version on background page (FHIR-47234)
+- Added text on use of Bundles in 5.2.1 and 5.3 (FHIR-46994)
