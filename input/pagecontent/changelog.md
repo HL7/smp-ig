@@ -17,3 +17,4 @@ This is the initial publication version of the US Standardized Medication Profil
 - Added preamble text to Domains page to clarify purpose (FHIR-46988)
 - Add contrast of MedicationStatement and MedicationRequest/MedicationAdministration to MedicationStatement (FHIR-46873)
 - Add link to RESTful FHIR exchanges to background page (FHIR-46989)
+- Add IP considerations to home page (FHIR-46757)

@@ -53,6 +53,11 @@ This implementation guide relies on the following other specifications:
 
 This implementation guide defines additional constraints and usage expectations above and beyond the information found in these base specifications.
 
+### Intellectual Property Considerations
+This implementation guide and the underlying FHIR specification are licensed as public domain under the [FHIR license](http://hl7.org/fhir/R4/license.html#license). The license page also describes rules for the use of the FHIR name and logo.
+
+{% include ip-statements.xhtml %}
+
 ### Acknowledgements
 This implementation guide was created under the supervision and review of the HL7 [Pharmacy Work Group](http://www.hl7.org/Special/committees/medications) (sponsor) with [Patient Care](http://www.hl7.org/Special/Committees/pcwg) (co-sponsor) and [EHR](http://www.hl7.org/Special/Committees/ehr) (co-sponsor) work groups.
 
