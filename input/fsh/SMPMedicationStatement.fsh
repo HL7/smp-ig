@@ -26,6 +26,9 @@ Description:    "The description of a medication or drug that a patient is takin
 
 * partOf only Reference($us-core-medicationdispense or $smp-medicationadministration)
 
+* note
+  * ^definition = "Provides extra information about the medication statement that is not conveyed by the other attributes, e.g. the approximate supply duration available to the patient or a pending shortage."
+
 * medication[x] only CodeableConcept or Reference($smp-medication)
 
 * subject only Reference($us-core-patient)
