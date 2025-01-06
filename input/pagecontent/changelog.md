@@ -16,3 +16,4 @@ This is the initial publication version of the US Standardized Medication Profil
 - Update definition of MedicationStatement.note to indicate capturing supply duration (FHIR-47717)
 - Added preamble text to Domains page to clarify purpose (FHIR-46988)
 - Add contrast of MedicationStatement and MedicationRequest/MedicationAdministration to MedicationStatement (FHIR-46873)
+- Add link to RESTful FHIR exchanges to background page (FHIR-46989)

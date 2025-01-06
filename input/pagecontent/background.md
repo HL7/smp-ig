@@ -16,6 +16,7 @@ specific to FHIR.  Before reading this implementation guide, it's important to b
 * [References between Resources]({{site.data.fhir.path}}references.html)
 * [How to Read Resource & Profile Definitions]({{site.data.fhir.path}}formats.html)
 * [Base Resource]({{site.data.fhir.path}}resource.html)
+* [RESTful Exchanges in FHIR]({{site.data.fhir.path}}http.html)
 
 This implementation guide supports the [R4]({{site.data.fhir.path}}index.html) version of the FHIR standard.
 
