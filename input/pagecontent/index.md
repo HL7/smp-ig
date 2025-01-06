@@ -47,9 +47,11 @@ The implementation guide is organized into the following sections:
 * [References](references.html) formal reference to quoted publications
 
 ### Dependencies
-This implementation guide relies on the following other specifications:
-* **[FHIR R4]({{site.data.fhir.path}})** - The 'current' official version of FHIR as of the time this implementation guide was published.  See the [background page](background.html#fhir) for key pieces of this specification implementers should be familiar with.
-* **[US Core]({{site.data.fhir.hl7_fhir_us_core}})** - The 6.1.0 version of US Core based on FHIR R4.
+This guide is based on the [FHIR R4]({{site.data.fhir.path}}) specification that is mandated for use in the U.S.
+
+In addition, this guide also relies on a number of parent implementation guides:
+
+{% include dependency-table-nontech.xhtml %}
 
 This implementation guide defines additional constraints and usage expectations above and beyond the information found in these base specifications.
 

@@ -18,3 +18,4 @@ This is the initial publication version of the US Standardized Medication Profil
 - Add contrast of MedicationStatement and MedicationRequest/MedicationAdministration to MedicationStatement (FHIR-46873)
 - Add link to RESTful FHIR exchanges to background page (FHIR-46989)
 - Add IP considerations to home page (FHIR-46757)
+- Add dependency table to home page (FHIR-46756)
