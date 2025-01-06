@@ -75,7 +75,7 @@ The abbreviations that appear in the following workflows are defined as:
 | Abbrev. | Expansion |
 |  | ----------- |
 | EHR | Electronic Health record system |
-| HDM | Health Data Manager (a repository or exchange to help locate a patient's records) |
+| HDM | Health Data Manager - a generalized term for a centralized repository or exchange to help locate and retrieve patient's records. This may be a central repository within a health system or a mechanism to allow retrieval from a group of federated repositories. |
 | HHA | Home Health Authority |
 | SNF | Skilled Nursing Facility |
 
@@ -95,7 +95,9 @@ All of the information exchanges described in the following sections cover the t
 
 {% include uc1-seq.svg %}
 
-In the initial diagram the capture of the patient medications, including both prescription and non-prescription items is performed and the information is record via a List resource and MedicationStatement resources as needed
+In the initial diagram the capture of the patient medications, including both prescription and non-prescription items is performed and the information is record via a List resource and MedicationStatement resources as needed.
+
+*See abbreviations above for a description of Health Data Manager*
 <br/>
 
 #### B: Hospital
