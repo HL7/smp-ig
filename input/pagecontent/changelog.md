@@ -14,3 +14,4 @@ This is the initial publication version of the US Standardized Medication Profil
 - Add additional text to Section 5.3 to clarify that exchanges do not cover internal events (FHIR-46993)
 - Add description of Health Data Manager (FHIR-46992)
 - Update definition of MedicationStatement.note to indicate capturing supply duration (FHIR-47717)
+- Added preamble text to Domains page to clarify purpose (FHIR-46988)

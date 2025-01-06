@@ -1,4 +1,5 @@
 
+This implementation guide provides a set of resource profiles to define how information should be packaged and retrieved in the exchange of medication data. This guide outlines the technical specification but requires the understanding of non-technical participants in implementation.
 
 ### Use
 
