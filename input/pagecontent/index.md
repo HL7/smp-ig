@@ -44,7 +44,6 @@ The implementation guide is organized into the following sections:
 * [Formal Specification](specification.html) covers the detailed implementation requirements and conformance expectations
 * [Artifacts](fhirArtifacts.html) introduces and provides links to the FHIR [R4](artifacts.html) profiles, operations and other FHIR artifacts used in this implementation guide
 * [Downloads](downloads.html) allows download of this and other specifications as well as other useful files
-* [Credits](credits.html) identifies the individuals and organizations involved in developing this implementation guide
 * [References](references.html) formal reference to quoted publications
 
 ### Dependencies
@@ -53,4 +52,33 @@ This implementation guide relies on the following other specifications:
 * **[US Core]({{site.data.fhir.hl7_fhir_us_core}})** - The 6.1.0 version of US Core based on FHIR R4.
 
 This implementation guide defines additional constraints and usage expectations above and beyond the information found in these base specifications.
+
+### Acknowledgements
+This implementation guide was created under the supervision and review of the HL7 [Pharmacy Work Group](http://www.hl7.org/Special/committees/medications) (sponsor) with [Patient Care](http://www.hl7.org/Special/Committees/pcwg) (co-sponsor) and [EHR](http://www.hl7.org/Special/Committees/ehr) (co-sponsor) work groups.
+
+This implementation guide was co-developed and balloted with the [National Council for Prescription Drug Programs (NCPDP)](http://www.ncpdp.org)
+
+Organizational participants included: The participants of the NCPDP WG14/WG10 Standardized Medication Profile Task Group
+
+Our thanks to these and to the many others who contributed their time, enthusiasm and expertise to this work.
+
+
+#### Authors
+Primary authors:
+
+| name | organization | contact |
+| ---- | ------------ | ------- |
+| Andy Stechishin | CANA Software & Services Ltd. | andy@canasoftware.ca |
+
+Guide Author Support:
+
+| name | organization | contact |
+| ---- | ------------ |---------|
+| Rachelle (Shelly) Spiro | Pharmacy HIT Collaborative | shelly@pharmacyhit.org |
+
+Supporting Resources Provided by the Department of Veterans Affairs:
+
+| name | department                                                   | contact |
+| ---- |--------------------------------------------------------------|---------|
+| Mary Kay McDaniel | Health System Specialist, KBS Standards and Interoperability | marykay.mcdaniel@outlook.com |
 

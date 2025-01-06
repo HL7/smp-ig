@@ -55,8 +55,6 @@ pages:
     title: Artifacts Overview
   downloads.md:
     title: Downloads
-  credits.md:
-    title: Credits
   references.md:
     title: Referenences
   changelog.md:
@@ -71,7 +69,6 @@ menu:
     Technical Background: background.html
     Formal Specification: specification.html
     References: references.html
-    Credits: credits.html
   FHIR Artifacts:
     Artifacts Overview: fhirArtifacts.html
     SMP Specific: artifacts.html
