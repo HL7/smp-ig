@@ -11,3 +11,4 @@ This is the initial publication version of the US Standardized Medication Profil
 - Remove references to CMS in section 2.2.1 (FHIR-47319)
 - Add Plain Language About HL7 and About this Guide to overview page (FHIR-47578)
 - Move Credits page contents to Overview page (FHIR-47581)
+- Add additional text to Section 5.3 to clarify that exchange do not cover internal events (FHIR-46993)

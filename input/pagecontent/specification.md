@@ -79,6 +79,7 @@ The abbreviations that appear in the following workflows are defined as:
 | HHA | Home Health Authority |
 | SNF | Skilled Nursing Facility |
 
+All of the information exchanges described in the following sections cover the transitions between care facilities and do not cover the internal events that will update and alter the medication lists during a patient's inpatient stay.
 
 #### A: Home - Pre-stroke
 
