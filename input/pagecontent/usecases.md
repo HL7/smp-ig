@@ -61,7 +61,7 @@ As defined by the Joint Commission on Accreditation of Healthcare Organizations 
 
 The SMP implementation guide does not discuss nor specify the process for medication reconciliation. Medication reconciliation is covered by the professional practices of the individuals performing same. The guide only seeks to ensure that the necessary information is made available or can be retrieved to/by the practitioner as needed.
 
-The SMP implementation guide does not specify the exchange of additional information beyond medication information. Additional information such as personal functioning or allergies are components of the medication reconciliation process however the exchange of this information is documented (see PACIO Transitions of Care implementation Guide) elsewhere and those implementation guides should be used.
+The SMP implementation guide does not specify the exchange of additional information beyond medication information. Additional information such as personal functioning or allergies are components of the medication reconciliation process however the exchange of this information is documented (see PACIO Transitions of Care implementation Guide) elsewhere and those implementation guides should be used. Drug Allergy information is of particular importance to the medication reconciliation process but is out of scope for this guide. Allergy information can be exchanged using the [International Patient Summary](https://hl7.org/fhir/uv/ips/).
 
 [^1]: [McCarthy (2021)](references.html#mccarthy-2021)
 [^2]: [MedPAC (2020)](references.html#medpac-2020)
