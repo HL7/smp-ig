@@ -20,7 +20,7 @@ specific to FHIR.  Before reading this implementation guide, it's important to b
 
 This implementation guide supports the [R4]({{site.data.fhir.path}}index.html) version of the FHIR standard.
 
-This implementation guide also builds on the [US Core (STU3 - R4 based)]({{site.data.fhir.hl7_fhir_us_core}}) Implementation Guide and implementers need to familiarize themselves with the profiles in that IG.
+This implementation guide also builds on the [US Core IG 6.1.0](https://hl7.org/fhir/us/core/STU6.1/index.html) Implementation Guide and implementers need to familiarize themselves with the profiles in that IG.
 
 This implementation guide works in alignment with the US CDI release 7.0.
 

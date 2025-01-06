@@ -19,3 +19,4 @@ This is the initial publication version of the US Standardized Medication Profil
 - Add link to RESTful FHIR exchanges to background page (FHIR-46989)
 - Add IP considerations to home page (FHIR-46757)
 - Add dependency table to home page (FHIR-46756)
+- Correct US Core version on background page (FHIR-47234)
