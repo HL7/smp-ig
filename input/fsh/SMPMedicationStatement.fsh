@@ -7,7 +7,7 @@ Profile:        SMPMedicationStatement
 Parent:         MedicationStatement
 Id:             smp-medicationstatement
 Title:          "Standardized Medication Profile - MedicationStatement"
-Description:    "The description of a medication or drug that a patient is taking or prescribed. Or a medication or drug that a patient did take or was prescribed in the past."
+Description:    "The description of a medication or drug that a patient is taking or prescribed. Or a medication or drug that a patient did take or was prescribed in the past. MedicationStatement can be created from a number of sources and may be anecdotal which can be useful in the recording of non-prescription, over-the-counter items. MedicationRequest and MedicationAdministration are a formal record of medications prescribed and given."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[0].valueCode = #phx
 * ^status = #active

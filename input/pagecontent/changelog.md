@@ -15,3 +15,4 @@ This is the initial publication version of the US Standardized Medication Profil
 - Add description of Health Data Manager (FHIR-46992)
 - Update definition of MedicationStatement.note to indicate capturing supply duration (FHIR-47717)
 - Added preamble text to Domains page to clarify purpose (FHIR-46988)
+- Add contrast of MedicationStatement and MedicationRequest/MedicationAdministration to MedicationStatement (FHIR-46873)
