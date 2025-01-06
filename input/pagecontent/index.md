@@ -33,7 +33,7 @@ The HL7 FHIR Standardized Medication Profile (SMP) Implementation Guide defines 
 **Medication reconciliation** is a process performed by healthcare professionals (such as pharmacists) to ensure the patient is receiving the correct medications/drugs for their condition and situation. This guide does not define the medication reconciliation process, the guidelines for the process will be established for the specific healthcare profession as a standard of practice. This guides describes how data can be provided so the medication reconciliation is done with the best data available.
 
 ### Overview
-This Implementation Guide identifies and defines the components of an interoperable medication profile for clinicians, patients and caregivers to use for the exchange of essential medication information during transitions of care to and from post-acute care settings.
+This Implementation Guide identifies and defines the components of an interoperable medication profile for clinicians, patients and caregivers to use for the exchange of essential medication information. One of the main drivers is the exchange during transitions of care to and from post-acute care settings, however other use cases may also be served by this guide.
 
 ### Content and organization
 The implementation guide is organized into the following sections:

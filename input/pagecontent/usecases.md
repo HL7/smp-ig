@@ -1,5 +1,5 @@
 ### Purpose and Need
-This implementation identifies and defines the components of an interoperable medication profile for clinicians, patients and caregivers to use for the exchange of essential medication information during transitions of care to and from post-acute care settings.
+This implementation identifies and defines the components of an interoperable medication profile for clinicians, patients and caregivers to use for the exchange of essential medication information. These exchanges are vitally important to the patient's well-being during transitions of care to and from post-acute care settings but are also applicable to many situations.
 
 The communication of health information, including medications, is critical to ensuring safe and effective transitions from one health care setting to another. Medication errors, poor communication and poor coordination between providers, along with the rising incidence of preventable adverse events and hospital readmissions, have drawn national attention to the importance of the timely transfer of medication information between post-acute care (PAC) providers, including Long-term Care Hospitals(LTCH), Inpatient Rehabilitation Facilities (IRF), Skilled Nursing Facilities (SNF), Home Health Agencies (HHA) and other settings.
 

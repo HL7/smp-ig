@@ -21,3 +21,4 @@ This is the initial publication version of the US Standardized Medication Profil
 - Add dependency table to home page (FHIR-46756)
 - Correct US Core version on background page (FHIR-47234)
 - Added text on use of Bundles in 5.2.1 and 5.3 (FHIR-46994)
+- Clarified business scope in 1.2 and 2.1 (FHIR-46986)
