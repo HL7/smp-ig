@@ -24,3 +24,4 @@ This is the initial publication version of the US Standardized Medication Profil
 - Clarified business scope in 1.2 and 2.1 (FHIR-46986)
 - Align text and illustration in section 2.3.1 (FHIR-46987)
 - Add reference to IPS for allergies in 2.4.1 (FHIR-46840)
+- Add operations, parameter profiles, examples and update section 5.2 to define operations (FHIR-46990) 

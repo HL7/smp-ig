@@ -22,7 +22,7 @@ One of the HL7 standards is HL7 FHIR (Fast Healthcare Interoperability Resources
 
 A goal of HL7 is to make sure everyone involved in your healthcare has the right information at the right time. Our standards help machines and people, including you, work together to make better decisions for your health. HL7 sets rules that computer systems follow, so they can understand and share information in a consistent and reliable way.
 
-To learn more about HL7, you can visit the website hl7.org
+To learn more about HL7, you can visit the website [hl7.org](https://www.hl7.org).
 
 The people at HL7 make guides that explain how to use the rules (standards) for different things. These guides bring the rules together and show how to use them for specific purposes.
 
@@ -85,7 +85,7 @@ Guide Author Support:
 
 Supporting Resources Provided by the Department of Veterans Affairs:
 
-| name | department                                                   | contact |
-| ---- |--------------------------------------------------------------|---------|
-| Mary Kay McDaniel | Health System Specialist, KBS Standards and Interoperability | marykay.mcdaniel@outlook.com |
+| name | department                                                   | contact                 |
+| ---- |--------------------------------------------------------------|-------------------------|
+| Mary Kay McDaniel | Health System Specialist, KBS Standards and Interoperability | marykay.mcdaniel@va.gov |
 

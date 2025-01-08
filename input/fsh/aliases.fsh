@@ -6,6 +6,7 @@ Alias: Hl7FhirAdminGender  = http://hl7.org/fhir/administrative-gender
 Alias: NUCC = http://nucc.org/provider-taxonomy
 Alias: $loinc = http://loinc.org
 Alias: $rxnorm = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $snomed = http://snomed.info/sct
 
 // Value Sets
