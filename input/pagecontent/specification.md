@@ -39,7 +39,7 @@ The full set of profiles defined in this implementation guide can be found by fo
 
 The primary interaction supported by this implementation guide is POST and GET. As an alternative to the granular REST transactions there are optional operations defined.
 
-The interactions can be comprised of completely RESTful operations for the storage and retrieval of resources but there are situations where the submission of a transaction Bundle containing the primary List resource and all of the associated MedicationStatement resources would be appropriate. As an alternative, where allowed by the server, use the SMPBundle and SMPBundleTransaction profiles and the SMPOperationRetrieve and SMPOperationSubmit operations. 
+The interactions can be comprised of completely RESTful operations for the storage and retrieval of resources but there are situations where the submission of a transaction Bundle containing the primary List resource and all of the associated MedicationStatement resources would be appropriate. As an alternative, where allowed by the server, use the [Bundle Medication List](StructureDefinition-smp-bundle.html) and [Bundle Medication List Maintenance](StructureDefinition-smp-bundle-transaction.html) profiles and the [SMP Operation Retrieve](OperationDefinition-smp-operation-retrieve.html) and [SMP Operation Submit](OperationDefinition-smp-operation-submit.html) operations. 
 
 
 When using a Bundle, the first entry in the Bundle **SHALL** be a List resource complying with the MedicationList defined in this IG to ensure the content is sufficient to appropriately populate a full medication list.

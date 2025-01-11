@@ -25,8 +25,6 @@ Usage: #definition
 * rest
   * mode = #client
 
-  * insert CSresource(#Patient, $us-core-patient)
-    * insert CSinteraction(#SHALL, #read, [[Required for identification and retrieval of patient medication information]])
   * insert CSresource(#List, $smp-medicationlist)
     * insert CSinteraction(#SHALL, #read, [[Allows retrieval medication details.]])
   * insert CSresource(#MedicationStatement, $smp-medicationstatement)
@@ -37,15 +35,11 @@ Usage: #definition
     * insert CSinteraction(#SHOULD, #read, [[Allows retrieval .  (Support is mandatory if the system supports MedicationRequests)]])
   * insert CSresource(#MedicationAdministration, $smp-medicationadministration)
     * insert CSinteraction(#SHOULD, #read, [[Allows retrieval medication details.  (Support is mandatory if the system supports MedicationAdministrations)]])
+  * insert CSresource(#Patient, $us-core-patient)
+    * insert CSinteraction(#SHALL, #read, [[Required for identification and retrieval of patient medication information]])
   * resource[+]
     * type = #Bundle
     * supportedProfile[0] = $smp-bundle
     * supportedProfile[+] = $smp-bundle-tx
   * insert CSinteraction(#MAY, #read, [[Allows retrieval using extended bundles and submission of new medication list to a repository.]])
-  * operation[0]
-    * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-    * extension.valueCode = #SHALL
-    * name = "smp-query"
-    * definition = "http://hl7.org/fhir/us/smp/OperationDefinition/smp-operation-retrieve"
-    * documentation = "Operation used to retrieve individual patient's medication history"
 

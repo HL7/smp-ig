@@ -26,3 +26,4 @@ This is the initial publication version of the US Standardized Medication Profil
 - Add reference to IPS for allergies in 2.4.1 (FHIR-46840)
 - Add operations, parameter profiles, examples and update section 5.2 to define operations (FHIR-46990)
 - Add REST resources to capability statements (FHIR-47240)
+- Add use of operations to capability statements and link the operations from section 5.2 (FHIR-47000)
