@@ -12,7 +12,7 @@ Usage: #definition
 * contact[0].name = "HL7 International / Pharmacy"
 * contact[=].telecom.system = #url
 * contact[=].telecom.value = "http://www.hl7.org/Special/committees/medication"
-* description = "This resource defines the expected capabilities of the SMP Server actor when conforming to the SMP IG and It is expected that it will be used in conjunction with the US Core CapabilityStatement. Together they describe the complete list of actual profiles and RESTful operations supported by SMP clients. SMP CLient requirements may also be impacted by the rules of local jurisdictions or other contextual requirements."
+* description = "This resource defines the expected capabilities of the SMP Server actor when conforming to the SMP IG and It is expected that it will be used in conjunction with the US Core CapabilityStatement. Together they describe the complete list of actual profiles and RESTful operations supported by SMP clients. SMP Client requirements may also be impacted by the rules of local jurisdictions or other contextual requirements."
 * jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -22,4 +22,30 @@ Usage: #definition
 * format[=].extension.valueCode = #SHALL
 * format[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * format[=].extension.valueCode = #SHOULD
-* rest.mode = #client
+* rest
+  * mode = #client
+
+  * insert CSresource(#Patient, $us-core-patient)
+    * insert CSinteraction(#SHALL, #read, [[Required for identification and retrieval of patient medication information]])
+  * insert CSresource(#List, $smp-medicationlist)
+    * insert CSinteraction(#SHALL, #read, [[Allows retrieval medication details.]])
+  * insert CSresource(#MedicationStatement, $smp-medicationstatement)
+    * insert CSinteraction(#SHALL, #read, [[Allows retrieval medication details.]])
+  * insert CSresource(#Medication, $smp-medication)
+    * insert CSinteraction(#SHOULD, #read, [[Allows retrieval medication details.  (Support is mandatory if the system supports Medications)]])
+  * insert CSresource(#MedicationRequest, $us-core-medicationrequest)
+    * insert CSinteraction(#SHOULD, #read, [[Allows retrieval .  (Support is mandatory if the system supports MedicationRequests)]])
+  * insert CSresource(#MedicationAdministration, $smp-medicationadministration)
+    * insert CSinteraction(#SHOULD, #read, [[Allows retrieval medication details.  (Support is mandatory if the system supports MedicationAdministrations)]])
+  * resource[+]
+    * type = #Bundle
+    * supportedProfile[0] = $smp-bundle
+    * supportedProfile[+] = $smp-bundle-tx
+  * insert CSinteraction(#MAY, #read, [[Allows retrieval using extended bundles and submission of new medication list to a repository.]])
+  * operation[0]
+    * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+    * extension.valueCode = #SHALL
+    * name = "smp-query"
+    * definition = "http://hl7.org/fhir/us/smp/OperationDefinition/smp-operation-retrieve"
+    * documentation = "Operation used to retrieve individual patient's medication history"
+
