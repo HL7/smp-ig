@@ -87,7 +87,7 @@ In the interaction diagrams following, the Bundle versions of the updates and re
 
 {::options parse_block_html="false" /}
 <figure>
-  <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc1.png" alt="A placeholder"/>
+  <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc1.png" alt="A diagram showing the control flows for showing the recording of home health medications"/>
   <figcaption>Figure A.1 - Home Health recording medications</figcaption>
 </figure>
 <br/>
@@ -106,7 +106,7 @@ In the initial diagram the capture of the patient medications, including both pr
 
 {::options parse_block_html="false" /}
 <figure>
-  <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc2.png" alt="A placeholder"/>
+  <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc2.png" alt="A diagram showing the control flows for admission of a patient to hospital fllwing a stroke"/>
   <figcaption>Figure B.1 - Admission to Hospital following stroke</figcaption>
 </figure>
 {::options parse_block_html="true" /}
@@ -126,7 +126,7 @@ Following the stroke event the patient is admitted to hospital, previous medicat
 
 {::options parse_block_html="false" /}
 <figure>
-  <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc3.png" alt="A placeholder"/>
+  <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc3.png" alt="A diagram showing the control flows for showing the admission of a patient to a SNF"/>
   <figcaption>Figure C.1 - Admission to SNF for Rehab</figcaption>
 </figure>
 {::options parse_block_html="true" /}
@@ -152,7 +152,7 @@ When rehabilitation in the SNF is complete the patient is ready to be returned t
 #### D: Return to Community/Home
 {::options parse_block_html="false" /}
 <figure>
-  <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc4.png" alt="A placeholder"/>
+  <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc4.png" alt="A diagram showing the control flows for returning a patient to community health"/>
   <figcaption>Figure D.1 - Return to Community/Home Health</figcaption>
 </figure>
 {::options parse_block_html="true" /}
@@ -170,7 +170,7 @@ Back in the community, the home care team for the patient review the discharge m
 
 {::options parse_block_html="false" /}
 <figure>
-  <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc5.png" alt="A placeholder"/>
+  <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc5.png" alt="A diagram showing the control flows for medication reconciliation in the community"/>
   <figcaption>Figure E.1 - Medication Reconciliation in the Community</figcaption>
 </figure>
 {::options parse_block_html="true" /}
@@ -182,6 +182,19 @@ Back in the community, the home care team for the patient review the discharge m
 
 The Primary caregivers go to the community pharmacy, the home care team for the patient review the discharge medication list from the SNF (and may also review previous administration lists and the discontinued medication list), making any recommendations as appropriate and create the new home medication list. The community pharmacist provides the medications to the caregiver with instructions, the caregiver can also the current home medication list from the patient portal of the Home Health Authority system.
 
+### Resource Structure
+The diagram below illustrates the structure of the relationships between the various resources in this IG. The resources present the internals as accurately as possible with some shortcuts to flatten the JSON structure (collapsing arrays to a single indexed attribute '[0]' for example or collapsing structure to a single attribute 'dosage.text'). The resources may not be instance valid but should give a clear idea of the relationships and how the data is stored across the resource graph. The Patient resource instance is only provided once on the diagram, the additional references to the Patient resource instance all use the 'Patient/*identifier*' and appear in <span style="text-decoration: underline red">red text and underlined</span>.
+
+{::options parse_block_html="false" /}
+<figure>
+  <img style="padding-top:0;padding-bottom:30px" width="1300px" src="struct.svg" alt="Resource inter-relationship diagram"/>
+  <figcaption>Figure F.1 - Medication List Resource Structure</figcaption>
+</figure>
+{::options parse_block_html="true" /}
+
+<br/>
+
+The diagram has been constrained to common browser widths. Open the diagram in its own window to view full-size.
 
 ### Testing Requirements
 It is the intent of this implementation guide to provide specifications for the exchange of medication information in a way that is conducive to developing test scripts and a reference implementation (RI) that can be used to validate/exercise the IG at connectathons and during piloting and production deployment. It is also the intent of this guide that any test scripts will include testing of: 
