@@ -5,7 +5,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.smp
 canonical: http://hl7.org/fhir/us/smp
-version: 1.0.0-publication
+version: 1.0.0
 name: StandardizedMedicationProfile
 title: Standardized Medication Profile (SMP) FHIR IG
 status: active
@@ -30,7 +30,7 @@ parameters:
   show-inherited-invariants: false
   path-expansion-params: '../../exp-params.json'
 copyrightYear: 2023+
-releaseLabel: STU1 Ballot
+releaseLabel: STU1
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
