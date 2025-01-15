@@ -24,7 +24,10 @@ fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 6.1.0
   hl7.fhir.extensions.r5: 4.0.1
-  us.nlm.vsac: 0.21.0
+  us.nlm.vsac:
+    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
+    version: 0.21.0
+    id: us_nlm_vsac
 parameters:
   shownav: 'true'
   show-inherited-invariants: false
@@ -56,7 +59,7 @@ pages:
   downloads.md:
     title: Downloads
   references.md:
-    title: Referenences
+    title: References
   changelog.md:
     title: Change Log
 
