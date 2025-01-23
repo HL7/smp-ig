@@ -5,7 +5,8 @@
   "mode": "milestone",
   "status": "trial-use",
   "sequence": "STU1",
-  "desc": "This is the proposed STU1 version of the Standardized Medication Profile (SMP) FHIR IG for ballot in September 2024. It is sponsored by the HL7 Pharmacy Work Group",
+  "desc": "This is the STU 1 version of the Standardized Medication Profile (SMP) FHIR IG published in January 2025. It is sponsored by the HL7 Pharmacy Work Group",
+  "descmd": "This is the STU 1 version of the Standardized Medication Profile (SMP) FHIR IG published in January 2025. It is sponsored by the  HL7 Pharmacy Work Group",
   "changes":"changes.html",
   "first":false
 }
