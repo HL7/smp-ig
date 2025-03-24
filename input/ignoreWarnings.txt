@@ -5,3 +5,10 @@
 
 # Deprecation message appeared following TSC approval of publication of STU 1.0
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+
+
+# This message appeared following TSC approval of publication of STU 1.0 and relates to the US Core Medication profile (the binding in question only appears in the US Core profile, no changes in the SMP). Changes to correct must appear in US Core
+There are multiple different potential matches for the url 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '20240606', found versions: 20170601, 20240606. Suggested fix: change the canonical reference from 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4' to 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4|20240606'
+
+# This message appeared following TSC approval of publication of STU 1.0 upgrading to newer versions will be considered in future updates
+The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 7.0.0. This reference is getting old and the more recent version should be considered
