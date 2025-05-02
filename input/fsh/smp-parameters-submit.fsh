@@ -27,8 +27,9 @@ Description: "This profile tailors the Parameters resource to convey medication 
     smp-medication-data 1..1 MS
 * parameter[smp-medication-data].name = "smp-medication-data" (exactly)
 * parameter[smp-medication-data].name MS
-* parameter[smp-medication-data].value[x] only Reference($smp-bundle-tx)
-* parameter[smp-medication-data].value[x] MS
+* parameter[smp-medication-data].value[x] 0..0
+* parameter[smp-medication-data].resource 1..1 MS
+* parameter[smp-medication-data].resource only $smp-bundle-tx
 
 
 Instance: smp-submit-input-parameters-1

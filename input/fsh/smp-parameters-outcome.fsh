@@ -27,8 +27,9 @@ Description: "This profile tailors the Parameters resource to convey status resu
     outcome 1..1 MS
 * parameter[outcome].name = "outcome" (exactly)
 * parameter[outcome].name MS
-* parameter[outcome].value[x] only Reference(OperationOutcome)
-* parameter[outcome].value[x] MS
+* parameter[outcome].value[x] 0..0
+* parameter[outcome].resource 1..1 MS
+* parameter[outcome].resource only OperationOutcome
 
 
 Instance: smp-submit-outcome-parameters-1

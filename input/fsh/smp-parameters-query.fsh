@@ -28,11 +28,14 @@ Description: "This profile tailors the Parameters resource to convey medication 
     list-type 0..1 MS
 * parameter[patient].name = "patient" (exactly)
 * parameter[patient].name MS
-* parameter[patient].value[x] only Reference($us-core-patient)
-* parameter[patient].value[x] MS
+* parameter[patient].value[x] 0..0
+* parameter[patient].resource 1..1 MS
+* parameter[patient].resource only $us-core-patient
 * parameter[list-type].name = "list-type" (exactly)
 * parameter[list-type].name MS
+* parameter[list-type].value[x] 1..1 MS
 * parameter[list-type].value[x] only CodeableConcept
+* parameter[list-type].resource 0..0
 
 
 Instance: smp-history-input-parameters-1

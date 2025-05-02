@@ -28,12 +28,14 @@ Description: "This profile tailors the Parameters resource to convey medication 
     outcome 0..1 MS
 * parameter[smp-medication-data].name = "smp-medication-data" (exactly)
 * parameter[smp-medication-data].name MS
-* parameter[smp-medication-data].value[x] only Reference($smp-bundle)
-* parameter[smp-medication-data].value[x] MS
+* parameter[smp-medication-data].value[x] 0..0
+* parameter[smp-medication-data].resource 1..1 MS
+* parameter[smp-medication-data].resource only $smp-bundle
 * parameter[outcome].name = "outcome" (exactly)
 * parameter[outcome].name MS
-* parameter[outcome].value[x] only Reference(OperationOutcome)
-* parameter[outcome].value[x] MS
+* parameter[outcome].value[x] 0..0
+* parameter[outcome].resource 1..1 MS
+* parameter[outcome].resource only OperationOutcome
 
 
 Instance: smp-history-output-parameters-1
