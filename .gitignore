@@ -90,3 +90,15 @@ fabric.properties
 !.idea/runConfigurations
 
 # End of https://www.toptal.com/developers/gitignore/api/rubymine+all
+/temp
+
+.DS_Store
+Thumbs.db
+/fsh-generated
+/input-cache
+/output
+/template
+/temp
+
+_genonce.bat
+/.vscode
