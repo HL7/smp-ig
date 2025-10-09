@@ -7,7 +7,15 @@ Profile:        SMPMedicationStatement
 Parent:         MedicationStatement
 Id:             smp-medicationstatement
 Title:          "Standardized Medication Profile - MedicationStatement"
-Description:    "The description of a medication or drug that a patient is taking or prescribed. Or a medication or drug that a patient did take or was prescribed in the past. MedicationStatement can be created from a number of sources and may be anecdotal which can be useful in the recording of non-prescription, over-the-counter items. MedicationRequest and MedicationAdministration are a formal record of medications prescribed and given."
+Description:    """
+The description of a medication or drug that a patient is taking or prescribed. Or a medication or drug that a patient did take or was prescribed in the past. MedicationStatement can be created from a number of sources and may be anecdotal which can be useful in the recording of non-prescription, over-the-counter items. MedicationRequest and MedicationAdministration are a formal record of medications prescribed and given.
+
+This profile supports the capture of medication adherence information within the MedicationStatement resource. Implementers SHOULD pre-adopt the FHIR MedicationStatement adherence extension as proposed for future FHIR releases.
+
+- The adherence extension SHOULD be included in MedicationStatement resources when information about a patient's adherence to a medication regimen is available.
+- The extension enables documentation of adherence status (e.g., 'taking as prescribed', 'not taking as prescribed') and, where applicable, the reason for non-adherence.
+- Systems SHOULD support the extension to facilitate interoperability and the exchange of clinically significant adherence data.
+"""
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[0].valueCode = #phx
 * ^status = #active
