@@ -26,7 +26,7 @@ Description:    "A related set of descriptions of individual medications a patie
 * subject 1..1 MS
 * subject only Reference($us-core-patient)
   * ^short = "Patient"
-  * ^comment = "The patient the is or has received the medications identified"
+  * ^comment = "The patient there is or has received the medications identified"
 
 * source 1..1 MS
 * source only Reference($us-core-practitioner or $us-core-practitionerrole)
@@ -52,3 +52,21 @@ Description: "Example of a List resource for a patient's SMP list"
 * source.reference = "Practitioner/practitioner-1"
 * entry[0].date = "2024-07-01"
 * entry[=].item.reference = "MedicationStatement/smp-medstmt-1"
+
+Instance: smp-medlist-2
+InstanceOf: smp-medication-list
+Usage: #example
+Description: "Example of a List resource for a patient's SMP primary care medication list"
+* meta.versionId = "1"
+* meta.lastUpdated = "2024-04-08T06:38:52Z"
+* meta.profile = "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication-list"
+
+* status = #current
+* mode = #working
+* title = "Primary Care Medication List"
+* code = $loinc#10160-0
+* subject.reference = "Patient/example"
+* date = "2024-07-01"
+* source.reference = "Practitioner/practitioner-2"
+* entry[0].date = "2024-07-01"
+* entry[0].item.reference = "MedicationStatement/smp-medstmt-3"
