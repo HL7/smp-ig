@@ -30,7 +30,7 @@ Description: "A single package that contains a specific kind of medication list 
 * entry.response 0..0
 * entry.response ^mustSupport = false
 * entry contains
-    list 1..1 MS and
+    list 1..* MS and
     patient 0..1 MS and
     medicationadministration 0..* MS and
     medicationstatement 0..* MS and
@@ -84,3 +84,35 @@ Description: "Example of a Bundle resource used to transmit a patient's SMP medi
 * entry[=].resource.reasonCode = $snomed#359642000 "Diabetes mellitus type 2 in nonobese (disorder)"
 * entry[=].resource.dosage.sequence = 1
 * entry[=].resource.dosage.text = "po daily"
+
+// Primary Care Medication List
+* entry[+].fullUrl = "urn:uuid:2f7e3c44-8e1c-4b2b-9b7e-0b3f0e6d1a2a"
+* entry[=].resource.id = "smp-medlist-2"
+* entry[=].resource.resourceType = "List"
+* entry[=].resource.meta.profile = $smp-medicationlist
+* entry[=].resource.text.status = #generated
+* entry[=].resource.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">A primary care medication list for a patient</div>"
+* entry[=].resource.status = #current
+* entry[=].resource.mode = #working
+* entry[=].resource.title = "Primary Care Medication List"
+* entry[=].resource.code = $loinc#10160-0
+* entry[=].resource.subject.reference = "Patient/example"
+* entry[=].resource.subject.display = "US Core Example Patient"
+* entry[=].resource.date = "2024-07-01"
+* entry[=].resource.source.reference = "Practitioner/practitioner-2"
+* entry[=].resource.entry[+].date = "2024-07-01"
+* entry[=].resource.entry[=].item.reference = "urn:uuid:bb2e8f9c-9c3a-4e2d-b5b2-8f9c9c3a4e2d"
+
+// MedicationStatement referenced by smp-medlist-2
+* entry[+].fullUrl = "urn:uuid:bb2e8f9c-9c3a-4e2d-b5b2-8f9c9c3a4e2d"
+* entry[=].resource.id = "smp-medstmt-3"
+* entry[=].resource.resourceType = "MedicationStatement"
+* entry[=].resource.meta.profile = "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement"
+* entry[=].resource.status = #active
+* entry[=].resource.medicationCodeableConcept = $rxnorm#197361 "Amlodipine 5 MG Oral Tablet"
+* entry[=].resource.subject.reference = "Patient/example"
+* entry[=].resource.effectiveDateTime = "2024-06-01"
+* entry[=].resource.dateAsserted = "2024-07-03"
+* entry[=].resource.reasonCode = $snomed#38341003 "Hypertensive disorder, systemic arterial (disorder)"
+* entry[=].resource.dosage.sequence = 1
+* entry[=].resource.dosage.text = "po qd"
