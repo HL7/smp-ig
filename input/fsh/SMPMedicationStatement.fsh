@@ -43,6 +43,11 @@ This profile supports the capture of medication adherence information within the
 
 * informationSource only Reference($us-core-patient or $us-core-practitioner or $us-core-practitionerrole or $us-core-relatedperson)
 
+* effective[x] MS
+* effectiveDateTime MS
+* effectivePeriod MS
+* dateAsserted MS
+
 * dosage MS
 
 Instance: smp-medstmt-1
@@ -95,3 +100,21 @@ Description: "Example of a MedicationStatement resource in a patient's SMP list 
 * reasonCode = $snomed#38341003 "Hypertensive disorder, systemic arterial (disorder)"
 * dosage.sequence = 1
 * dosage.text = "po qd"
+
+Instance: smp-medstmt-4
+InstanceOf: smp-medicationstatement
+Usage: #example
+Description: "Example of a MedicationStatement that uses effectivePeriod instead of effectiveDateTime"
+* meta.versionId = "1"
+* meta.lastUpdated = "2023-12-08T06:38:52Z"
+* meta.profile = "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement"
+
+* status = #active
+* medicationCodeableConcept = $rxnorm#597983 "atorvastatin 40 MG Oral Tablet"
+* subject.reference = "Patient/example"
+* effectivePeriod.start = "2024-05-01"
+* effectivePeriod.end = "2024-06-01"
+* dateAsserted = "2024-07-04"
+* reasonCode = $snomed#55822004 "Hyperlipidemia"
+* dosage.sequence = 1
+* dosage.text = "po bid"
