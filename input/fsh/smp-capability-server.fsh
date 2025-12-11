@@ -30,7 +30,8 @@ Usage: #definition
     * insert CSinteraction(#SHOULD, #update, [[Allows for the maintenance of the medication lists.]])
     * insert CSinteraction(#SHOULD, #create, [[Allows for the creation of a medication list.]])
     * insert CSsearch(#SHALL, "patient", "http://hl7.org/fhir/SearchParameter/List-subject", #reference, [[Allows retrieving medication lists for the patient]])
-    * insert CSsearch(#SHALL, "code", "http://hl7.org/fhir/SearchParameter/clinical-code", #token, [[Allows retrieving specific kinds of medication lists for the patient]])
+    * insert CSsearch(#SHOULD, "code", "http://hl7.org/fhir/SearchParameter/clinical-code", #token, [[Allows retrieving specific kinds of medication lists]])
+    * insert CSsearch(#SHALL, "patient+code", "http://hl7.org/fhir/SearchParameter/List-subject", #composite, [[Allows retrieving specific kinds of medication lists for a patient - required to avoid returning too many records]])
   * resource[=].operation[0]
     * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
     * extension.valueCode = #MAY
