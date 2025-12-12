@@ -31,7 +31,6 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].documentation = "A Bundle of type 'transaction' that contains medication information for the specified patient"
 * parameter[=].type = #Bundle
-* parameter[=].targetProfile = $smp-bundle-tx
 * parameter[+].name = #outcome
 * parameter[=].use = #out
 * parameter[=].min = 1

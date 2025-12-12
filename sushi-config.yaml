@@ -32,7 +32,7 @@ dependencies:
 parameters:
   shownav: 'true'
   show-inherited-invariants: false
-  path-expansion-params: '../../exp-params.json'
+#  path-expansion-params: '../../exp-params.json'  # Commented out - causes invalid extension reference error
 copyrightYear: 2023+
 releaseLabel: STU 1
 extension:

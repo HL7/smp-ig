@@ -71,9 +71,7 @@ Usage: #definition
   * resource[+]
     * type = #Bundle
     * supportedProfile[0] = $smp-bundle
-    * documentation = "The Bundle Medication List profile (type=collection) is used to retrieve a medication list with all supporting resources in a single package."
-  * insert CSinteraction(#MAY, #read, [[Allows retrieval of a medication list bundle from a repository. If the smp-query operation on List is implemented, this capability becomes mandatory.]])
-  * resource[+]
-    * type = #Bundle
-    * supportedProfile[0] = $smp-bundle-tx
-    * documentation = "The Bundle Medication List Maintenance profile (type=transaction) is used to submit create/update operations for a medication list and its medications. The transaction bundle itself is not stored as a resource; rather, it contains the operations to be performed on the contained resources."
+    * supportedProfile[+] = $smp-bundle-tx
+    * documentation = "Supports two Bundle profiles: (1) Bundle Medication List profile (type=collection) for retrieving medication lists with supporting resources - supports read interaction; (2) Bundle Medication List Maintenance profile (type=transaction) for submitting create/update operations - transaction bundles are ephemeral processing instructions and are not stored as resources, so the read interaction does not apply to them."
+  * insert CSinteraction(#MAY, #read, [[Allows retrieval of collection-type medication list bundles from a repository. Does NOT apply to transaction bundles which are ephemeral. If the smp-query operation on List is implemented, this capability becomes mandatory.]])
+
