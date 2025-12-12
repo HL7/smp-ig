@@ -30,16 +30,20 @@ Description: "A way to define and create a specific kind of medication list and 
 * entry.response 0..0
 * entry.response ^mustSupport = false
 * entry contains
-    list 1..* MS and
-    patient 0..1 MS and
-    medicationstatement 0..* MS and
-    medication 0..* MS and
-    medicationrequest 0..* MS and
-    medicationdispense 0..* MS and
-    medicationadministration 0..* MS
-* entry[patient].resource only $us-core-patient
-* entry[list].resource only $smp-medicationlist
-* entry[medicationstatement].resource only $smp-medicationstatement
+    List 1..* MS and
+    Patient 0..1 MS and
+    MedicationStatement 0..* MS and
+    Medication 0..* MS and
+    MedicationRequest 0..* MS and
+    MedicationDispense 0..* MS and
+    MedicationAdministration 0..* MS
+* entry[Patient].resource only $us-core-patient
+* entry[List].resource only $smp-medicationlist
+* entry[MedicationAdministration].resource only MedicationAdministration
+* entry[MedicationStatement].resource only $smp-medicationstatement
+* entry[Medication].resource only Medication
+* entry[MedicationRequest].resource only MedicationRequest
+* entry[MedicationDispense].resource only MedicationDispense
 
 Instance: smp-bundle-tx-1
 InstanceOf: smp-bundle-transaction
