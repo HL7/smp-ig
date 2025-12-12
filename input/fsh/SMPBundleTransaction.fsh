@@ -108,7 +108,7 @@ Description: "Example of a Bundle resource used to create multiple medication li
 * entry[=].resource.status = #current
 * entry[=].resource.mode = #working
 * entry[=].resource.title = "Hospital Admission Medication List"
-* entry[=].resource.code = $loinc#104207-6 "Hospital admission medication list"
+* entry[=].resource.code = $loinc#104207-6 "Medication administration list [Identifier] Episode Pharmacy"
 * entry[=].resource.subject.reference = "Patient/example"
 * entry[=].resource.subject.display = "US Core Example Patient"
 * entry[=].resource.date = "2024-07-01"
@@ -147,7 +147,7 @@ Description: "Example of a Bundle resource used to create multiple medication li
 * entry[=].resource.status = #current
 * entry[=].resource.mode = #working
 * entry[=].resource.title = "Hospital Discharge Medication List"
-* entry[=].resource.code = $loinc#104208-4 "Hospital discharge medication list"
+* entry[=].resource.code = $loinc#104208-4 "Medication list for public health AndOr CDC reporting [Identifier] Episode Pharmacy"
 * entry[=].resource.subject.reference = "Patient/example"
 * entry[=].resource.subject.display = "US Core Example Patient"
 * entry[=].resource.date = "2024-07-10"
@@ -186,7 +186,7 @@ Description: "Example of a Bundle resource used to create multiple medication li
 * entry[=].resource.text.status = #generated
 * entry[=].resource.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Atorvastatin added on discharge</div>"
 * entry[=].resource.status = #active
-* entry[=].resource.medicationCodeableConcept = $rxnorm#597983 "atorvastatin 40 MG Oral Tablet"
+* entry[=].resource.medicationCodeableConcept = $rxnorm#597983 "atorvastatin 40 MG"
 * entry[=].resource.subject.reference = "Patient/example"
 * entry[=].resource.subject.display = "US Core Example Patient"
 * entry[=].resource.effectiveDateTime = "2024-07-10"
