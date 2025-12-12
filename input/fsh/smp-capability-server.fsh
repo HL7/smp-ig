@@ -68,6 +68,7 @@ Usage: #definition
     * insert CSsearch(#SHOULD, "status", "http://hl7.org/fhir/SearchParameter/medications-status", #token, [[Allows filtering by medication administration status]])
   * insert CSresource(#Patient, $us-core-patient)
     * insert CSinteraction(#SHALL, #read, [[Required for identification and retrieval of patient medication information]])
+    * insert CSsearch(#SHALL, "_id", "http://hl7.org/fhir/SearchParameter/Resource-id", #token, [[Allows retrieval of patient by id. Aligns with US Core requirement and FHIR base spec.]])
   * resource[+]
     * type = #Bundle
     * supportedProfile[0] = $smp-bundle
