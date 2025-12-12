@@ -31,7 +31,6 @@ Usage: #definition
     * insert CSinteraction(#SHOULD, #create, [[Allows for the creation of a medication list.]])
     * insert CSsearch(#SHALL, "patient", "http://hl7.org/fhir/SearchParameter/List-subject", #reference, [[Allows retrieving medication lists for the patient]])
     * insert CSsearch(#SHOULD, "code", "http://hl7.org/fhir/SearchParameter/clinical-code", #token, [[Allows retrieving specific kinds of medication lists]])
-    * insert CSsearch(#SHALL, "patient+code", "http://hl7.org/fhir/SearchParameter/List-subject", #composite, [[Allows retrieving specific kinds of medication lists for a patient - required to avoid returning too many records]])
   * resource[=].operation[0]
     * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
     * extension.valueCode = #MAY
@@ -72,6 +71,9 @@ Usage: #definition
   * resource[+]
     * type = #Bundle
     * supportedProfile[0] = $smp-bundle
-    * supportedProfile[+] = $smp-bundle-tx
-  * insert CSinteraction(#MAY, #read, [[Allows retrieval using extended bundles of a medication list from a repository (if the smp-query operation on List is implemented, the Bundle Medication List profile becomes mandatory).]])
-  * insert CSinteraction(#MAY, #create, [[Allows submission of new medication list to a repository (if the smp-submit operation on List is implemented, the Bundle Medication List Maintenance profile becomes mandatory).]])
+    * documentation = "The Bundle Medication List profile (type=collection) is used to retrieve a medication list with all supporting resources in a single package."
+  * insert CSinteraction(#MAY, #read, [[Allows retrieval of a medication list bundle from a repository. If the smp-query operation on List is implemented, this capability becomes mandatory.]])
+  * resource[+]
+    * type = #Bundle
+    * supportedProfile[0] = $smp-bundle-tx
+    * documentation = "The Bundle Medication List Maintenance profile (type=transaction) is used to submit create/update operations for a medication list and its medications. The transaction bundle itself is not stored as a resource; rather, it contains the operations to be performed on the contained resources."
