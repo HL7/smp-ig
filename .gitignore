@@ -90,3 +90,31 @@ fabric.properties
 !.idea/runConfigurations
 
 # End of https://www.toptal.com/developers/gitignore/api/rubymine+all
+
+# macOS and Windows
+.DS_Store
+Thumbs.db
+
+# IG Publisher build artifacts
+/fsh-generated
+/input-cache
+/output
+/template
+/temp
+_build.bat
+_build.sh
+_gencontinuous.bat
+_gencontinuous.sh
+FHIR-us-smp.xml
+
+# Environment-specific
+.ruby-version
+
+# SSH keys (never commit!)
+*-github
+*-github.pub
+*.pem
+*.key
+
+# VS Code
+/.vscode
