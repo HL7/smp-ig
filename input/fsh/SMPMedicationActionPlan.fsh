@@ -7,6 +7,9 @@ Description: "A single package that contains a collection of medication action p
 * type only code
 * type = #document
 
+// * extension contains 
+//    medication-action-plan-category named SMPMedicationActionPlanCategory 0..1 MS
+
 * entry 1..* MS
 * entry ^comment = "The result bundle may contain one or more entries."
 * entry ^slicing.discriminator.type = #type
@@ -24,8 +27,8 @@ Description: "A single package that contains a collection of medication action p
    medicationactionplan-document 0..* MS
 * entry[patient].resource 1..1 MS
 * entry[patient].resource only $us-core-patient
-* entry[medicationactionplan].resource only SMPMedicationActionPlan
-* entry[medicationactionplan-document].resource only DocumentReference
+* entry[medicationactionplan].resource only SMPMedicationActionPlan // reference to one or more MAP care plans, each which identify detected issues and recommended actions.
+* entry[medicationactionplan-document].resource only DocumentReference  // The Medication Action Plan document as unstructured data (PDF, scanned image, etc.)  
 
 Profile:        SMPMedicationActionPlan
 Parent:         $us-core-care-plan
@@ -39,5 +42,12 @@ Description:    "A pharmacist-generated care plan that identifies issues and ris
 * category = $snomed#736379008 "Medication management plan (record artifact)"
 
 * supportingInfo 0..* MS
-* supportingInfo only Reference(DetectedIssue or DocumentReference or Observation)
+* supportingInfo only Reference(SMPMedicationActionPlanDetectedIssue)
 
+Profile:        SMPMedicationActionPlanDetectedIssue
+Parent:         DetectedIssue
+Id:             smp-medication-action-plan-detected-issue
+Title:          "Standardized Medication Profile - Medication Action Plan Detected Issue"
+Description:    "An issues or risk related to a given medication, therapy, or regimen. May include interventions and actions that mitigate the issue."
+
+* author only Reference($us-core-practitioner or $us-core-practitionerrole)

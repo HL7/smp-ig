@@ -7,6 +7,7 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="List/smp-medlist-1" key="List-smp-medlist-1" name="Hospital Medication Administration List"/>
+<artifact id="StructureDefinition/smp-medication-action-plan-category" key="StructureDefinition-smp-medication-action-plan-category" name="Medication Action Plan Category"/>
 <artifact id="List/smp-medlist-2" key="List-smp-medlist-2" name="Primary Care Medication List"/>
 <artifact id="OperationDefinition/smp-operation-retrieve" key="OperationDefinition-smp-operation-retrieve" name="SMP Operation Retrieve"/>
 <artifact id="OperationDefinition/smp-operation-submit" key="OperationDefinition-smp-operation-submit" name="SMP Operation Submit"/>
@@ -19,6 +20,7 @@
 <artifact id="StructureDefinition/smp-bundle-transaction" key="StructureDefinition-smp-bundle-transaction" name="Standardized Medication Profile - Bundle Medication List Maintenance"/>
 <artifact id="StructureDefinition/smp-medication" key="StructureDefinition-smp-medication" name="Standardized Medication Profile - Medication"/>
 <artifact id="StructureDefinition/smp-medication-action-plan" key="StructureDefinition-smp-medication-action-plan" name="Standardized Medication Profile - Medication Action Plan"/>
+<artifact id="StructureDefinition/smp-medication-action-plan-detected-issue" key="StructureDefinition-smp-medication-action-plan-detected-issue" name="Standardized Medication Profile - Medication Action Plan Detected Issue"/>
 <artifact id="StructureDefinition/smp-medication-list" key="StructureDefinition-smp-medication-list" name="Standardized Medication Profile - Medication List"/>
 <artifact id="StructureDefinition/smp-medicationadministration" key="StructureDefinition-smp-medicationadministration" name="Standardized Medication Profile - MedicationAdministration"/>
 <artifact id="StructureDefinition/smp-medicationstatement" key="StructureDefinition-smp-medicationstatement" name="Standardized Medication Profile - MedicationStatement"/>
