@@ -1,3 +1,15 @@
+# FHIR IG / FSH specific ignores
+.DS_Store
+Thumbs.db
+/fsh-generated
+/input-cache
+/output
+/template
+/temp
+
+_genonce.bat
+/.vscode
+
 # Created by https://www.toptal.com/developers/gitignore/api/rubymine+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=rubymine+all
 
