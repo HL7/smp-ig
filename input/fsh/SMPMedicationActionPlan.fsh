@@ -41,7 +41,7 @@ Description:    "A pharmacist-generated care plan that identifies issues and ris
   * ^comment = "Category for Medication Action Plan as defined by SMP Implementation Guide"
 * category = $snomed#736379008 "Medication management plan (record artifact)"
 
-* supportingInfo 0..* MS
+* supportingInfo 1..* MS
 * supportingInfo only Reference(SMPMedicationActionPlanDetectedIssue)
 
 Profile:        SMPMedicationActionPlanDetectedIssue

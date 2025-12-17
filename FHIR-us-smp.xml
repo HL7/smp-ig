@@ -26,6 +26,7 @@
 <artifact id="StructureDefinition/smp-medicationstatement" key="StructureDefinition-smp-medicationstatement" name="Standardized Medication Profile - MedicationStatement"/>
 <artifact id="Bundle/smp-bundle-1" key="Bundle-smp-bundle-1" name="smp-bundle-1"/>
 <artifact id="Bundle/smp-bundle-tx-1" key="Bundle-smp-bundle-tx-1" name="smp-bundle-tx-1"/>
+<artifact id="Bundle/smp-bundle-tx-2" key="Bundle-smp-bundle-tx-2" name="smp-bundle-tx-2"/>
 <artifact id="CapabilityStatement/smp-client" key="CapabilityStatement-smp-client" name="smp-client"/>
 <artifact id="Parameters/smp-history-input-parameters-1" key="Parameters-smp-history-input-parameters-1" name="smp-history-input-parameters-1"/>
 <artifact id="Parameters/smp-history-output-parameters-1" key="Parameters-smp-history-output-parameters-1" name="smp-history-output-parameters-1"/>
