@@ -30,7 +30,7 @@ Usage: #definition
     * insert CSinteraction(#SHOULD, #update, [[Allows for the maintenance of the medication lists.]])
     * insert CSinteraction(#SHOULD, #create, [[Allows for the creation of a medication list.]])
     * insert CSsearch(#SHALL, "patient", "http://hl7.org/fhir/SearchParameter/List-subject", #reference, [[Allows retrieving medication lists for the patient]])
-    * insert CSsearch(#SHALL, "code", "http://hl7.org/fhir/SearchParameter/clinical-code", #token, [[Allows retrieving specific kinds of medication lists for the patient]])
+    * insert CSsearch(#SHOULD, "code", "http://hl7.org/fhir/SearchParameter/clinical-code", #token, [[Allows retrieving specific kinds of medication lists]])
   * resource[=].operation[0]
     * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
     * extension.valueCode = #MAY
@@ -47,6 +47,8 @@ Usage: #definition
     * insert CSinteraction(#SHALL, #read, [[Allows retrieval of medication details.]])
     * insert CSinteraction(#SHOULD, #update, [[Allows for the maintenance of the medication details.]])
     * insert CSinteraction(#SHOULD, #create, [[Allows for the creation of a medication details. (Mandatory if creation of Medication lists enabled.)]])
+    * insert CSsearch(#SHALL, "patient", "http://hl7.org/fhir/SearchParameter/clinical-patient", #reference, [[Allows retrieving medication statements for a patient]])
+    * insert CSsearch(#SHOULD, "status", "http://hl7.org/fhir/SearchParameter/medications-status", #token, [[Allows filtering by medication statement status]])
   * insert CSresource(#Medication, $smp-medication)
     * insert CSinteraction(#SHOULD, #read, [[Allows retrieval medication details]])
     * insert CSinteraction(#MAY, #create, [[Allows for the creation of a medication.]])
@@ -54,15 +56,22 @@ Usage: #definition
     * insert CSinteraction(#SHOULD, #read, [[Allows retrieval of .]])
     * insert CSinteraction(#MAY, #create, [[Allows for the creation of a medication.]])
     * insert CSinteraction(#MAY, #update, [[Allows for the maintenance of a MedicationRequest as required.]])
+    * insert CSsearch(#SHALL, "patient", "http://hl7.org/fhir/SearchParameter/clinical-patient", #reference, [[Allows retrieving medication requests for a patient]])
+    * insert CSsearch(#SHOULD, "intent", "http://hl7.org/fhir/SearchParameter/MedicationRequest-intent", #token, [[Allows filtering by medication request intent]])
+    * insert CSsearch(#SHOULD, "status", "http://hl7.org/fhir/SearchParameter/medications-status", #token, [[Allows filtering by medication request status]])
   * insert CSresource(#MedicationAdministration, $smp-medicationadministration)
     * insert CSinteraction(#SHOULD, #read, [[Allows retrieval medication details.]])
     * insert CSinteraction(#MAY, #create, [[Allows for the creation of a medication.]])
     * insert CSinteraction(#MAY, #update, [[Allows for the maintenance of a MedicationAdministration as required.]])
+    * insert CSsearch(#SHALL, "patient", "http://hl7.org/fhir/SearchParameter/clinical-patient", #reference, [[Allows retrieving medication administrations for a patient]])
+    * insert CSsearch(#SHOULD, "status", "http://hl7.org/fhir/SearchParameter/medications-status", #token, [[Allows filtering by medication administration status]])
   * insert CSresource(#Patient, $us-core-patient)
     * insert CSinteraction(#SHALL, #read, [[Required for identification and retrieval of patient medication information]])
+    * insert CSsearch(#SHALL, "_id", "http://hl7.org/fhir/SearchParameter/Resource-id", #token, [[Allows retrieval of patient by id. Aligns with US Core requirement and FHIR base spec.]])
   * resource[+]
     * type = #Bundle
     * supportedProfile[0] = $smp-bundle
     * supportedProfile[+] = $smp-bundle-tx
-  * insert CSinteraction(#MAY, #read, [[Allows retrieval using extended bundles of a medication list from a repository (if the smp-query operation on List is implemented, the Bundle Medication List profile becomes mandatory).]])
-  * insert CSinteraction(#MAY, #create, [[Allows submission of new medication list to a repository (if the smp-submit operation on List is implemented, the Bundle Medication List Maintenance profile becomes mandatory).]])
+    * documentation = "Supports two Bundle profiles: (1) Bundle Medication List profile (type=collection) for retrieving medication lists with supporting resources - supports read interaction; (2) Bundle Medication List Maintenance profile (type=transaction) for submitting create/update operations - transaction bundles are ephemeral processing instructions and are not stored as resources, so the read interaction does not apply to them."
+  * insert CSinteraction(#MAY, #read, [[Allows retrieval of collection-type medication list bundles from a repository. Does NOT apply to transaction bundles which are ephemeral. If the smp-query operation on List is implemented, this capability becomes mandatory.]])
+

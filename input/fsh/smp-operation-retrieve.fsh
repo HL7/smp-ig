@@ -31,7 +31,6 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].documentation = "The patient whose medication history is desired"
 * parameter[=].type = #Patient
-* parameter[=].targetProfile = $us-core-patient
 * parameter[+].name = #list-type
 * parameter[=].use = #in
 * parameter[=].min = 0
@@ -44,7 +43,6 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].documentation = "A Bundle of type 'collection' that contains medication  information for the requested patient (if found)"
 * parameter[=].type = #Bundle
-* parameter[=].targetProfile = "http://hl7.org/fhir/us/smp/StructureDefinition/smp-bundle"
 * parameter[+].name = #outcome
 * parameter[=].use = #out
 * parameter[=].min = 0

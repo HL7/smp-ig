@@ -110,7 +110,7 @@ Description: "Example of a MedicationStatement that uses effectivePeriod instead
 * meta.profile = "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement"
 
 * status = #active
-* medicationCodeableConcept = $rxnorm#597983 "atorvastatin 40 MG Oral Tablet"
+* medicationCodeableConcept = $rxnorm#597983 "atorvastatin 40 MG"
 * subject.reference = "Patient/example"
 * effectivePeriod.start = "2024-05-01"
 * effectivePeriod.end = "2024-06-01"
