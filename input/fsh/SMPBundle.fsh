@@ -37,6 +37,7 @@ Description: "A single package that contains a specific kind of medication list 
     Medication 0..* MS and
     MedicationRequest 0..* MS and
     MedicationDispense 0..* MS and
+    SMPMedicationActionPlanBundle 0..1 MS and
     Practitioner 0..* MS and
     PractitionerRole 0..* MS
 * entry[Patient].resource 1..1 MS
@@ -48,6 +49,7 @@ Description: "A single package that contains a specific kind of medication list 
 * entry[Medication].resource only Medication
 * entry[MedicationRequest].resource only MedicationRequest
 * entry[MedicationDispense].resource only MedicationDispense
+* entry[SMPMedicationActionPlanBundle].resource only SMPMedicationActionPlanBundle
 * entry[Practitioner].resource only Practitioner
 * entry[PractitionerRole].resource only PractitionerRole
 
