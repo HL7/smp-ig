@@ -9,6 +9,7 @@
 <artifact id="List/smp-medlist-1" key="List-smp-medlist-1" name="Hospital Medication Administration List"/>
 <artifact id="StructureDefinition/smp-medication-action-plan-category" key="StructureDefinition-smp-medication-action-plan-category" name="Medication Action Plan Category"/>
 <artifact id="List/smp-medlist-2" key="List-smp-medlist-2" name="Primary Care Medication List"/>
+<artifact id="StructureDefinition/smp-map-composition" key="StructureDefinition-smp-map-composition" name="SMP Composition Medication Action Plan"/>
 <artifact id="OperationDefinition/smp-operation-retrieve" key="OperationDefinition-smp-operation-retrieve" name="SMP Operation Retrieve"/>
 <artifact id="OperationDefinition/smp-operation-submit" key="OperationDefinition-smp-operation-submit" name="SMP Operation Submit"/>
 <artifact id="StructureDefinition/smp-parameters-outcome" key="StructureDefinition-smp-parameters-outcome" name="SMP Parameters - Outcome"/>

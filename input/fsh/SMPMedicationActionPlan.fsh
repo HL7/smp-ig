@@ -23,12 +23,53 @@ Description: "A single package that contains a collection of medication action p
 * entry.response ^mustSupport = false
 * entry contains
    patient 0..1 MS and
-   medicationactionplan 1..* MS and 
-   medicationactionplan-document 0..* MS
+   smp-map-composition 1..1 MS
+
 * entry[patient].resource 1..1 MS
 * entry[patient].resource only $us-core-patient
-* entry[medicationactionplan].resource only SMPMedicationActionPlan // reference to one or more MAP care plans, each which identify detected issues and recommended actions.
-* entry[medicationactionplan-document].resource only DocumentReference  // The Medication Action Plan document as unstructured data (PDF, scanned image, etc.)  
+
+* entry[smp-map-composition].resource only SMPMedicationActionPlanComposition
+
+
+/* ****************************** */
+
+Profile: SMPMedicationActionPlanComposition
+Parent: Composition
+Id: smp-map-composition
+Title: "SMP Composition Medication Action Plan"
+Description: "A composition resource that defines the metadata for a medication action plan document."
+
+* type = $loinc#80797-4 "Pharmacology Plan of care note"
+* author only Reference($us-core-practitioner or $us-core-practitionerrole)
+* attester 1..* MS 
+* attester.party only Reference($us-core-practitioner or $us-core-practitionerrole)
+* attester.mode = #professional
+
+* section ^slicing.discriminator.type = #pattern 
+* section ^slicing.discriminator.path = "code"
+* section ^slicing.rules = #open
+* section ^slicing.ordered = false   // can be omitted, since false is the default
+* section ^slicing.description = "Slice based on $this value"
+
+* section 1..*
+* section.text 1..1 MS
+* section ^slicing.discriminator.type = #pattern 
+* section ^slicing.discriminator.path = "code"
+* section ^slicing.rules = #open
+* section ^slicing.ordered = false   // can be omitted, since false is the default
+* section ^slicing.description = "Slice based on $this value"
+* section contains
+    map-care-plan 1..* MS and
+    map-document 0..* MS
+
+* section[map-care-plan] ^short = "Medication Action Plan Care Plan Section"
+* section[map-care-plan].code = $snomed#736378000 "Medication management plan (record artifact)"
+* section[map-care-plan].entry only Reference(SMPMedicationActionPlan) // reference to one or more MAP care plans, each which identify detected issues and recommended actions.
+* section[map-document] ^short = "Medication Action Plan Document Section"
+* section[map-document].code = $loinc#80797-4 "Pharmacology Plan of care note" //  loinc document code
+* section[map-document].entry only Reference(DocumentReference)  // The Medication Action Plan document as unstructured data (PDF, scanned image, etc.)  
+
+/* ****************************** */
 
 Profile:        SMPMedicationActionPlan
 Parent:         $us-core-care-plan
@@ -39,10 +80,12 @@ Description:    "A pharmacist-generated care plan that identifies issues and ris
 * category 1..1 MS
   * ^short = "Medication Action Plan Category"
   * ^comment = "Category for Medication Action Plan as defined by SMP Implementation Guide"
-* category = $snomed#736379008 "Medication management plan (record artifact)"
+* category = $snomed#736378000 "Medication management plan (record artifact)"
 
 * supportingInfo 1..* MS
 * supportingInfo only Reference(SMPMedicationActionPlanDetectedIssue)
+
+/* ****************************** */
 
 Profile:        SMPMedicationActionPlanDetectedIssue
 Parent:         DetectedIssue
@@ -51,3 +94,11 @@ Title:          "Standardized Medication Profile - Medication Action Plan Detect
 Description:    "An issues or risk related to a given medication, therapy, or regimen. May include interventions and actions that mitigate the issue."
 
 * author only Reference($us-core-practitioner or $us-core-practitionerrole)
+* code 0..1 MS
+  * ^short = "Detected Issue Code"
+  * ^comment = "Code representing the detected issue or risk."
+* detail 0..1 MS
+  * ^short = "Detected Issue Detail"
+  * ^comment = "Additional information about the detected issue or risk as a string. To be used when a code is not available or sufficient."
+
+/* ****************************** */
