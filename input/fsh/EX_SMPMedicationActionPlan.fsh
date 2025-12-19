@@ -11,6 +11,9 @@ Usage: #example
 * type = #document
 * timestamp = "2025-07-02T14:25:34.001-05:00"
 
+* link[0].relation = #self
+* link[0].url = "http://example.org/List/SMP-MedList-Example20250709093051"
+
 * entry[0].fullUrl = "http://example.org/Composition/Example-SMP-MAPComposition-01"
 * entry[=].resource = Example-SMP-MAPComposition-01
 
