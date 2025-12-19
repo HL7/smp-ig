@@ -12,7 +12,9 @@ Usage: #definition
 * contact[0].name = "HL7 International / Pharmacy"
 * contact[=].telecom.system = #url
 * contact[=].telecom.value = "http://www.hl7.org/Special/committees/medication"
-* description = "This resource defines the expected capabilities of the SMP Server actor when conforming to the SMP IG and It is expected that it will be used in conjunction with the US Core CapabilityStatement. Together they describe the complete list of actual profiles and RESTful operations supported by SMP servers. SMP Server requirements may also be impacted by the rules of local jurisdictions or other contextual requirements."
+* description = "This resource defines the expected capabilities of the SMP Server actor when conforming to the SMP IG and It is expected that it will be used in conjunction with the US Core CapabilityStatement. Together they describe the complete list of actual profiles and RESTful operations supported by SMP servers. SMP Server requirements may also be impacted by the rules of local jurisdictions or other contextual requirements.
+
+**Multi-Version US Core Support**: This server SHALL be able to handle medication data from SMP clients using US Core 3.1.1 (USCDI v1), 6.1.0 (USCDI v3), or 7.0.0 (USCDI v4). As healthcare organizations transition between USCDI versions at different times, servers must accommodate clients operating with different US Core versions to ensure seamless medication information exchange during the transition period."
 * jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * kind = #requirements
 * fhirVersion = #4.0.1

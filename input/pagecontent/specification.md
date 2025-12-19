@@ -1,5 +1,38 @@
 This section of the implementation guide defines the specific conformance requirements for systems wishing to conform to Standardized Medication Profile implementation guide.  The RESTful exchanges of resources is the primary means of information exchange but in some situations, a Bundle containing the primary Medication List resources and all of the reference SMP Medication Statements may optimize the exchange.
 
+### US Core Version Support
+
+This implementation guide supports multiple versions of US Core to accommodate the transition period as healthcare organizations upgrade to newer USCDI requirements:
+
+- **US Core 3.1.1** (USCDI v1)
+- **US Core 6.1.0** (USCDI v3)
+- **US Core 7.0.0** (USCDI v4)
+
+**Note**: US Core 8.0.0 (USCDI v5) support will be added when the package becomes available in the FHIR package registry.
+
+#### Server Requirements
+
+SMP servers **SHALL** be able to accept and process medication data from clients using any of the supported US Core versions. This ensures that servers can handle medication submissions from various clients that may be at different stages of upgrading their US Core support.
+
+#### Client Requirements
+
+SMP clients **SHALL** conform to one of the version-specific SMP Client CapabilityStatements based on their supported US Core version:
+
+- SMP Client 3.1 (for systems supporting US Core 3.1.1)
+- SMP Client 6.1 (for systems supporting US Core 6.1.0)
+- SMP Client 7.0 (for systems supporting US Core 7.0.0)
+
+Clients select their CapabilityStatement based on their internal capabilities and which USCDI version they support. As systems upgrade, they transition to supporting newer US Core versions.
+
+#### Rationale
+
+Healthcare organizations upgrade to newer USCDI requirements at different times based on regulatory timelines, system capabilities, and organizational readiness. Supporting multiple US Core versions allows:
+
+- **Gradual transition**: Organizations can upgrade when ready without breaking existing integrations
+- **Interoperability during transition**: Servers handle mixed-version environments seamlessly
+- **Regulatory flexibility**: Accommodates different compliance timelines across organizations
+- **Backward compatibility**: Earlier adopters don't need to downgrade to work with systems still on older versions
+
 ### Context
 
 #### Pre-reading
