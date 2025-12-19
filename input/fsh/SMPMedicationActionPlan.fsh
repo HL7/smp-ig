@@ -77,13 +77,27 @@ Id:             smp-medication-action-plan
 Title:          "Standardized Medication Profile - Medication Action Plan"
 Description:    "A pharmacist-generated care plan that identifies issues and risks as well as recommended interventions and actions. These plans are normally created in response to a comprehensive medication review."
 
-* category 1..1 MS
+* category 1..* MS
   * ^short = "Medication Action Plan Category"
   * ^comment = "Category for Medication Action Plan as defined by SMP Implementation Guide"
-* category = $snomed#736378000 "Medication management plan (record artifact)"
+
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^slicing.description = "Slice based on the category CodeableConcept pattern"
+
+* category contains
+    MedActPlanCategory 1..1 MS
+
+* category[MedActPlanCategory] = $snomed#736378000 "Medication management plan (record artifact)"
+
+* intent = #plan
+* subject only Reference($us-core-patient)
+* author only Reference($us-core-practitioner or $us-core-practitionerrole)
 
 * supportingInfo 1..* MS
 * supportingInfo only Reference(SMPMedicationActionPlanDetectedIssue)
+
 
 /* ****************************** */
 

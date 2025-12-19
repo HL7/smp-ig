@@ -6,10 +6,17 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="CarePlan/example-MAP-Alprazolam-Metoclopramide-01" key="CarePlan-example-MAP-Alprazolam-Metoclopramide-01" name="Betsy Smith-Johnson Med Action Plan (MAP) - Alprazolam and metoclopramide concurrent therapy as detected issue"/>
+<artifact id="MedicationRequest/example-MedicationRequest-alprazolam-01" key="MedicationRequest-example-MedicationRequest-alprazolam-01" name="Example Alprazolam Medication Request"/>
+<artifact id="MedicationRequest/example-MedicationRequest-metoclopramide-01" key="MedicationRequest-example-MedicationRequest-metoclopramide-01" name="Example Metoclopramide Medication Request"/>
+<artifact id="Patient/examplePatient" key="Patient-examplePatient" name="Example Patient"/>
+<artifact id="Practitioner/examplePharmacist" key="Practitioner-examplePharmacist" name="Example Practitioner"/>
+<artifact id="Practitioner/examplePractitioner" key="Practitioner-examplePractitioner" name="Example Practitioner"/>
+<artifact id="DocumentReference/Example-DocumentReference-PatientSummary20250709093054" key="DocumentReference-Example-DocumentReference-PatientSummary20250709093054" name="Example-DocumentReference-PatientSummary20250709093054"/>
 <artifact id="List/smp-medlist-1" key="List-smp-medlist-1" name="Hospital Medication Administration List"/>
-<artifact id="StructureDefinition/smp-medication-action-plan-category" key="StructureDefinition-smp-medication-action-plan-category" name="Medication Action Plan Category"/>
 <artifact id="List/smp-medlist-2" key="List-smp-medlist-2" name="Primary Care Medication List"/>
 <artifact id="StructureDefinition/smp-map-composition" key="StructureDefinition-smp-map-composition" name="SMP Composition Medication Action Plan"/>
+<artifact id="Composition/Example-SMP-MAPComposition-01" key="Composition-Example-SMP-MAPComposition-01" name="SMP Medication Action Plan for examplePatient"/>
 <artifact id="OperationDefinition/smp-operation-retrieve" key="OperationDefinition-smp-operation-retrieve" name="SMP Operation Retrieve"/>
 <artifact id="OperationDefinition/smp-operation-submit" key="OperationDefinition-smp-operation-submit" name="SMP Operation Submit"/>
 <artifact id="StructureDefinition/smp-parameters-outcome" key="StructureDefinition-smp-parameters-outcome" name="SMP Parameters - Outcome"/>
@@ -25,6 +32,7 @@
 <artifact id="StructureDefinition/smp-medication-list" key="StructureDefinition-smp-medication-list" name="Standardized Medication Profile - Medication List"/>
 <artifact id="StructureDefinition/smp-medicationadministration" key="StructureDefinition-smp-medicationadministration" name="Standardized Medication Profile - MedicationAdministration"/>
 <artifact id="StructureDefinition/smp-medicationstatement" key="StructureDefinition-smp-medicationstatement" name="Standardized Medication Profile - MedicationStatement"/>
+<artifact id="DetectedIssue/example-di01-duplicateTherapy" key="DetectedIssue-example-di01-duplicateTherapy" name="example-di01-duplicateTherapy"/>
 <artifact id="Bundle/smp-bundle-1" key="Bundle-smp-bundle-1" name="smp-bundle-1"/>
 <artifact id="Bundle/smp-bundle-tx-1" key="Bundle-smp-bundle-tx-1" name="smp-bundle-tx-1"/>
 <artifact id="Bundle/smp-bundle-tx-2" key="Bundle-smp-bundle-tx-2" name="smp-bundle-tx-2"/>
@@ -33,6 +41,7 @@
 <artifact id="Parameters/smp-history-output-parameters-1" key="Parameters-smp-history-output-parameters-1" name="smp-history-output-parameters-1"/>
 <artifact id="Medication/smp-med-1" key="Medication-smp-med-1" name="smp-med-1"/>
 <artifact id="MedicationAdministration/smp-medadm-1" key="MedicationAdministration-smp-medadm-1" name="smp-medadm-1"/>
+<artifact id="Bundle/smp-medication-action-plan-bundle-example01" key="Bundle-smp-medication-action-plan-bundle-example01" name="smp-medication-action-plan-bundle-example01"/>
 <artifact id="MedicationStatement/smp-medstmt-1" key="MedicationStatement-smp-medstmt-1" name="smp-medstmt-1"/>
 <artifact id="MedicationStatement/smp-medstmt-2" key="MedicationStatement-smp-medstmt-2" name="smp-medstmt-2"/>
 <artifact id="MedicationStatement/smp-medstmt-3" key="MedicationStatement-smp-medstmt-3" name="smp-medstmt-3"/>
