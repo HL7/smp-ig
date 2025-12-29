@@ -35,6 +35,12 @@ Usage: #example
 * entry[+].fullUrl = "http://example.org/MedicationRequest/example-MedicationRequest-metoclopramide-01"
 * entry[=].resource = example-MedicationRequest-metoclopramide-01
 
+* entry[+].fullUrl = "http://example.org/MedicationStatement/example-MedicationStatement-alprazolam-01"
+* entry[=].resource = example-MedicationStatement-alprazolam-01
+
+* entry[+].fullUrl = "http://example.org/MedicationStatement/example-MedicationStatement-metoclopramide-01"
+* entry[=].resource = example-MedicationStatement-metoclopramide-01
+
 * entry[+].fullUrl = "http://example.org/DetectedIssue/example-di01-duplicateTherapy"
 * entry[=].resource = example-di01-duplicateTherapy
 
@@ -108,7 +114,7 @@ Description: "A sample US Core patient"
 
 Instance: examplePractitioner
 InstanceOf: $us-core-practitioner
-Title: "Example Practitioner"
+Title: "Example Practitioner - Primary Care Physician"
 Description: "A sample US Core practitioner"
 
 * identifier[0]
@@ -129,7 +135,7 @@ Description: "A sample US Core practitioner"
 
 Instance: examplePharmacist
 InstanceOf: $us-core-practitioner
-Title: "Example Practitioner"
+Title: "Example Practitioner - Pharmacist"
 Description: "A sample practitioner"
 
 * identifier[0]
@@ -173,8 +179,8 @@ InstanceOf: SMPMedicationActionPlanDetectedIssue
 * patient = Reference(examplePatient)
 * identifiedDateTime = "2025-07-02T08:00:00Z"
 * author = Reference(Practitioner/examplePharmacist)
-* implicated[0] = Reference(MedicationRequest/example-MedicationRequest-alprazolam-01) "alprazolam 0.5 MG Oral Tablet"
-* implicated[+] = Reference(MedicationRequest/example-MedicationRequest-metoclopramide-01) "metoclopromide 10 MG Oral Tablet"
+* implicated[0] = Reference(MedicationStatement/example-MedicationStatement-alprazolam-01) "alprazolam 0.5 MG Oral Tablet"
+* implicated[+] = Reference(MedicationStatement/example-MedicationStatement-metoclopramide-01) "metoclopromide 10 MG Oral Tablet"
 * detail = "Taking these medications contribute a risk of anticholinergic side effects that increase risk of cognitive impairment, dementia and falls."
 * mitigation.action = $v3-ActCode#13 "Stopped Concurrent Therapy"
 * mitigation.action.text = "Discontinue noted medications to prevent cognitive worsening, due to duplicative impact with other anticholinergics."
@@ -201,6 +207,19 @@ Description: "A medication request for alprazolam 0.5 MG Oral Tablet"
 * requester = Reference(examplePractitioner)
 * dosageInstruction[0].text = "Take as prescribed"
 
+// ****************************** */
+
+Instance: example-MedicationStatement-alprazolam-01
+InstanceOf: MedicationStatement
+Description: "Example Alprazolam Medication Statement"
+
+* basedOn = Reference(example-MedicationRequest-alprazolam-01)
+* status = #active
+* subject = Reference(Patient/examplePatient) "Example Patient"
+* dateAsserted = "2025-07-02T13:00:00-08:00"
+* informationSource = Reference(Practitioner/examplePractitioner)
+* medicationCodeableConcept[0].coding[0] = $rxnorm#308048 "alprazolam 0.5 MG Oral Tablet"
+* medicationCodeableConcept[0].coding[1] = $NDC#00378400305
 
 // ****************************** */
 
@@ -220,6 +239,20 @@ Description: "A medication request for metoclopramide 10 MG Oral Tablet"
 * authoredOn = "2025-07-02"
 * requester = Reference(examplePractitioner)
 * dosageInstruction[0].text = "Take as prescribed"
+
+// ****************************** */
+
+Instance: example-MedicationStatement-metoclopramide-01
+InstanceOf: MedicationStatement
+Description: "Example Metoclopramide Medication Statement"
+
+* basedOn = Reference(example-MedicationRequest-metoclopramide-01)
+* status = #active
+* subject = Reference(Patient/examplePatient) "Example Patient"
+* dateAsserted = "2025-07-02T13:00:00-08:00"
+* informationSource = Reference(Practitioner/examplePractitioner)
+* medicationCodeableConcept[0].coding[0] = $rxnorm#311666 "metoclopramide 10 MG Oral Tablet"
+* medicationCodeableConcept[0].coding[1] = $NDC#00093220301
 
 
 // ****************************** */

@@ -10,8 +10,8 @@
 <artifact id="MedicationRequest/example-MedicationRequest-alprazolam-01" key="MedicationRequest-example-MedicationRequest-alprazolam-01" name="Example Alprazolam Medication Request"/>
 <artifact id="MedicationRequest/example-MedicationRequest-metoclopramide-01" key="MedicationRequest-example-MedicationRequest-metoclopramide-01" name="Example Metoclopramide Medication Request"/>
 <artifact id="Patient/examplePatient" key="Patient-examplePatient" name="Example Patient"/>
-<artifact id="Practitioner/examplePharmacist" key="Practitioner-examplePharmacist" name="Example Practitioner"/>
-<artifact id="Practitioner/examplePractitioner" key="Practitioner-examplePractitioner" name="Example Practitioner"/>
+<artifact id="Practitioner/examplePharmacist" key="Practitioner-examplePharmacist" name="Example Practitioner - Pharmacist"/>
+<artifact id="Practitioner/examplePractitioner" key="Practitioner-examplePractitioner" name="Example Practitioner - Primary Care Physician"/>
 <artifact id="DocumentReference/Example-DocumentReference-PatientSummary20250709093054" key="DocumentReference-Example-DocumentReference-PatientSummary20250709093054" name="Example-DocumentReference-PatientSummary20250709093054"/>
 <artifact id="List/smp-medlist-1" key="List-smp-medlist-1" name="Hospital Medication Administration List"/>
 <artifact id="List/smp-medlist-2" key="List-smp-medlist-2" name="Primary Care Medication List"/>
@@ -32,6 +32,8 @@
 <artifact id="StructureDefinition/smp-medication-list" key="StructureDefinition-smp-medication-list" name="Standardized Medication Profile - Medication List"/>
 <artifact id="StructureDefinition/smp-medicationadministration" key="StructureDefinition-smp-medicationadministration" name="Standardized Medication Profile - MedicationAdministration"/>
 <artifact id="StructureDefinition/smp-medicationstatement" key="StructureDefinition-smp-medicationstatement" name="Standardized Medication Profile - MedicationStatement"/>
+<artifact id="MedicationStatement/example-MedicationStatement-alprazolam-01" key="MedicationStatement-example-MedicationStatement-alprazolam-01" name="example-MedicationStatement-alprazolam-01"/>
+<artifact id="MedicationStatement/example-MedicationStatement-metoclopramide-01" key="MedicationStatement-example-MedicationStatement-metoclopramide-01" name="example-MedicationStatement-metoclopramide-01"/>
 <artifact id="DetectedIssue/example-di01-duplicateTherapy" key="DetectedIssue-example-di01-duplicateTherapy" name="example-di01-duplicateTherapy"/>
 <artifact id="Bundle/smp-bundle-1" key="Bundle-smp-bundle-1" name="smp-bundle-1"/>
 <artifact id="Bundle/smp-bundle-tx-1" key="Bundle-smp-bundle-tx-1" name="smp-bundle-tx-1"/>
