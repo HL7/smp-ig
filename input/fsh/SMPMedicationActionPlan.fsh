@@ -22,7 +22,7 @@ Description: "A single package that contains a collection of medication action p
 * entry.response 0..0
 * entry.response ^mustSupport = false
 * entry contains
-   patient 0..1 MS and
+   patient 1..1 MS and
    smp-map-composition 1..1 MS
 
 * entry[patient].resource 1..1 MS

@@ -159,8 +159,8 @@ InstanceOf: SMPMedicationActionPlan
 
 * status = #draft
 * intent = #plan
-* title = "Betsy Smith-Johnson Med Action Plan (MAP) - Alprazolam and metoclopramide concurrent therapy as detected issue"
-* description = "Betsy Smith-Johnson Med Action Plan (MAP) - Alprazolam and metoclopramide concurrent therapy as DetectedIssue with risk for falls."
+* title = "Example Med Action Plan (MAP) - Alprazolam and metoclopramide concurrent therapy as detected issue"
+* description = "Example Med Action Plan (MAP) - Alprazolam and metoclopramide concurrent therapy as DetectedIssue with risk for falls."
 // * category[AssessPlan] = http://hl7.org/fhir/us/core/CodeSystem/careplan-category#assess-plan
 // * category[MedicationActionPlan] = $snomed#736378000 "Medication management plan (record artifact)"
 * subject = Reference(examplePatient) "Betsy Smith-Johnson"
@@ -219,7 +219,7 @@ Description: "Example Alprazolam Medication Statement"
 * dateAsserted = "2025-07-02T13:00:00-08:00"
 * informationSource = Reference(Practitioner/examplePractitioner)
 * medicationCodeableConcept[0].coding[0] = $rxnorm#308048 "alprazolam 0.5 MG Oral Tablet"
-* medicationCodeableConcept[0].coding[1] = $NDC#00378400305
+* medicationCodeableConcept[0].coding[1] = $ndc#00378400305
 
 // ****************************** */
 
@@ -252,7 +252,7 @@ Description: "Example Metoclopramide Medication Statement"
 * dateAsserted = "2025-07-02T13:00:00-08:00"
 * informationSource = Reference(Practitioner/examplePractitioner)
 * medicationCodeableConcept[0].coding[0] = $rxnorm#311666 "metoclopramide 10 MG Oral Tablet"
-* medicationCodeableConcept[0].coding[1] = $NDC#00093220301
+* medicationCodeableConcept[0].coding[1] = $ndc#00093220301
 
 
 // ****************************** */
