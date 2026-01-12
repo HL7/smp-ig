@@ -38,5 +38,9 @@ Alias: $smp-medicationlist = http://hl7.org/fhir/us/smp/StructureDefinition/smp-
 Alias: $smp-medication = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication
 Alias: $smp-medicationstatement = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement
 Alias: $smp-medicationadministration = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationadministration
+Alias: $smp-medicationactionplan = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication-action-plan
+Alias: $smp-medicationactionplandetectedissue = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication-action-plan-detected-issue
 Alias: $smp-bundle = http://hl7.org/fhir/us/smp/StructureDefinition/smp-bundle
 Alias: $smp-bundle-tx = http://hl7.org/fhir/us/smp/StructureDefinition/smp-bundle-transaction
+Alias: $smp-bundle-map = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication-action-plan-bundle
+

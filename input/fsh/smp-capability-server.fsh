@@ -65,6 +65,14 @@ Usage: #definition
     * insert CSinteraction(#MAY, #update, [[Allows for the maintenance of a MedicationAdministration as required.]])
     * insert CSsearch(#SHALL, "patient", "http://hl7.org/fhir/SearchParameter/clinical-patient", #reference, [[Allows retrieving medication administrations for a patient]])
     * insert CSsearch(#SHOULD, "status", "http://hl7.org/fhir/SearchParameter/medications-status", #token, [[Allows filtering by medication administration status]])
+  * insert CSresource(#CarePlan, $smp-medicationactionplan)
+    * insert CSinteraction(#SHOULD, #read, [[Allows retrieval medication action plan details.]])
+    * insert CSinteraction(#MAY, #create, [[Allows for the creation of a medication action plan.]])
+    * insert CSinteraction(#MAY, #update, [[Allows for the maintenance of a CarePlan as required.]])
+    * insert CSsearch(#SHALL, "patient", "http://hl7.org/fhir/SearchParameter/clinical-patient", #reference, [[Allows retrieving medication action plans for a patient]])
+    * insert CSresource(#DetectedIssue, $smp-medicationactionplandetectedissue)
+    * insert CSinteraction(#SHOULD, #read, [[Allows retrieval medication action plan detected issue details.]])
+    * insert CSsearch(#SHALL, "patient", "http://hl7.org/fhir/SearchParameter/clinical-patient", #reference, [[Allows retrieving medication action plans for a patient]])
   * insert CSresource(#Patient, $us-core-patient)
     * insert CSinteraction(#SHALL, #read, [[Required for identification and retrieval of patient medication information]])
     * insert CSsearch(#SHALL, "_id", "http://hl7.org/fhir/SearchParameter/Resource-id", #token, [[Allows retrieval of patient by id. Aligns with US Core requirement and FHIR base spec.]])
@@ -72,6 +80,7 @@ Usage: #definition
     * type = #Bundle
     * supportedProfile[0] = $smp-bundle
     * supportedProfile[+] = $smp-bundle-tx
-    * documentation = "Supports two Bundle profiles: (1) Bundle Medication List profile (type=collection) for retrieving medication lists with supporting resources - supports read interaction; (2) Bundle Medication List Maintenance profile (type=transaction) for submitting create/update operations - transaction bundles are ephemeral processing instructions and are not stored as resources, so the read interaction does not apply to them."
+    * supportedProfile[+] = $smp-bundle-map
+    * documentation = "Supports three Bundle profiles: (1) Bundle Medication List profile (type=collection) for retrieving medication lists with supporting resources - supports read interaction; (2) Bundle Medication List Maintenance profile (type=transaction) for submitting create/update operations - transaction bundles are ephemeral processing instructions and are not stored as resources, so the read interaction does not apply to them; (3) Bundle Medication Action Plan (type=document) for submitting a medication action plan consisting of detected issues and an unstructured document attachment."
   * insert CSinteraction(#MAY, #read, [[Allows retrieval of collection-type medication list bundles from a repository. Does NOT apply to transaction bundles which are ephemeral. If the smp-query operation on List is implemented, this capability becomes mandatory.]])
 
