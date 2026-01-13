@@ -81,7 +81,7 @@ Description:    "A pharmacist-generated care plan that identifies issues and ris
   * ^short = "Medication Action Plan Category"
   * ^comment = "Category for Medication Action Plan as defined by SMP Implementation Guide"
 
-* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slice based on the category CodeableConcept pattern"
