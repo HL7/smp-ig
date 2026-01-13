@@ -16,6 +16,14 @@ echo "$txoption"
 
 export JAVA_TOOL_OPTIONS="$JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8"
 
+if [ -d "./temp/pages" ]; then
+    echo "Cleaning ./temp/pages directory..."
+    rm -rf ./temp/pages/*
+    echo "Contents deleted."
+else
+    echo "Directory ./temp/pages does not exist."
+fi
+
 publisher=$input_cache_path/$publisher_jar
 if test -f "$publisher"; then
 	java -jar $publisher -ig . $txoption $*

@@ -114,6 +114,7 @@ Description:    "An issues or risk related to a given medication, therapy, or re
 * detail 0..1 MS
   * ^short = "Detected Issue Detail"
   * ^comment = "Additional information about the detected issue or risk as a string. To be used when a code is not available or sufficient."
+* implicated 1..* MS
 * implicated only Reference(MedicationStatement)
 
 /* ****************************** */

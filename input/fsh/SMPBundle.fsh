@@ -70,7 +70,7 @@ Description: "Example of a Bundle resource used to transmit a patient's SMP medi
 * entry[=].resource.mode = #working
 * entry[=].resource.title = "Hospital Medication Administration List"
 * entry[=].resource.code = $loinc#104207-6
-* entry[=].resource.subject.reference = "Patient/example"
+* entry[=].resource.subject.reference = "Patient/patient-john-doe"
 * entry[=].resource.subject.display = "US Core Example Patient"
 * entry[=].resource.date = "2024-07-01"
 * entry[=].resource.source.reference = "Practitioner/practitioner-1"
@@ -85,7 +85,7 @@ Description: "Example of a Bundle resource used to transmit a patient's SMP medi
 * entry[=].resource.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">A statement of an individual medication the patient is receiving</div>"
 * entry[=].resource.status = #active
 * entry[=].resource.medicationCodeableConcept = $rxnorm#428759 "metformin 250 MG Oral Tablet"
-* entry[=].resource.subject.reference = "Patient/example"
+* entry[=].resource.subject.reference = "Patient/patient-john-doe"
 * entry[=].resource.subject.display = "US Core Example Patient"
 * entry[=].resource.effectiveDateTime = "2024-06-01"
 * entry[=].resource.dateAsserted = "2024-07-01"
@@ -104,7 +104,7 @@ Description: "Example of a Bundle resource used to transmit a patient's SMP medi
 * entry[=].resource.mode = #working
 * entry[=].resource.title = "Primary Care Medication List"
 * entry[=].resource.code = $loinc#10160-0
-* entry[=].resource.subject.reference = "Patient/example"
+* entry[=].resource.subject.reference = "Patient/patient-john-doe"
 * entry[=].resource.subject.display = "US Core Example Patient"
 * entry[=].resource.date = "2024-07-01"
 * entry[=].resource.source.reference = "Practitioner/practitioner-2"
@@ -118,7 +118,7 @@ Description: "Example of a Bundle resource used to transmit a patient's SMP medi
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement"
 * entry[=].resource.status = #active
 * entry[=].resource.medicationCodeableConcept = $rxnorm#197361 "Amlodipine 5 MG Oral Tablet"
-* entry[=].resource.subject.reference = "Patient/example"
+* entry[=].resource.subject.reference = "Patient/patient-john-doe"
 * entry[=].resource.effectiveDateTime = "2024-06-01"
 * entry[=].resource.dateAsserted = "2024-07-03"
 * entry[=].resource.reasonCode = $snomed#38341003 "Hypertensive disorder, systemic arterial (disorder)"

@@ -7,7 +7,6 @@ Thumbs.db
 /template
 /temp
 
-_genonce.bat
 /.vscode
 
 # Created by https://www.toptal.com/developers/gitignore/api/rubymine+all
@@ -117,6 +116,8 @@ _build.bat
 _build.sh
 _gencontinuous.bat
 _gencontinuous.sh
+_genonce.bat
+_genonce.sh
 FHIR-us-smp.xml
 
 # Environment-specific
