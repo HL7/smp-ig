@@ -58,12 +58,12 @@ Description: "Example SMP Medication Action Plan Bundle - 4978b86e-e7bc-4dcd-b3b
 Usage: #example
 
 * identifier.system = "urn:uuid:4978b86e-e7bc-4dcd-b3b5-27b72826147f"
-* identifier.value = "4978b86e-e7bc-4dcd-b3b5-27b72826147f"
+* identifier.value = "smp-medication-action-plan-bundle-example01"
 * type = #document
 * timestamp = "2025-07-02T14:25:34.001-05:00"
 
-// * link[0].relation = #self
-// * link[0].url = "http://hospital.example.com/List/SMP-MedList-Example20250702093051"
+* link[0].relation = #self
+* link[0].url = "urn:uuid:3c676f57-b990-42e0-a5ce-203dbb8369e5"
 
 * entry[0].fullUrl = "http://hospital.example.com/Composition/Example-SMP-MAPComposition-01"
 * entry[=].resource = Example-SMP-MAPComposition-01
@@ -77,8 +77,8 @@ Usage: #example
 * entry[+].fullUrl = "http://hospital.example.com/Practitioner/example-pharmacist"
 * entry[=].resource = example-pharmacist
 
-* entry[+].fullUrl = "http://hospital.example.com/List/SMP-MedList-Example20250702093051"
-* entry[=].resource = SMP-MedList-Example20250702093051
+// * entry[+].fullUrl = "http://hospital.example.com/List/3c676f57-b990-42e0-a5ce-203dbb8369e5"
+// * entry[=].resource = 3c676f57-b990-42e0-a5ce-203dbb8369e5
 
 * entry[+].fullUrl = "http://hospital.example.com/CarePlan/example-MAP-Alprazolam-Metoclopramide-01"
 * entry[=].resource = example-MAP-Alprazolam-Metoclopramide-01
@@ -132,7 +132,7 @@ Usage: #example
 
 // ****************************** */
 
-Instance: SMP-MedList-Example20250702093051
+Instance: 3c676f57-b990-42e0-a5ce-203dbb8369e5
 InstanceOf: List
 Usage: #example
 

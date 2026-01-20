@@ -13,7 +13,7 @@
 <artifact id="Patient/patient-john-doe" key="Patient-patient-john-doe" name="Example Patient"/>
 <artifact id="Practitioner/example-pharmacist" key="Practitioner-example-pharmacist" name="Example Practitioner - Pharmacist"/>
 <artifact id="Practitioner/example-practitioner" key="Practitioner-example-practitioner" name="Example Practitioner - Primary Care Physician"/>
-<artifact id="List/SMP-MedList-Example20250702093051" key="List-SMP-MedList-Example20250702093051" name="Example Reconciled MedList20250702093051"/>
+<artifact id="List/3c676f57-b990-42e0-a5ce-203dbb8369e5" key="List-3c676f57-b990-42e0-a5ce-203dbb8369e5" name="Example Reconciled MedList20250702093051"/>
 <artifact id="DocumentReference/Example-DocumentReference-PatientSummary20250709093054" key="DocumentReference-Example-DocumentReference-PatientSummary20250709093054" name="Example-DocumentReference-PatientSummary20250709093054"/>
 <artifact id="List/smp-medlist-1" key="List-smp-medlist-1" name="Hospital Medication Administration List"/>
 <artifact id="List/smp-medlist-2" key="List-smp-medlist-2" name="Primary Care Medication List"/>
