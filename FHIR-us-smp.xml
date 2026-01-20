@@ -6,30 +6,73 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="DocumentReference/ActualMeds-DocumentReference-PatientSummary20260107105203" key="DocumentReference-ActualMeds-DocumentReference-PatientSummary20260107105203" name="ActualMeds-DocumentReference-PatientSummary20260107105203"/>
+<artifact id="CarePlan/betsysmith-johnson01-MAP-Drug-druginteraction0" key="CarePlan-betsysmith-johnson01-MAP-Drug-druginteraction0" name="Clopidogrel Bisulfate Oral Tablet 75 MG,Sertraline HCl Oral Tablet 25 MG Betsy Smith-Johnson Med Action Plan (MAP)"/>
+<artifact id="MedicationRequest/example-MedicationRequest-alprazolam-01" key="MedicationRequest-example-MedicationRequest-alprazolam-01" name="Example Alprazolam Medication Request"/>
+<artifact id="CarePlan/example-MAP-Alprazolam-Metoclopramide-01" key="CarePlan-example-MAP-Alprazolam-Metoclopramide-01" name="Example Med Action Plan (MAP) - Alprazolam and metoclopramide concurrent therapy as detected issue"/>
+<artifact id="MedicationRequest/example-MedicationRequest-metoclopramide-01" key="MedicationRequest-example-MedicationRequest-metoclopramide-01" name="Example Metoclopramide Medication Request"/>
+<artifact id="Patient/examplePatient" key="Patient-examplePatient" name="Example Patient"/>
+<artifact id="Practitioner/examplePharmacist" key="Practitioner-examplePharmacist" name="Example Practitioner - Pharmacist"/>
+<artifact id="Practitioner/examplePractitioner" key="Practitioner-examplePractitioner" name="Example Practitioner - Primary Care Physician"/>
+<artifact id="DocumentReference/Example-DocumentReference-PatientSummary20250709093054" key="DocumentReference-Example-DocumentReference-PatientSummary20250709093054" name="Example-DocumentReference-PatientSummary20250709093054"/>
 <artifact id="List/smp-medlist-1" key="List-smp-medlist-1" name="Hospital Medication Administration List"/>
+<artifact id="CarePlan/betsysmith-johnson01-MAP-Drug-druginteraction1" key="CarePlan-betsysmith-johnson01-MAP-Drug-druginteraction1" name="Jardiance Oral Tablet 10 MG,metFORMIN HCl Oral Tablet 500 MG,Sertraline HCl Oral Tablet 25 MG Betsy Smith-Johnson Med Action Plan (MAP)"/>
+<artifact id="Practitioner/Practitioner-AnitaChu" key="Practitioner-Practitioner-AnitaChu" name="Practitioner-AnitaChu"/>
+<artifact id="Practitioner/Practitioner-KevinJames" key="Practitioner-Practitioner-KevinJames" name="Practitioner-KevinJames"/>
+<artifact id="Practitioner/Practitioner-PriyaSarkar" key="Practitioner-Practitioner-PriyaSarkar" name="Practitioner-PriyaSarkar"/>
+<artifact id="PractitionerRole/PractitionerRole-Physician-PriyaSarkar" key="PractitionerRole-PractitionerRole-Physician-PriyaSarkar" name="PractitionerRole-Physician-PriyaSarkar"/>
+<artifact id="List/smp-medlist-2" key="List-smp-medlist-2" name="Primary Care Medication List"/>
+<artifact id="PractitionerRole/Role-IMMD-AnitaChu" key="PractitionerRole-Role-IMMD-AnitaChu" name="Role-IMMD-AnitaChu"/>
+<artifact id="StructureDefinition/smp-map-composition" key="StructureDefinition-smp-map-composition" name="SMP Composition Medication Action Plan"/>
+<artifact id="Composition/betsysmith-johnson01-SMP-MAPComposition20260107105207" key="Composition-betsysmith-johnson01-SMP-MAPComposition20260107105207" name="SMP Medication Action Plan for betsysmith-johnson01"/>
+<artifact id="Composition/Example-SMP-MAPComposition-01" key="Composition-Example-SMP-MAPComposition-01" name="SMP Medication Action Plan for examplePatient"/>
 <artifact id="OperationDefinition/smp-operation-retrieve" key="OperationDefinition-smp-operation-retrieve" name="SMP Operation Retrieve"/>
 <artifact id="OperationDefinition/smp-operation-submit" key="OperationDefinition-smp-operation-submit" name="SMP Operation Submit"/>
 <artifact id="StructureDefinition/smp-parameters-outcome" key="StructureDefinition-smp-parameters-outcome" name="SMP Parameters - Outcome"/>
 <artifact id="StructureDefinition/smp-parameters-query" key="StructureDefinition-smp-parameters-query" name="SMP Parameters - Query"/>
 <artifact id="StructureDefinition/smp-parameters-response" key="StructureDefinition-smp-parameters-response" name="SMP Parameters - Response"/>
 <artifact id="StructureDefinition/smp-parameters-submit" key="StructureDefinition-smp-parameters-submit" name="SMP Parameters - Submit"/>
+<artifact id="StructureDefinition/smp-medication-action-plan-bundle" key="StructureDefinition-smp-medication-action-plan-bundle" name="Standardized Medication Profile - Bundle Medication Action Plan"/>
 <artifact id="StructureDefinition/smp-bundle" key="StructureDefinition-smp-bundle" name="Standardized Medication Profile - Bundle Medication List"/>
 <artifact id="StructureDefinition/smp-bundle-transaction" key="StructureDefinition-smp-bundle-transaction" name="Standardized Medication Profile - Bundle Medication List Maintenance"/>
 <artifact id="StructureDefinition/smp-medication" key="StructureDefinition-smp-medication" name="Standardized Medication Profile - Medication"/>
-<artifact id="StructureDefinition/smp-map" key="StructureDefinition-smp-map" name="Standardized Medication Profile - Medication Action Plan"/>
-<artifact id="StructureDefinition/smp-map-detectedissue" key="StructureDefinition-smp-map-detectedissue" name="Standardized Medication Profile - Medication Action Plan Detected Issue"/>
+<artifact id="StructureDefinition/smp-medication-action-plan" key="StructureDefinition-smp-medication-action-plan" name="Standardized Medication Profile - Medication Action Plan"/>
+<artifact id="StructureDefinition/smp-medication-action-plan-detected-issue" key="StructureDefinition-smp-medication-action-plan-detected-issue" name="Standardized Medication Profile - Medication Action Plan Detected Issue"/>
 <artifact id="StructureDefinition/smp-medication-list" key="StructureDefinition-smp-medication-list" name="Standardized Medication Profile - Medication List"/>
 <artifact id="StructureDefinition/smp-medicationadministration" key="StructureDefinition-smp-medicationadministration" name="Standardized Medication Profile - MedicationAdministration"/>
 <artifact id="StructureDefinition/smp-medicationstatement" key="StructureDefinition-smp-medicationstatement" name="Standardized Medication Profile - MedicationStatement"/>
+<artifact id="DetectedIssue/betsysmith-johnson01-di01-Drug-druginteraction0" key="DetectedIssue-betsysmith-johnson01-di01-Drug-druginteraction0" name="betsysmith-johnson01-di01-Drug-druginteraction0"/>
+<artifact id="DetectedIssue/betsysmith-johnson01-di01-Drug-druginteraction1" key="DetectedIssue-betsysmith-johnson01-di01-Drug-druginteraction1" name="betsysmith-johnson01-di01-Drug-druginteraction1"/>
+<artifact id="MedicationRequest/bsj1-smp-medrx-clopidogrel-1-11" key="MedicationRequest-bsj1-smp-medrx-clopidogrel-1-11" name="bsj1-smp-medrx-clopidogrel-1-11"/>
+<artifact id="MedicationRequest/bsj1-smp-medrx-jardiance-1-5" key="MedicationRequest-bsj1-smp-medrx-jardiance-1-5" name="bsj1-smp-medrx-jardiance-1-5"/>
+<artifact id="MedicationRequest/bsj1-smp-medrx-metformin-0-12" key="MedicationRequest-bsj1-smp-medrx-metformin-0-12" name="bsj1-smp-medrx-metformin-0-12"/>
+<artifact id="MedicationRequest/bsj1-smp-medrx-sertraline-1-8" key="MedicationRequest-bsj1-smp-medrx-sertraline-1-8" name="bsj1-smp-medrx-sertraline-1-8"/>
+<artifact id="MedicationStatement/bsj1-smp-medstmt-clopidogrel-1-11" key="MedicationStatement-bsj1-smp-medstmt-clopidogrel-1-11" name="bsj1-smp-medstmt-clopidogrel-1-11"/>
+<artifact id="MedicationStatement/bsj1-smp-medstmt-jardiance-1-5" key="MedicationStatement-bsj1-smp-medstmt-jardiance-1-5" name="bsj1-smp-medstmt-jardiance-1-5"/>
+<artifact id="MedicationStatement/bsj1-smp-medstmt-metformin-0-12" key="MedicationStatement-bsj1-smp-medstmt-metformin-0-12" name="bsj1-smp-medstmt-metformin-0-12"/>
+<artifact id="MedicationStatement/bsj1-smp-medstmt-sertraline-1-8" key="MedicationStatement-bsj1-smp-medstmt-sertraline-1-8" name="bsj1-smp-medstmt-sertraline-1-8"/>
+<artifact id="Bundle/ddca07f5-6e40-4c30-952e-23cffd48b045" key="Bundle-ddca07f5-6e40-4c30-952e-23cffd48b045" name="ddca07f5-6e40-4c30-952e-23cffd48b045"/>
+<artifact id="MedicationStatement/example-MedicationStatement-alprazolam-01" key="MedicationStatement-example-MedicationStatement-alprazolam-01" name="example-MedicationStatement-alprazolam-01"/>
+<artifact id="MedicationStatement/example-MedicationStatement-metoclopramide-01" key="MedicationStatement-example-MedicationStatement-metoclopramide-01" name="example-MedicationStatement-metoclopramide-01"/>
+<artifact id="DetectedIssue/example-di01-duplicateTherapy" key="DetectedIssue-example-di01-duplicateTherapy" name="example-di01-duplicateTherapy"/>
+<artifact id="Organization/org-ED-Metro-Hospital" key="Organization-org-ED-Metro-Hospital" name="org-ED-Metro-Hospital"/>
+<artifact id="Location/org-Loc-Michigan-Primary-Health-Care-A" key="Location-org-Loc-Michigan-Primary-Health-Care-A" name="org-Loc-Michigan-Primary-Health-Care-A"/>
+<artifact id="Organization/org-Michigan-Primary-Health-Care-A" key="Organization-org-Michigan-Primary-Health-Care-A" name="org-Michigan-Primary-Health-Care-A"/>
+<artifact id="Organization/org-PC-Primary-Care-Michigan" key="Organization-org-PC-Primary-Care-Michigan" name="org-PC-Primary-Care-Michigan"/>
+<artifact id="Patient/patient-betsysmith-johnson01" key="Patient-patient-betsysmith-johnson01" name="patient-betsysmith-johnson01"/>
 <artifact id="Bundle/smp-bundle-1" key="Bundle-smp-bundle-1" name="smp-bundle-1"/>
 <artifact id="Bundle/smp-bundle-tx-1" key="Bundle-smp-bundle-tx-1" name="smp-bundle-tx-1"/>
+<artifact id="Bundle/smp-bundle-tx-2" key="Bundle-smp-bundle-tx-2" name="smp-bundle-tx-2"/>
 <artifact id="CapabilityStatement/smp-client" key="CapabilityStatement-smp-client" name="smp-client"/>
 <artifact id="Parameters/smp-history-input-parameters-1" key="Parameters-smp-history-input-parameters-1" name="smp-history-input-parameters-1"/>
 <artifact id="Parameters/smp-history-output-parameters-1" key="Parameters-smp-history-output-parameters-1" name="smp-history-output-parameters-1"/>
 <artifact id="Medication/smp-med-1" key="Medication-smp-med-1" name="smp-med-1"/>
 <artifact id="MedicationAdministration/smp-medadm-1" key="MedicationAdministration-smp-medadm-1" name="smp-medadm-1"/>
+<artifact id="Bundle/smp-medication-action-plan-bundle-example01" key="Bundle-smp-medication-action-plan-bundle-example01" name="smp-medication-action-plan-bundle-example01"/>
 <artifact id="MedicationStatement/smp-medstmt-1" key="MedicationStatement-smp-medstmt-1" name="smp-medstmt-1"/>
 <artifact id="MedicationStatement/smp-medstmt-2" key="MedicationStatement-smp-medstmt-2" name="smp-medstmt-2"/>
+<artifact id="MedicationStatement/smp-medstmt-3" key="MedicationStatement-smp-medstmt-3" name="smp-medstmt-3"/>
+<artifact id="MedicationStatement/smp-medstmt-4" key="MedicationStatement-smp-medstmt-4" name="smp-medstmt-4"/>
 <artifact id="CapabilityStatement/smp-server" key="CapabilityStatement-smp-server" name="smp-server"/>
 <artifact id="Parameters/smp-submit-input-parameters-1" key="Parameters-smp-submit-input-parameters-1" name="smp-submit-input-parameters-1"/>
 <artifact id="Parameters/smp-submit-outcome-parameters-1" key="Parameters-smp-submit-outcome-parameters-1" name="smp-submit-outcome-parameters-1"/>

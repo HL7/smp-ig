@@ -8,6 +8,8 @@ Alias: $loinc = http://loinc.org
 Alias: $rxnorm = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $snomed = http://snomed.info/sct
+Alias: $ndc = http://hl7.org/fhir/sid/ndc
+Alias: $taxonomy = http://nucc.org/provider-taxonomy
 
 // Value Sets
 // NOTE: use a value set (not code system) when binding a field
@@ -29,12 +31,16 @@ Alias: $us-core-patient = http://hl7.org/fhir/us/core/StructureDefinition/us-cor
 Alias: $us-core-practitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 Alias: $us-core-practitionerrole = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
 Alias: $us-core-relatedperson = http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
-Alias: $us-core-careplan = http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan
+Alias: $us-core-care-plan = http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan
 
 // SMP content profiles
 Alias: $smp-medicationlist = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication-list
 Alias: $smp-medication = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication
 Alias: $smp-medicationstatement = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement
 Alias: $smp-medicationadministration = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationadministration
+Alias: $smp-medicationactionplan = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication-action-plan
+Alias: $smp-medicationactionplandetectedissue = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication-action-plan-detected-issue
 Alias: $smp-bundle = http://hl7.org/fhir/us/smp/StructureDefinition/smp-bundle
 Alias: $smp-bundle-tx = http://hl7.org/fhir/us/smp/StructureDefinition/smp-bundle-transaction
+Alias: $smp-bundle-map = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication-action-plan-bundle
+
