@@ -64,8 +64,6 @@ pages:
     title: Standardized Medication Profile Implementation Guide Home Page
   usecases.md:
     title: Use Cases and Overview
-  domains.md:
-    title: Domains
   background.md:
     title: Technical Background
   specification.md:
@@ -84,7 +82,6 @@ menu:
   SMP Specification:
     SMP Home Page: index.html
     Use Cases and Overview: usecases.html
-    Domains: domains.html
     Technical Background: background.html
     Formal Specification: specification.html
     References: references.html

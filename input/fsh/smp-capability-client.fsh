@@ -12,7 +12,7 @@ Usage: #definition
 * contact[0].name = "HL7 International / Pharmacy"
 * contact[=].telecom.system = #url
 * contact[=].telecom.value = "http://www.hl7.org/Special/committees/medication"
-* description = "This resource defines the expected capabilities of the SMP Server actor when conforming to the SMP IG and It is expected that it will be used in conjunction with the US Core CapabilityStatement. Together they describe the complete list of actual profiles and RESTful operations supported by SMP clients. SMP Client requirements may also be impacted by the rules of local jurisdictions or other contextual requirements."
+* description = "This CapabilityStatement defines the expected capabilities of the SMP Client actor when conforming to the SMP Implementation Guide (IG). It is intended to be used together with the US Core CapabilityStatement. Combined, they describe the complete set of profiles and RESTful operations that SMP clients support. Client requirements may also be influenced by local jurisdictional rules and other contextual considerations."
 * jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * kind = #requirements
 * fhirVersion = #4.0.1

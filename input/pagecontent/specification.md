@@ -1,4 +1,4 @@
-This section of the implementation guide defines the specific conformance requirements for systems wishing to conform to Standardized Medication Profile implementation guide.  The RESTful exchanges of resources is the primary means of information exchange but in some situations, a Bundle containing the primary Medication List resources and all of the reference SMP Medication Statements may optimize the exchange.
+This section of the implementation guide defines the specific requirements for systems wishing to conform to Standardized Medication Profile implementation guide.  The Representational State Transfer (REST)-based exchanges of resources is the primary means of information exchange. In some cases, it is more efficient to submit a FHIR Bundle that includes the primary Medication List resources along with all referenced SMP Medication Statements, consolidating the exchange into a single REST request.
 
 ### Context
 
@@ -180,7 +180,7 @@ Back in the community, the home care team for the patient review the discharge m
 
 <br/>
 
-The Primary caregivers go to the community pharmacy, the home care team for the patient review the discharge medication list from the SNF (and may also review previous administration lists and the discontinued medication list), making any recommendations as appropriate and create the new home medication list. The community pharmacist provides the medications to the caregiver with instructions, the caregiver can also the current home medication list from the patient portal of the Home Health Authority system.
+The Primary caregivers go to the community pharmacy, the home care team for the patient review the discharge medication list from the SNF (and may also review previous administration lists and the discontinued medication list), making any recommendations as appropriate and create the new home medication list. The community pharmacist provides the medications to the caregiver with instructions, the caregiver can also access the current home medication list from the patient portal of the Home Health Authority system.
 
 ### Resource Structure
 The diagram below illustrates the structure of the relationships between the various resources in this IG. The resources present the internals as accurately as possible with some shortcuts to flatten the JSON structure (collapsing arrays to a single indexed attribute '[0]' for example or collapsing structure to a single attribute 'dosage.text'). The resources may not be instance valid but should give a clear idea of the relationships and how the data is stored across the resource graph. The Patient resource instance is only provided once on the diagram, the additional references to the Patient resource instance all use the 'Patient/*identifier*' and appear in <span style="text-decoration: underline red">red text and underlined</span>.
