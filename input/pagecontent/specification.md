@@ -26,7 +26,7 @@ This implementation guide sets expectations for both clients and servers during 
 
 
 #### Profiles
-This specification makes significant use of [FHIR profiles]({{site.data.fhir.path}}profiling.html) and terminology artifacts to describe the content to be shared as part of prior authorization requests and responses.
+This specification makes significant use of [FHIR profiles]({{site.data.fhir.path}}profiling.html) and terminology artifacts to describe the content to be shared as part of transition of care process.
 
 The full set of profiles defined in this implementation guide can be found by following the links on the [Artifacts](fhirArtifacts.html) page.
 
@@ -183,7 +183,7 @@ Back in the community, the home care team for the patient review the discharge m
 The Primary caregivers go to the community pharmacy, the home care team for the patient review the discharge medication list from the SNF (and may also review previous administration lists and the discontinued medication list), making any recommendations as appropriate and create the new home medication list. The community pharmacist provides the medications to the caregiver with instructions, the caregiver can also access the current home medication list from the patient portal of the Home Health Authority system.
 
 ### Resource Structure
-The diagram below illustrates the structure of the relationships between the various resources in this IG. The resources present the internals as accurately as possible with some shortcuts to flatten the JSON structure (collapsing arrays to a single indexed attribute '[0]' for example or collapsing structure to a single attribute 'dosage.text'). The resources may not be instance valid but should give a clear idea of the relationships and how the data is stored across the resource graph. The Patient resource instance is only provided once on the diagram, the additional references to the Patient resource instance all use the 'Patient/*identifier*' and appear in <span style="text-decoration: underline red">red text and underlined</span>.
+The diagram below illustrates the structure of the relationships between the various resources in this IG. The resources present the internals as accurately as possible with some shortcuts to flatten the JSON structure (collapsing arrays to a single indexed attribute '[0]' for example or collapsing structure to a single attribute 'dosage.text'). Because of these simplifications and the use of placeholders, the depicted resources are illustrative and may not be fully valid FHIR instances. They are intended to show where data is represented and how resources reference each other across the overall resource graph. The Patient resource instance is only provided once on the diagram, the additional references to the Patient resource instance all use the 'Patient/*identifier*' and appear in <span style="text-decoration: underline red">red text and underlined</span>.
 
 {::options parse_block_html="false" /}
 <figure>
