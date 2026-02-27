@@ -82,7 +82,7 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="changelog" name="Change Log"/>
 <page deprecated="true" key="credits" name="Credits"/>
-<page key="domains" name="Domains"/>
+<page deprecated="true" key="domains" name="Domains"/>
 <page key="downloads" name="Downloads"/>
 <page key="specification" name="Formal Specification"/>
 <page key="references" name="References"/>
