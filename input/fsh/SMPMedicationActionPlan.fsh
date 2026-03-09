@@ -22,14 +22,26 @@ Description: "A single package that contains a collection of medication action p
 * entry.response 0..0
 * entry.response ^mustSupport = false
 * entry contains
-   patient 1..1 MS and
-   smp-map-composition 1..1 MS
-
+    smp-map-composition 1..1 MS and
+    patient 1..1 MS and
+    List 0..* MS and
+    MedicationStatement 0..* MS and
+    Medication 0..* MS and
+    MedicationRequest 0..* MS and
+    Practitioner 0..* MS and
+    PractitionerRole 0..* MS and
+    Organization 0..* MS
+* entry[smp-map-composition].resource only SMPMedicationActionPlanComposition
 * entry[patient].resource 1..1 MS
 * entry[patient].resource only $us-core-patient
-
-* entry[smp-map-composition].resource only SMPMedicationActionPlanComposition
-
+* entry[List].resource 1..1 MS
+* entry[List].resource only $smp-medicationlist
+* entry[MedicationStatement].resource only $smp-medicationstatement
+* entry[Medication].resource only Medication
+* entry[MedicationRequest].resource only MedicationRequest
+* entry[Practitioner].resource only Practitioner
+* entry[PractitionerRole].resource only PractitionerRole
+* entry[Organization].resource only Organization
 
 /* ****************************** */
 
@@ -37,7 +49,7 @@ Profile: SMPMedicationActionPlanComposition
 Parent: Composition
 Id: smp-map-composition
 Title: "SMP Composition Medication Action Plan"
-Description: "A composition resource that defines the metadata for a medication action plan document."
+Description: "A Medication Action Plan is a pharmacist-evaluation of a patient’s medications, and other clinical factors (e.g.: conditions, allergies). It identifies potential drug therapy related issues, recommended interventions and medication list."
 
 * type = $loinc#80797-4 "Pharmacology Plan of care note"
 * author only Reference($us-core-practitioner or $us-core-practitionerrole)
@@ -114,6 +126,6 @@ Description:    "An issues or risk related to a given medication, therapy, or re
 * detail 0..1 MS
   * ^short = "Detected Issue Detail"
   * ^comment = "Additional information about the detected issue or risk as a string. To be used when a code is not available or sufficient."
-* implicated only Reference(MedicationStatement)
+* implicated only Reference(SMPMedicationStatement or Condition or Observation or AllergyIntolerance)
 
 /* ****************************** */
