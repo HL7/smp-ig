@@ -79,8 +79,17 @@ Usage: #definition
   * resource[+]
     * type = #Bundle
     * supportedProfile[0] = $smp-bundle
-    * supportedProfile[+] = $smp-bundle-tx
-    * supportedProfile[+] = $smp-bundle-map
-    * documentation = "Supports three Bundle profiles: (1) Bundle Medication List profile (type=collection) for retrieving medication lists with supporting resources - supports read interaction; (2) Bundle Medication List Maintenance profile (type=transaction) for submitting create/update operations - transaction bundles are ephemeral processing instructions and are not stored as resources, so the read interaction does not apply to them; (3) Bundle Medication Action Plan (type=document) for submitting a medication action plan consisting of detected issues and an unstructured document attachment."
-  * insert CSinteraction(#MAY, #read, [[Allows retrieval of collection-type medication list bundles from a repository. Does NOT apply to transaction bundles which are ephemeral. If the smp-query operation on List is implemented, this capability becomes mandatory.]])
+    * documentation = "Bundle Medication List profile (type=collection) supports retrieval and submission of medication list bundles."
+  * insert CSinteraction(#MAY, #read, [[Allows retrieval of collection-type medication list bundles from a repository. If the smp-query operation on List is implemented, this capability becomes mandatory.]])
+  * insert CSinteraction(#MAY, #create, [[Allows submission of collection-type medication list bundles to a repository.]])
+  * resource[+]
+    * type = #Bundle
+    * supportedProfile[0] = $smp-bundle-tx
+    * documentation = "Bundle Medication List Maintenance profile (type=transaction) is a processing instruction and is not persisted as a readable/creatable Bundle resource."
+  * resource[+]
+    * type = #Bundle
+    * supportedProfile[0] = $smp-bundle-map
+    * documentation = "Bundle Medication Action Plan profile (type=document) supports retrieval and submission of medication action plan bundles."
+  * insert CSinteraction(#MAY, #read, [[Allows retrieval of medication action plan document bundles from a repository.]])
+  * insert CSinteraction(#MAY, #create, [[Allows submission of medication action plan document bundles to a repository.]])
 
