@@ -32,6 +32,7 @@
 <artifact id="StructureDefinition/smp-parameters-query" key="StructureDefinition-smp-parameters-query" name="SMP Parameters - Query"/>
 <artifact id="StructureDefinition/smp-parameters-response" key="StructureDefinition-smp-parameters-response" name="SMP Parameters - Response"/>
 <artifact id="StructureDefinition/smp-parameters-submit" key="StructureDefinition-smp-parameters-submit" name="SMP Parameters - Submit"/>
+<artifact id="StructureDefinition/smp-bundle-documentreference" key="StructureDefinition-smp-bundle-documentreference" name="Standardized Medication Profile - Bundle DocumentReference"/>
 <artifact id="StructureDefinition/smp-medication-action-plan-bundle" key="StructureDefinition-smp-medication-action-plan-bundle" name="Standardized Medication Profile - Bundle Medication Action Plan"/>
 <artifact id="StructureDefinition/smp-bundle" key="StructureDefinition-smp-bundle" name="Standardized Medication Profile - Bundle Medication List"/>
 <artifact id="StructureDefinition/smp-bundle-transaction" key="StructureDefinition-smp-bundle-transaction" name="Standardized Medication Profile - Bundle Medication List Maintenance"/>
@@ -61,6 +62,7 @@
 <artifact id="Organization/org-PC-Primary-Care-Michigan" key="Organization-org-PC-Primary-Care-Michigan" name="org-PC-Primary-Care-Michigan"/>
 <artifact id="Patient/patient-betsysmith-johnson01" key="Patient-patient-betsysmith-johnson01" name="patient-betsysmith-johnson01"/>
 <artifact id="Bundle/smp-bundle-1" key="Bundle-smp-bundle-1" name="smp-bundle-1"/>
+<artifact id="DocumentReference/smp-bundle-documentreference-example" key="DocumentReference-smp-bundle-documentreference-example" name="smp-bundle-documentreference-example"/>
 <artifact id="Bundle/smp-bundle-tx-1" key="Bundle-smp-bundle-tx-1" name="smp-bundle-tx-1"/>
 <artifact id="Bundle/smp-bundle-tx-2" key="Bundle-smp-bundle-tx-2" name="smp-bundle-tx-2"/>
 <artifact id="CapabilityStatement/smp-client" key="CapabilityStatement-smp-client" name="smp-client"/>
