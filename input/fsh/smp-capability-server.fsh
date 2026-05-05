@@ -31,18 +31,6 @@ Usage: #definition
     * insert CSinteraction(#SHOULD, #create, [[Allows for the creation of a medication list.]])
     * insert CSsearch(#SHALL, "patient", "http://hl7.org/fhir/SearchParameter/List-subject", #reference, [[Allows retrieving medication lists for the patient]])
     * insert CSsearch(#SHOULD, "code", "http://hl7.org/fhir/SearchParameter/clinical-code", #token, [[Allows retrieving specific kinds of medication lists]])
-  * resource[=].operation[0]
-    * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-    * extension.valueCode = #MAY
-    * name = "smp-query"
-    * definition = "http://hl7.org/fhir/us/smp/OperationDefinition/smp-operation-retrieve"
-    * documentation = "Operation used to retrieve individual patient's medication history"
-  * resource[=].operation[+]
-    * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-    * extension.valueCode = #MAY
-    * name = "smp-submit"
-    * definition = "http://hl7.org/fhir/us/smp/OperationDefinition/smp-operation-submit"
-    * documentation = "Operation used to submit individual patient's medication list for storage"
   * insert CSresource(#MedicationStatement, $smp-medicationstatement)
     * insert CSinteraction(#SHALL, #read, [[Allows retrieval of medication details.]])
     * insert CSinteraction(#SHOULD, #update, [[Allows for the maintenance of the medication details.]])
@@ -86,6 +74,18 @@ Usage: #definition
     * type = #Bundle
     * supportedProfile[0] = $smp-bundle-tx
     * documentation = "Bundle Medication List Maintenance profile (type=transaction) is a processing instruction and is not persisted as a readable/creatable Bundle resource."
+    * operation[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #MAY
+      * name = "smp-query"
+      * definition = "http://hl7.org/fhir/us/smp/OperationDefinition/smp-operation-retrieve"
+      * documentation = "Operation used to retrieve individual patient's medication history"
+    * operation[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #MAY
+      * name = "smp-submit"
+      * definition = "http://hl7.org/fhir/us/smp/OperationDefinition/smp-operation-submit"
+      * documentation = "Operation used to submit individual patient's medication list for storage"
   * resource[+]
     * type = #Bundle
     * supportedProfile[0] = $smp-bundle-map
