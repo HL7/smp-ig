@@ -10,6 +10,7 @@ Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $snomed = http://snomed.info/sct
 Alias: $ndc = http://hl7.org/fhir/sid/ndc
 Alias: $taxonomy = http://nucc.org/provider-taxonomy
+Alias: $medstatement-adherence-cs = http://hl7.org/fhir/CodeSystem/medication-statement-adherence
 
 // Value Sets
 // NOTE: use a value set (not code system) when binding a field
@@ -17,8 +18,10 @@ Alias: LNCVS = http://hl7.org/fhir/ValueSet/observation-codes
 Alias: CATVS = http://hl7.org/fhir/ValueSet/observation-category
 Alias: LL4309-2 = http://loinc.org/vs/LL4309-2
 Alias: $loinc-med-list = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1096.240
+Alias: $medstatement-adherence-vs = http://hl7.org/fhir/ValueSet/medication-statement-adherence
 
 // Misc
+Alias: $r5-medstatement-adherence = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationStatement.adherence
 
 
 // US Core profiles
@@ -44,4 +47,3 @@ Alias: $smp-medicationactionplandetectedissue = http://hl7.org/fhir/us/smp/Struc
 Alias: $smp-bundle = http://hl7.org/fhir/us/smp/StructureDefinition/smp-bundle
 Alias: $smp-bundle-tx = http://hl7.org/fhir/us/smp/StructureDefinition/smp-bundle-transaction
 Alias: $smp-bundle-map = http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication-action-plan-bundle
-
