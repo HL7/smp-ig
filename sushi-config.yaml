@@ -38,7 +38,7 @@ dependencies:
     id: uscore3
     reason: |
       Needed for systems supporting USCDI v1
-  hl7.fhir.extensions.r5: 4.0.1
+  hl7.fhir.uv.xver-r5.r4: 0.1.0
 #  us.nlm.vsac: 0.21.0
   us.nlm.vsac:
     uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac

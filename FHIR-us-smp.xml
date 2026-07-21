@@ -50,6 +50,7 @@
 <artifact id="MedicationStatement/smp-medstmt-2" key="MedicationStatement-smp-medstmt-2" name="smp-medstmt-2"/>
 <artifact id="MedicationStatement/smp-medstmt-3" key="MedicationStatement-smp-medstmt-3" name="smp-medstmt-3"/>
 <artifact id="MedicationStatement/smp-medstmt-4" key="MedicationStatement-smp-medstmt-4" name="smp-medstmt-4"/>
+<artifact id="MedicationStatement/smp-medstmt-5" key="MedicationStatement-smp-medstmt-5" name="smp-medstmt-5"/>
 <artifact id="CapabilityStatement/smp-server" key="CapabilityStatement-smp-server" name="smp-server"/>
 <artifact id="Parameters/smp-submit-input-parameters-1" key="Parameters-smp-submit-input-parameters-1" name="smp-submit-input-parameters-1"/>
 <artifact id="Parameters/smp-submit-outcome-parameters-1" key="Parameters-smp-submit-outcome-parameters-1" name="smp-submit-outcome-parameters-1"/>
