@@ -87,7 +87,7 @@ In the interaction diagrams following, the Bundle versions of the updates and re
 
 {::options parse_block_html="false" /}
 <figure>
-  <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc1.png" alt="A diagram showing the control flows for showing the recording of home health medications"/>
+  <img style="padding-top:0;padding-bottom:30px" width="600px" src="uc1.png" alt="A diagram showing the control flows for showing the recording of home health medications"/>
   <figcaption>Figure A.1 - Home Health recording medications</figcaption>
 </figure>
 <br/>
@@ -106,7 +106,7 @@ In the initial diagram the capture of the patient medications, including both pr
 
 {::options parse_block_html="false" /}
 <figure>
-  <img style="padding-top:0;padding-bottom:30px" width="800px" src="uc2.png" alt="A diagram showing the control flows for admission of a patient to hospital fllwing a stroke"/>
+  <img style="padding-top:0;padding-bottom:30px" width="600px" src="uc2.png" alt="A diagram showing the control flows for admission of a patient to hospital fllwing a stroke"/>
   <figcaption>Figure B.1 - Admission to Hospital following stroke</figcaption>
 </figure>
 {::options parse_block_html="true" /}
