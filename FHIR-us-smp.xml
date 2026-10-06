@@ -13,7 +13,29 @@
 <artifact id="Practitioner/examplePharmacist" key="Practitioner-examplePharmacist" name="Example Practitioner - Pharmacist"/>
 <artifact id="Practitioner/examplePractitioner" key="Practitioner-examplePractitioner" name="Example Practitioner - Primary Care Physician"/>
 <artifact id="DocumentReference/Example-DocumentReference-PatientSummary20250709093054" key="DocumentReference-Example-DocumentReference-PatientSummary20250709093054" name="Example-DocumentReference-PatientSummary20250709093054"/>
+<artifact id="StructureDefinition/extemporaneous-formula-source" key="StructureDefinition-extemporaneous-formula-source" name="Extemporaneous Formula Source"/>
+<artifact id="DocumentReference/extcomp-formula-1" key="DocumentReference-extcomp-formula-1" name="Extemporaneous Preparation - DocumentReference (formula-1)"/>
+<artifact id="Location/extcomp-location" key="Location-extcomp-location" name="Extemporaneous Preparation - Location (location)"/>
+<artifact id="Medication/extcomp-compound-med-1" key="Medication-extcomp-compound-med-1" name="Extemporaneous Preparation - Medication (compound-med-1)"/>
+<artifact id="MedicationDispense/extcomp-dispense-1" key="MedicationDispense-extcomp-dispense-1" name="Extemporaneous Preparation - MedicationDispense (dispense-1)"/>
+<artifact id="MedicationRequest/extcomp-request-1" key="MedicationRequest-extcomp-request-1" name="Extemporaneous Preparation - MedicationRequest (request-1)"/>
+<artifact id="MedicationStatement/extcomp-statement-1" key="MedicationStatement-extcomp-statement-1" name="Extemporaneous Preparation - MedicationStatement (statement-1)"/>
+<artifact id="Organization/extcomp-pharmacy-1" key="Organization-extcomp-pharmacy-1" name="Extemporaneous Preparation - Organization (pharmacy-1)"/>
+<artifact id="Patient/extcomp-patient-1" key="Patient-extcomp-patient-1" name="Extemporaneous Preparation - Patient (patient-1)"/>
+<artifact id="Practitioner/extcomp-pharmacist" key="Practitioner-extcomp-pharmacist" name="Extemporaneous Preparation - Practitioner (pharmacist)"/>
+<artifact id="Practitioner/extcomp-requester-1" key="Practitioner-extcomp-requester-1" name="Extemporaneous Preparation - Practitioner (requester-1)"/>
+<artifact id="Substance/extcomp-ingredient-api" key="Substance-extcomp-ingredient-api" name="Extemporaneous Preparation - Substance (ingredient-api)"/>
+<artifact id="Substance/extcomp-ingredient-vehicle" key="Substance-extcomp-ingredient-vehicle" name="Extemporaneous Preparation - Substance (ingredient-vehicle)"/>
+<artifact id="Bundle/extemporaneous-preparation-example" key="Bundle-extemporaneous-preparation-example" name="Extemporaneous Preparation Example"/>
+<artifact id="StructureDefinition/extemporaneous-preparation-instructions" key="StructureDefinition-extemporaneous-preparation-instructions" name="Extemporaneous Preparation Instructions"/>
+<artifact id="StructureDefinition/extemporaneous-preparation-reason" key="StructureDefinition-extemporaneous-preparation-reason" name="Extemporaneous Preparation Reason"/>
+<artifact id="StructureDefinition/extemporaneous-storage-instructions" key="StructureDefinition-extemporaneous-storage-instructions" name="Extemporaneous Storage Instructions"/>
 <artifact id="List/smp-medlist-1" key="List-smp-medlist-1" name="Hospital Medication Administration List"/>
+<artifact id="StructureDefinition/smp-extemporaneous-ingredient" key="StructureDefinition-smp-extemporaneous-ingredient" name="PACIO Extemporaneous Preparation Ingredient"/>
+<artifact id="StructureDefinition/smp-extemporaneous-medication" key="StructureDefinition-smp-extemporaneous-medication" name="PACIO Extemporaneous Preparation Medication"/>
+<artifact id="StructureDefinition/smp-extemporaneous-medication-dispense" key="StructureDefinition-smp-extemporaneous-medication-dispense" name="PACIO Extemporaneous Preparation MedicationDispense"/>
+<artifact id="StructureDefinition/smp-extemporaneous-medication-request" key="StructureDefinition-smp-extemporaneous-medication-request" name="PACIO Extemporaneous Preparation MedicationRequest"/>
+<artifact id="StructureDefinition/smp-extemporaneous-medication-statement" key="StructureDefinition-smp-extemporaneous-medication-statement" name="PACIO Extemporaneous Preparation MedicationStatement"/>
 <artifact id="List/smp-medlist-2" key="List-smp-medlist-2" name="Primary Care Medication List"/>
 <artifact id="StructureDefinition/smp-map-composition" key="StructureDefinition-smp-map-composition" name="SMP Composition Medication Action Plan"/>
 <artifact id="Composition/Example-SMP-MAPComposition-01" key="Composition-Example-SMP-MAPComposition-01" name="SMP Medication Action Plan for examplePatient"/>
@@ -36,6 +58,7 @@
 <artifact id="MedicationStatement/example-MedicationStatement-alprazolam-01" key="MedicationStatement-example-MedicationStatement-alprazolam-01" name="example-MedicationStatement-alprazolam-01"/>
 <artifact id="MedicationStatement/example-MedicationStatement-metoclopramide-01" key="MedicationStatement-example-MedicationStatement-metoclopramide-01" name="example-MedicationStatement-metoclopramide-01"/>
 <artifact id="DetectedIssue/example-di01-duplicateTherapy" key="DetectedIssue-example-di01-duplicateTherapy" name="example-di01-duplicateTherapy"/>
+<artifact id="Organization/org-ED-Metro-Hospital" key="Organization-org-ED-Metro-Hospital" name="org-ED-Metro-Hospital"/>
 <artifact id="Bundle/smp-bundle-1" key="Bundle-smp-bundle-1" name="smp-bundle-1"/>
 <artifact id="DocumentReference/smp-bundle-documentreference-example" key="DocumentReference-smp-bundle-documentreference-example" name="smp-bundle-documentreference-example"/>
 <artifact id="Bundle/smp-bundle-tx-1" key="Bundle-smp-bundle-tx-1" name="smp-bundle-tx-1"/>
@@ -56,6 +79,7 @@
 <artifact id="Parameters/smp-submit-outcome-parameters-1" key="Parameters-smp-submit-outcome-parameters-1" name="smp-submit-outcome-parameters-1"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="extemporaneous-preparations" name="Appendix A - Extemporaneous Preparations"/>
 <page key="fhirArtifacts" name="Artifacts Overview"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="changelog" name="Change Log"/>

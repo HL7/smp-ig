@@ -74,6 +74,8 @@ pages:
     title: Downloads
   references.md:
     title: References
+  extemporaneous-preparations.md:
+    title: Appendix A - Extemporaneous Preparations
   changelog.md:
     title: Change Log
 
@@ -85,6 +87,7 @@ menu:
     Technical Background: background.html
     Formal Specification: specification.html
     References: references.html
+    Appendix A - Extemporaneous Preparations: extemporaneous-preparations.html
   FHIR Artifacts:
     Artifacts Overview: fhirArtifacts.html
     SMP Specific: artifacts.html
