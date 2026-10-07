@@ -20,10 +20,10 @@
 <artifact id="MedicationDispense/extcomp-dispense-1" key="MedicationDispense-extcomp-dispense-1" name="Extemporaneous Preparation - MedicationDispense (dispense-1)"/>
 <artifact id="MedicationRequest/extcomp-request-1" key="MedicationRequest-extcomp-request-1" name="Extemporaneous Preparation - MedicationRequest (request-1)"/>
 <artifact id="MedicationStatement/extcomp-statement-1" key="MedicationStatement-extcomp-statement-1" name="Extemporaneous Preparation - MedicationStatement (statement-1)"/>
-<artifact id="Organization/extcomp-pharmacy-1" key="Organization-extcomp-pharmacy-1" name="Extemporaneous Preparation - Organization (pharmacy-1)"/>
+<artifact id="Organization/extcomp-pharmacy-1" key="Organization-extcomp-pharmacy-1" name="Extemporaneous Preparation - Organization - pharmacy-1"/>
 <artifact id="Patient/extcomp-patient-1" key="Patient-extcomp-patient-1" name="Extemporaneous Preparation - Patient (patient-1)"/>
 <artifact id="Practitioner/extcomp-pharmacist" key="Practitioner-extcomp-pharmacist" name="Extemporaneous Preparation - Practitioner (pharmacist)"/>
-<artifact id="Practitioner/extcomp-requester-1" key="Practitioner-extcomp-requester-1" name="Extemporaneous Preparation - Practitioner (requester-1)"/>
+<artifact id="Practitioner/extcomp-requester-1" key="Practitioner-extcomp-requester-1" name="Extemporaneous Preparation - Practitioner - requester-1"/>
 <artifact id="Substance/extcomp-ingredient-api" key="Substance-extcomp-ingredient-api" name="Extemporaneous Preparation - Substance (ingredient-api)"/>
 <artifact id="Substance/extcomp-ingredient-vehicle" key="Substance-extcomp-ingredient-vehicle" name="Extemporaneous Preparation - Substance (ingredient-vehicle)"/>
 <artifact id="Bundle/extemporaneous-preparation-example" key="Bundle-extemporaneous-preparation-example" name="Extemporaneous Preparation Example"/>
