@@ -46,20 +46,25 @@ Each extension slice is optional, at most once, and Must Support. When present, 
 ##### Resource relationships
 
 ```mermaid
-flowchart LR
-    Statement[MedicationStatement: reconciled use] -->|basedOn| Order[MedicationRequest: order]
-    Statement -->|partOf| Dispense[MedicationDispense: supply]
+%%{init: {"themeVariables": {"fontSize": "18px"}, "flowchart": {"nodeSpacing": 24, "rankSpacing": 48}}}%%
+flowchart TB
+    Statement["SMPExtemporaneousMedicationStatement<br/>(reconciled use)"] -->|basedOn| Order["SMPExtemporaneousMedicationRequest<br/>(order)"]
+    Statement -->|partOf| Dispense["SMPExtemporaneousMedicationDispense<br/>(supply)"]
     Dispense -->|authorizingPrescription| Order
-    Statement -->|medicationReference| Product[Medication: prepared product]
+    Statement -->|medicationReference| Product["SMPExtemporaneousMedication<br/>(prepared product)"]
     Order -->|medicationReference| Product
     Dispense -->|medicationReference| Product
-    Product -->|ingredient| Ingredients[Substance: active ingredient and vehicle]
-    Product -->|formulaSource| Formula[DocumentReference: formula revision]
+    Product -->|ingredient| Ingredients["SMPExtemporaneousIngredient<br/>(active ingredient and vehicle)"]
+    Product -->|formulaSource| Formula["DocumentReference<br/>(formula revision)"]
 ```
 
 #### Examples
 
 The following fictional scenario provides the clinical context for the comprehensive standalone examples:
+
+<p align="center">
+    <img src="./extemporaneous-preparations-scenario.svg" alt="Example Scenario" style="width: 100%; float: none; align: middle;"/>
+</p>
 
 Jordan Example, an older adult moving between care settings, cannot swallow solid oral dosage forms. In this fictional case, Avery Clinician orders an extemporaneously prepared omeprazole oral suspension. The order records why preparation is needed, identifies the intended pharmacy, and specifies the formulation and directions so the receiving care team can distinguish the liquid from other medication products.
 
