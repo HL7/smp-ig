@@ -1,11 +1,11 @@
-// Uses the SMPExtemporaneous profiles in this directory and aliases from SMP input/fsh/aliases.fsh.
+// Uses the SMPCompounded profiles in this directory and aliases from SMP input/fsh/aliases.fsh.
 // Bundle fullUrls and references use matching UUID URNs; resource IDs remain human-readable.
 
-Instance: extemporaneous-preparation-example
+Instance: compounded-preparation-example
 InstanceOf: Bundle
 Usage: #example
-Title: "Extemporaneous Preparation Example"
-Description: "Illustrative extemporaneous medication preparation, order, dispense, and medication statement."
+Title: "Compounded Preparation Example"
+Description: "Illustrative compounded medication preparation, order, dispense, and medication statement."
 * type = #collection
 * timestamp = "2026-09-02T10:00:00-04:00"
 * entry[0].fullUrl = "urn:uuid:33d93910-728b-5923-8de9-c9e934dbf17a"
@@ -71,7 +71,7 @@ Usage: #inline
 * content[0].attachment.title = "Illustrative omeprazole 2 mg/mL formula reference"
 
 Instance: extemp-ingredient-api
-InstanceOf: SMPExtemporaneousIngredient
+InstanceOf: SMPCompoundedIngredient
 Usage: #inline
 * id = "ingredient-api"
 * identifier[0].system = "http://example.org/ingredient-catalog"
@@ -89,7 +89,7 @@ Usage: #inline
 * instance[0].quantity.code = #"g"
 
 Instance: extemp-ingredient-vehicle
-InstanceOf: SMPExtemporaneousIngredient
+InstanceOf: SMPCompoundedIngredient
 Usage: #inline
 * id = "ingredient-vehicle"
 * identifier[0].system = "http://example.org/ingredient-catalog"
@@ -105,7 +105,7 @@ Usage: #inline
 * instance[0].quantity.code = #"mL"
 
 Instance: extemp-compound-med-1
-InstanceOf: SMPExtemporaneousMedication
+InstanceOf: SMPCompoundedMedication
 Usage: #inline
 * id = "compound-med-1"
 * extension[formulaSource].valueReference.reference = "urn:uuid:6b44f131-fd6a-5df4-867b-d82a19bbc36f"
@@ -115,7 +115,7 @@ Usage: #inline
 * identifier[0].value = "CMP-2026-0901"
 // RxNorm ingredient concept; the compounded strength and form are specified separately.
 * code.coding[0] = $rxnorm#7646 "omeprazole"
-* code.text = "Extemporaneously prepared omeprazole 2 mg/mL oral suspension"
+* code.text = "Compoundedly prepared omeprazole 2 mg/mL oral suspension"
 * status = #"active"
 * form.text = "Oral suspension"
 * ingredient[0].itemReference.reference = "urn:uuid:b867cab6-f2f3-5bf7-9e9e-53e93f5361e0"
@@ -136,7 +136,7 @@ Usage: #inline
 * batch.expirationDate = "2026-10-01T23:59:59-04:00"
 
 Instance: extemp-request-1
-InstanceOf: SMPExtemporaneousMedicationRequest
+InstanceOf: SMPCompoundedMedicationRequest
 Usage: #inline
 * id = "request-1"
 * extension[preparationReason].valueCodeableConcept.text = "Unable to swallow solid oral dosage forms"
@@ -166,7 +166,7 @@ Usage: #inline
 * dispenseRequest.performer.reference = "urn:uuid:2fac4966-90ce-5cb0-9613-1a124d6a010d"
 
 Instance: extemp-dispense-1
-InstanceOf: SMPExtemporaneousMedicationDispense
+InstanceOf: SMPCompoundedMedicationDispense
 Usage: #inline
 * id = "dispense-1"
 * status = #"completed"
@@ -184,7 +184,7 @@ Usage: #inline
 * dosageInstruction[0].text = "Take 5 mL by mouth once daily."
 
 Instance: extemp-statement-1
-InstanceOf: SMPExtemporaneousMedicationStatement
+InstanceOf: SMPCompoundedMedicationStatement
 Usage: #inline
 * id = "statement-1"
 * basedOn[0].reference = "urn:uuid:1c2eb3a2-fd76-5739-b1bc-2de6b274a671"

@@ -1,11 +1,11 @@
-Profile: SMPExtemporaneousMedicationDispense
+Profile: SMPCompoundedMedicationDispense
 Parent: $us-core-medicationdispense
-Id: smp-extemporaneous-medication-dispense
-Title: "PACIO Extemporaneous Preparation MedicationDispense"
-Description: "A proposed profile for the preparation and dispensing event for an extemporaneous medication, including the prepared product reference, performer, preparation timestamp, and dispensed quantity."
+Id: smp-compounded-medication-dispense
+Title: "PACIO Compounded Preparation MedicationDispense"
+Description: "A proposed profile for the preparation and dispensing event for an compounded medication, including the prepared product reference, performer, preparation timestamp, and dispensed quantity."
 
 // Preserve the draft design identity and metadata from the source StructureDefinition.
-// * ^url = "http://example.org/fhir/smp-extemporaneous/StructureDefinition/smp-extemporaneous-medication-dispense"
+// * ^url = "http://example.org/fhir/smp-compounded/StructureDefinition/smp-compounded-medication-dispense"
 // * ^version = "0.1.0"
 // * ^status = #draft
 // * ^experimental = true
@@ -16,8 +16,8 @@ Description: "A proposed profile for the preparation and dispensing event for an
 // * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 
 * medication[x] 1..1 MS
-* medication[x] only Reference(SMPExtemporaneousMedication)
-* medication[x] ^short = "Reference to the prepared extemporaneous medication"
+* medication[x] only Reference(SMPCompoundedMedication)
+* medication[x] ^short = "Reference to the prepared compounded medication"
 * subject MS
 * performer MS
 * performer ^short = "Compounder and/or dispenser participation"
@@ -26,7 +26,7 @@ Description: "A proposed profile for the preparation and dispensing event for an
 * performer.actor MS
 * location MS
 * authorizingPrescription MS
-* authorizingPrescription only Reference(SMPExtemporaneousMedicationRequest)
+* authorizingPrescription only Reference(SMPCompoundedMedicationRequest)
 * authorizingPrescription ^short = "Order authorizing preparation/dispense"
 * quantity MS
 * quantity ^short = "Final amount dispensed"

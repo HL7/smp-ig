@@ -1,11 +1,11 @@
-Profile: SMPExtemporaneousMedicationRequest
+Profile: SMPCompoundedMedicationRequest
 Parent: $us-core-medicationrequest
-Id: smp-extemporaneous-medication-request
-Title: "PACIO Extemporaneous Preparation MedicationRequest"
-Description: "A proposed profile for ordering an extemporaneously prepared medication. It requires Medication.reference rather than medicationCodeableConcept so the formulation and ingredient details are exchangeable."
+Id: smp-compounded-medication-request
+Title: "PACIO Compounded Preparation MedicationRequest"
+Description: "A proposed profile for ordering an compoundedly prepared medication. It requires Medication.reference rather than medicationCodeableConcept so the formulation and ingredient details are exchangeable."
 
 // Preserve the draft design identity and metadata from the source StructureDefinition.
-// * ^url = "http://example.org/fhir/smp-extemporaneous/StructureDefinition/smp-extemporaneous-medication-request"
+// * ^url = "http://example.org/fhir/smp-compounded/StructureDefinition/smp-compounded-medication-request"
 // * ^version = "0.1.0"
 // * ^status = #draft
 // * ^experimental = true
@@ -15,10 +15,10 @@ Description: "A proposed profile for ordering an extemporaneously prepared medic
 // * ^abstract = false
 // * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 
-* extension contains SMPExtemporaneousPreparationReason named preparationReason 0..1 MS
+* extension contains SMPCompoundedPreparationReason named preparationReason 0..1 MS
 * medication[x] 1..1 MS
-* medication[x] only Reference(SMPExtemporaneousMedication)
-* medication[x] ^short = "Reference to the ordered extemporaneous formulation"
+* medication[x] only Reference(SMPCompoundedMedication)
+* medication[x] ^short = "Reference to the ordered compounded formulation"
 * subject MS
 * authoredOn MS
 * requester MS

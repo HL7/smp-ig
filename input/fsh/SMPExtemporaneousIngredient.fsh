@@ -1,11 +1,11 @@
-Profile: SMPExtemporaneousIngredient
+Profile: SMPCompoundedIngredient
 Parent: Substance
-Id: smp-extemporaneous-ingredient
-Title: "PACIO Extemporaneous Preparation Ingredient"
-Description: "A proposed profile for an ingredient or constituent used in an extemporaneous preparation. It supports coded ingredient identity and optional source package lot/expiry traceability."
+Id: smp-compounded-ingredient
+Title: "PACIO Compounded Preparation Ingredient"
+Description: "A proposed profile for an ingredient or constituent used in an compounded preparation. It supports coded ingredient identity and optional source package lot/expiry traceability."
 
 // Preserve the draft design identity and metadata from the source StructureDefinition.
-// * ^url = "http://example.org/fhir/smp-extemporaneous/StructureDefinition/smp-extemporaneous-ingredient"
+// * ^url = "http://example.org/fhir/smp-compounded/StructureDefinition/smp-compounded-ingredient"
 // * ^version = "0.1.0"
 // * ^status = #draft
 // * ^experimental = true

@@ -1,12 +1,12 @@
-// Standalone published examples for the extemporaneous profiles and their extensions.
+// Standalone published examples for the compounded profiles and their extensions.
 // Uses aliases and parent profiles from the SMP FSH tank.
-// Synthetic scenario: see extemporaneous-preparations-guide.md.
+// Synthetic scenario: see compounded-preparations-guide.md.
 
 Instance: extcomp-patient-1
 InstanceOf: $us-core-patient
 Usage: #example
-Title: "Extemporaneous Preparation - Patient (patient-1)"
-Description: "Synthetic Patient example supporting the extemporaneous preparation care-transition scenario."
+Title: "Compounded Preparation - Patient (patient-1)"
+Description: "Synthetic Patient example supporting the compounded preparation care-transition scenario."
 * identifier[0].system = "http://example.org/mrn"
 * identifier[0].value = "EX-10001"
 * name[0].use = #official
@@ -18,8 +18,8 @@ Description: "Synthetic Patient example supporting the extemporaneous preparatio
 Instance: extcomp-requester-1
 InstanceOf: $us-core-practitioner
 Usage: #example
-Title: "Extemporaneous Preparation - Practitioner - requester-1"
-Description: "Synthetic Practitioner example supporting the extemporaneous preparation care-transition scenario."
+Title: "Compounded Preparation - Practitioner - requester-1"
+Description: "Synthetic Practitioner example supporting the compounded preparation care-transition scenario."
 * identifier[0].system = "http://example.org/provider-id"
 * identifier[0].value = "P-100"
 * name[0].family = "Clinician"
@@ -28,8 +28,8 @@ Description: "Synthetic Practitioner example supporting the extemporaneous prepa
 Instance: extcomp-pharmacy-1
 InstanceOf: $us-core-organization
 Usage: #example
-Title: "Extemporaneous Preparation - Organization - pharmacy-1"
-Description: "Synthetic Organization example supporting the extemporaneous preparation care-transition scenario."
+Title: "Compounded Preparation - Organization - pharmacy-1"
+Description: "Synthetic Organization example supporting the compounded preparation care-transition scenario."
 * active = true
 * identifier[0].system = "http://example.org/org-id"
 * identifier[0].value = "PHARM-01"
@@ -38,8 +38,8 @@ Description: "Synthetic Organization example supporting the extemporaneous prepa
 Instance: extcomp-formula-1
 InstanceOf: DocumentReference
 Usage: #example
-Title: "Extemporaneous Preparation - DocumentReference (formula-1)"
-Description: "Synthetic DocumentReference example supporting the extemporaneous preparation care-transition scenario."
+Title: "Compounded Preparation - DocumentReference (formula-1)"
+Description: "Synthetic DocumentReference example supporting the compounded preparation care-transition scenario."
 * status = #current
 * type.text = "Validated compounding formula / monograph"
 * masterIdentifier.system = "http://example.org/formula-registry"
@@ -53,10 +53,10 @@ Description: "Synthetic DocumentReference example supporting the extemporaneous 
 * content[0].attachment.title = "Illustrative omeprazole 2 mg/mL formula reference"
 
 Instance: extcomp-ingredient-api
-InstanceOf: SMPExtemporaneousIngredient
+InstanceOf: SMPCompoundedIngredient
 Usage: #example
-Title: "Extemporaneous Preparation - Substance (ingredient-api)"
-Description: "Synthetic Substance example supporting the extemporaneous preparation care-transition scenario."
+Title: "Compounded Preparation - Substance (ingredient-api)"
+Description: "Synthetic Substance example supporting the compounded preparation care-transition scenario."
 * identifier[0].system = "http://example.org/ingredient-catalog"
 * identifier[0].value = "ING-OMEP"
 * code.coding[0].system = $rxnorm
@@ -73,10 +73,10 @@ Description: "Synthetic Substance example supporting the extemporaneous preparat
 * instance[0].quantity.code = #g
 
 Instance: extcomp-ingredient-vehicle
-InstanceOf: SMPExtemporaneousIngredient
+InstanceOf: SMPCompoundedIngredient
 Usage: #example
-Title: "Extemporaneous Preparation - Substance (ingredient-vehicle)"
-Description: "Synthetic Substance example supporting the extemporaneous preparation care-transition scenario."
+Title: "Compounded Preparation - Substance (ingredient-vehicle)"
+Description: "Synthetic Substance example supporting the compounded preparation care-transition scenario."
 * identifier[0].system = "http://example.org/ingredient-catalog"
 * identifier[0].value = "ING-VEHICLE-01"
 * code.text = "Oral suspension vehicle, sugar-free"
@@ -90,17 +90,17 @@ Description: "Synthetic Substance example supporting the extemporaneous preparat
 * instance[0].quantity.code = #mL
 
 Instance: extcomp-compound-med-1
-InstanceOf: SMPExtemporaneousMedication
+InstanceOf: SMPCompoundedMedication
 Usage: #example
-Title: "Extemporaneous Preparation - Medication (compound-med-1)"
-Description: "Synthetic Medication example supporting the extemporaneous preparation care-transition scenario."
+Title: "Compounded Preparation - Medication (compound-med-1)"
+Description: "Synthetic Medication example supporting the compounded preparation care-transition scenario."
 * extension[formulaSource].valueReference = Reference(extcomp-formula-1)
 * extension[preparationInstructions].valueString = "Use the pharmacy-controlled formula revision identified by formulaSource. The final product is labeled for this patient; detailed preparation steps remain in the pharmacy record."
 * extension[storageInstructions].valueString = "Keep in the original labeled container and follow the dispensing pharmacy label for temperature, handling, and discard instructions. Contact the pharmacy if those instructions are missing."
 * identifier[0].system = "http://example.org/compound-lot"
 * identifier[0].value = "CMP-2026-0901"
 * code.coding[0] = http://example.org/compound-catalog#OMEP-2-SUSP "Omeprazole 2 mg/mL oral suspension"
-* code.text = "Extemporaneously prepared omeprazole 2 mg/mL oral suspension"
+* code.text = "Compoundedly prepared omeprazole 2 mg/mL oral suspension"
 * status = #active
 * form.text = "Oral suspension"
 * ingredient[0].itemReference = Reference(extcomp-ingredient-api)
@@ -121,10 +121,10 @@ Description: "Synthetic Medication example supporting the extemporaneous prepara
 * batch.expirationDate = "2026-10-01T23:59:59-04:00"
 
 Instance: extcomp-request-1
-InstanceOf: SMPExtemporaneousMedicationRequest
+InstanceOf: SMPCompoundedMedicationRequest
 Usage: #example
-Title: "Extemporaneous Preparation - MedicationRequest (request-1)"
-Description: "Synthetic MedicationRequest example supporting the extemporaneous preparation care-transition scenario."
+Title: "Compounded Preparation - MedicationRequest (request-1)"
+Description: "Synthetic MedicationRequest example supporting the compounded preparation care-transition scenario."
 * extension[preparationReason].valueCodeableConcept.text = "Unable to swallow solid oral dosage forms"
 * status = #active
 * intent = #order
@@ -152,10 +152,10 @@ Description: "Synthetic MedicationRequest example supporting the extemporaneous 
 * dispenseRequest.performer = Reference(extcomp-pharmacy-1)
 
 Instance: extcomp-dispense-1
-InstanceOf: SMPExtemporaneousMedicationDispense
+InstanceOf: SMPCompoundedMedicationDispense
 Usage: #example
-Title: "Extemporaneous Preparation - MedicationDispense (dispense-1)"
-Description: "Synthetic MedicationDispense example supporting the extemporaneous preparation care-transition scenario."
+Title: "Compounded Preparation - MedicationDispense (dispense-1)"
+Description: "Synthetic MedicationDispense example supporting the compounded preparation care-transition scenario."
 * status = #completed
 * medicationReference = Reference(extcomp-compound-med-1)
 * subject = Reference(extcomp-patient-1)
@@ -182,10 +182,10 @@ Description: "Synthetic MedicationDispense example supporting the extemporaneous
 * dosageInstruction[0].doseAndRate[0].doseQuantity.code = #mL
 
 Instance: extcomp-statement-1
-InstanceOf: SMPExtemporaneousMedicationStatement
+InstanceOf: SMPCompoundedMedicationStatement
 Usage: #example
-Title: "Extemporaneous Preparation - MedicationStatement (statement-1)"
-Description: "Synthetic MedicationStatement example supporting the extemporaneous preparation care-transition scenario."
+Title: "Compounded Preparation - MedicationStatement (statement-1)"
+Description: "Synthetic MedicationStatement example supporting the compounded preparation care-transition scenario."
 * basedOn[0] = Reference(extcomp-request-1)
 * partOf[0] = Reference(extcomp-dispense-1)
 * status = #active
@@ -208,8 +208,8 @@ Description: "Synthetic MedicationStatement example supporting the extemporaneou
 Instance: extcomp-pharmacist
 InstanceOf: $us-core-practitioner
 Usage: #example
-Title: "Extemporaneous Preparation - Practitioner (pharmacist)"
-Description: "Synthetic Practitioner example supporting the extemporaneous preparation care-transition scenario."
+Title: "Compounded Preparation - Practitioner (pharmacist)"
+Description: "Synthetic Practitioner example supporting the compounded preparation care-transition scenario."
 * identifier[0].system = "http://example.org/provider-id"
 * identifier[0].value = "PH-200"
 * name[0].family = "Pharmacist"
@@ -218,8 +218,8 @@ Description: "Synthetic Practitioner example supporting the extemporaneous prepa
 Instance: extcomp-location
 InstanceOf: Location
 Usage: #example
-Title: "Extemporaneous Preparation - Location (location)"
-Description: "Synthetic Location example supporting the extemporaneous preparation care-transition scenario."
+Title: "Compounded Preparation - Location (location)"
+Description: "Synthetic Location example supporting the compounded preparation care-transition scenario."
 * status = #active
 * name = "Example Compounding Pharmacy - preparation and dispensing site"
 * managingOrganization = Reference(extcomp-pharmacy-1)

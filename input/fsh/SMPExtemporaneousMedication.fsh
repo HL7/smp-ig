@@ -1,11 +1,11 @@
-Profile: SMPExtemporaneousMedication
+Profile: SMPCompoundedMedication
 Parent: $smp-medication
-Id: smp-extemporaneous-medication
-Title: "PACIO Extemporaneous Preparation Medication"
-Description: "A proposed PACIO profile for an extemporaneously prepared medication. It extends the Standardized Medication Profile (SMP) Medication profile to make composition, dosage form, and preparation-specific information interoperable in FHIR R4."
+Id: smp-compounded-medication
+Title: "PACIO Compounded Preparation Medication"
+Description: "A proposed PACIO profile for an compoundedly prepared medication. It extends the Standardized Medication Profile (SMP) Medication profile to make composition, dosage form, and preparation-specific information interoperable in FHIR R4."
 
 // Preserve the draft design identity and metadata from the source StructureDefinition.
-// * ^url = "http://example.org/fhir/smp-extemporaneous/StructureDefinition/smp-extemporaneous-medication"
+// * ^url = "http://example.org/fhir/smp-compounded/StructureDefinition/smp-compounded-medication"
 // * ^version = "0.1.0"
 // * ^status = #draft
 // * ^experimental = true
@@ -16,9 +16,9 @@ Description: "A proposed PACIO profile for an extemporaneously prepared medicati
 // * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 
 * . obeys smp-extemp-1
-* extension contains SMPExtemporaneousFormulaSource named formulaSource 0..1 MS
-* extension contains SMPExtemporaneousPreparationInstructions named preparationInstructions 0..1 MS
-* extension contains SMPExtemporaneousStorageInstructions named storageInstructions 0..1 MS
+* extension contains SMPCompoundedFormulaSource named formulaSource 0..1 MS
+* extension contains SMPCompoundedPreparationInstructions named preparationInstructions 0..1 MS
+* extension contains SMPCompoundedStorageInstructions named storageInstructions 0..1 MS
 * identifier MS
 * identifier ^short = "Business or local identifier for the formulation or prepared product"
 * code 1..1 MS
@@ -29,7 +29,7 @@ Description: "A proposed PACIO profile for an extemporaneously prepared medicati
 * ingredient 1..* MS
 * ingredient ^short = "Active and inactive ingredients/constituents"
 * ingredient.item[x] 1..1 MS
-* ingredient.item[x] only CodeableConcept or Reference(SMPExtemporaneousIngredient or $smp-medication)
+* ingredient.item[x] only CodeableConcept or Reference(SMPCompoundedIngredient or $smp-medication)
 * ingredient.isActive 1..1 MS
 * ingredient.isActive ^short = "Explicitly identify active versus inactive constituent"
 * ingredient.strength MS
